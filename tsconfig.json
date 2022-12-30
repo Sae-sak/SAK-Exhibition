@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "outDir": "./out",
+    "paths": {
+      "@app": ["src/toolkit"],
+      "@app/*": ["src/toolkit/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+      "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"],
+      "@features": ["./src/features"],
+      "@features/*": ["./src/features/*"],
+      "@templates": ["./src/templates"],
+      "@templates/*": ["./src/templates/*"],
+      "@types": ["./src/types"],
+      "@types/*": ["./src/types/*"],
+      "@src": ["./src"],
+      "@src/*": ["./src/*"],
+      "@": ["./"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "pages/**/*",
+    "src/**/*",
+    "styles/**/*",
+    "public/**/*",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["coverage", ".next", "dist", "out", "node_modules"]
+}
