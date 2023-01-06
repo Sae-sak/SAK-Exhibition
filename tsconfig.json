@@ -30,8 +30,6 @@
       "@constants/*": ["./src/constants/*"],
       "@features": ["./src/features"],
       "@features/*": ["./src/features/*"],
-      "@types": ["./src/types"],
-      "@types/*": ["./src/types/*"],
       "@src": ["./src"],
       "@src/*": ["./src/*"],
       "@": ["./"],

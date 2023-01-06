@@ -14,22 +14,22 @@ export default function Header() {
 
           <span className="ml-3 text-xl">SAK Exhibtion</span>
         </Link>
-        <nav className="flex flex-wrap items-center justify-center text-base md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400">
+        <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
+          <Link href={"/"} className="mr-5 hover:text-gray-900">
+            Home
+          </Link>
           <Link href={"/about"} className="mr-5 hover:text-gray-900">
             About
           </Link>
           <Link href={"/exhibition"} className="mr-5 hover:text-gray-900">
             Exhibition
           </Link>
-          <Link href={"/comment"} className="mr-5 hover:text-gray-900">
-            Comment
-          </Link>
-          <Link href={"/news"} className="mr-5 hover:text-gray-900">
-            News
+          <Link href={"/contactus"} className="mr-5 hover:text-gray-900">
+            Contact Us
           </Link>
         </nav>
         <button className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200 md:mt-0">
-          Sign Up
+          Sign In
           <svg
             fill="none"
             stroke="currentColor"
