@@ -5,8 +5,8 @@ import logo from "public/favicon/favicon.png";
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+        <div className="flex-shrink-0 w-64 mx-auto mt-10 text-center md:mx-0 md:text-left md:mt-0">
           <Link
             href={"/"}
             className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start"
@@ -18,15 +18,15 @@ export default function Footer() {
             Air plant banjo lyft occupy retro adaptogen indego
           </p>
         </div>
-        <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <div className="flex flex-wrap flex-grow order-first -mb-10 text-center md:pr-20 md:text-left">
+          <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <Link
               href={"/about"}
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font"
             >
               About
             </Link>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               {/* <li>
                 <a className="text-gray-600 hover:text-gray-800">First Link</a>
               </li>
@@ -41,14 +41,14 @@ export default function Footer() {
               </li> */}
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <Link
               href={"/exhibition"}
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font"
             >
               Exhibition
             </Link>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               {/* <li>
                 <a className="text-gray-600 hover:text-gray-800">First Link</a>
               </li>
@@ -63,14 +63,14 @@ export default function Footer() {
               </li> */}
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <Link
               href={"/comment"}
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font"
             >
               Comment
             </Link>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               {/* <li>
                 <a className="text-gray-600 hover:text-gray-800">First Link</a>
               </li>
@@ -85,14 +85,14 @@ export default function Footer() {
               </li> */}
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <Link
               href={"/news"}
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font"
             >
               News
             </Link>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               {/* <li>
                 <a className="text-gray-600 hover:text-gray-800">First Link</a>
               </li>
@@ -110,25 +110,25 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-gray-100">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">
+        <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
+          <p className="text-sm text-center text-gray-500 sm:text-left">
             © 2022 SAK —{" "}
             <a
               href="https://github.com/kimyoo04/SAK-Exhibition"
-              className="text-gray-600 ml-1"
+              className="ml-1 text-gray-600"
               target="_blank"
               rel="noopener noreferrer"
             >
               @kimyoo04
             </a>
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
             <a className="text-gray-500">
               <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -138,9 +138,9 @@ export default function Footer() {
             <a className="ml-3 text-gray-500">
               <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -151,9 +151,9 @@ export default function Footer() {
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -165,9 +165,9 @@ export default function Footer() {
               <svg
                 fill="currentColor"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="0"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
