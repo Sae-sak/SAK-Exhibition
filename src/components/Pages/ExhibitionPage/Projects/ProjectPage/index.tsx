@@ -1,25 +1,29 @@
-import {useRouter} from "next/router";
-import Image from "next/image";
-import NotFoundPage from "@/pages/404";
+import ProjectHeader from "./ProjectHeader";
+import ProjectContent from "./ProjectContent";
+import {IProject} from "@constants/types/exhibition";
 
-export default function ProjectPage() {
-  const router = useRouter();
-  const {slug} = router.query;
+export default function ProjectPage({projectData}: {projectData: IProject}) {
+  const {
+    slug,
+    title,
+    date,
+    year,
+    semester,
+    grade,
+    studio,
+    namepath,
+    tags,
+    name,
+    motto,
+    content,
+  } = projectData;
 
-  if (slug && typeof slug !== "string" && slug.length === 5) {
-    const [year, semester, grade, studio, namepath] = slug;
-    const projectPath = slug.join("/");
-    const thumbnail = `/images/exhibition/projects/${projectPath}/thumbnail.jpg`;
-    const projectContent = ``;
+  const thumbnail = `/images/exhibition/projects/${slug}/thumbnail.jpg`;
 
-    return (
-      <>
-        <div>
-          <Image src={thumbnail} alt={slug[-1]} width={300} height={200} />
-        </div>
-      </>
-    );
-  } else {
-    return <NotFoundPage />;
-  }
+  return (
+    <article>
+      <ProjectHeader title={title} thumbnail={thumbnail} namepath={namepath} />
+      <ProjectContent content={content} />
+    </article>
+  );
 }

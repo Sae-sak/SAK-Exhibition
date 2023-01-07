@@ -1,13 +1,24 @@
+import {getAllProjects} from "@components/Base/Util/project-util";
 import MainLayout from "@components/Layouts/MainLayout";
 import ExhibitionPage from "@components/Pages/ExhibitionPage";
-import {DUMMY_PROJECTS_LIST} from "@constants/pages/dummy_projects_list";
+import {IProject} from "@constants/types/exhibition";
 
-export default function Page() {
+export default function Exhibition({projects}: {projects: IProject[]}) {
   return (
     <MainLayout>
       <div>
-        <ExhibitionPage projects={DUMMY_PROJECTS_LIST} />
+        <ExhibitionPage projects={projects} />
       </div>
     </MainLayout>
   );
+}
+
+export function getStaticProps() {
+  const allProjects = getAllProjects();
+
+  return {
+    props: {
+      projects: allProjects,
+    },
+  };
 }
