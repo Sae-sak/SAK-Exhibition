@@ -7,19 +7,19 @@ export type ITag =
   | "마을재생"
   | "";
 
-export interface IStudentInfo {
-  name: string;
-  grade: number;
-  email: string;
-  motto: string;
-}
-
 export interface IProject {
+  slug: string;
   title: string;
+  date: string;
   year: number;
   semester: number;
+  grade: number;
   studio: string;
-  namePath: string;
-  studentInfo: IStudentInfo;
+  namepath: string;
+  excerpt: string;
+  name: string;
+  email: string;
+  motto: string;
   tags: ITag[];
+  content: string;
 }
