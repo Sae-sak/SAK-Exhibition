@@ -1,3 +1,4 @@
+import ThemeChanger from "@components/Base/Util/Theme/ThemeChanger";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/favicon/favicon.png";
@@ -28,20 +29,7 @@ export default function Header() {
             Contact Us
           </Link>
         </nav>
-        <button className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200 md:mt-0">
-          Sign In
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
+        <ThemeChanger />
       </div>
     </header>
   );
