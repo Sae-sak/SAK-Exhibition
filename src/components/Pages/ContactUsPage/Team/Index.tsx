@@ -21,6 +21,8 @@ export default function Team() {
                 alt="team"
                 className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"
                 src="https://dummyimage.com/200x200"
+                width={200}
+                height={200}
               />
               <div className="flex-grow sm:pl-8">
                 <h2 className="text-lg font-medium text-gray-900 title-font">
@@ -36,9 +38,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -49,9 +51,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -62,9 +64,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -81,6 +83,8 @@ export default function Team() {
                 alt="team"
                 className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"
                 src="https://dummyimage.com/201x201"
+                width={200}
+                height={200}
               />
               <div className="flex-grow sm:pl-8">
                 <h2 className="text-lg font-medium text-gray-900 title-font">
@@ -96,9 +100,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -109,9 +113,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -122,9 +126,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -141,6 +145,8 @@ export default function Team() {
                 alt="team"
                 className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"
                 src="https://dummyimage.com/204x204"
+                width={200}
+                height={200}
               />
               <div className="flex-grow sm:pl-8">
                 <h2 className="text-lg font-medium text-gray-900 title-font">
@@ -156,9 +162,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -169,9 +175,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -182,9 +188,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -201,6 +207,8 @@ export default function Team() {
                 alt="team"
                 className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"
                 src="https://dummyimage.com/206x206"
+                width={200}
+                height={200}
               />
               <div className="flex-grow sm:pl-8">
                 <h2 className="text-lg font-medium text-gray-900 title-font">
@@ -216,9 +224,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -229,9 +237,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -242,9 +250,9 @@ export default function Team() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
