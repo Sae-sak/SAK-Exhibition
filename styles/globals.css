@@ -34,3 +34,16 @@ a {
 p {
   @apply text-slate-500 dark:text-slate-400;
 }
+
+.col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
