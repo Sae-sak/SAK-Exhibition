@@ -1,9 +1,10 @@
-import MainLayout from "@components/Layouts/MainLayout";
+import Cover from "@components/Layouts/Cover/Cover";
+import HomeLayout from "@components/Layouts/HomeLayout";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <MainLayout>
+    <HomeLayout>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col w-full mb-20 text-center">
@@ -158,6 +159,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </HomeLayout>
   );
 }
