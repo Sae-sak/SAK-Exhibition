@@ -6,9 +6,7 @@ import {IProject} from "@constants/types/exhibition";
 export default function Exhibition({projects}: {projects: IProject[]}) {
   return (
     <MainLayout>
-      <div>
-        <ExhibitionPage projects={projects} />
-      </div>
+      <ExhibitionPage projects={projects} />
     </MainLayout>
   );
 }

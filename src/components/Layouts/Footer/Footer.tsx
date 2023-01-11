@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-100">
+      <div className="bg-gray-200">
         <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
           <p className="text-sm text-center text-gray-500 sm:text-left">
             © 2022 SAK —{" "}
