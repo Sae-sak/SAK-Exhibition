@@ -1,7 +1,11 @@
+import MainHero from "./Hero/MainHero";
+
 export default function HomePage() {
   return (
     <>
-      <div></div>
+      <div>
+        <MainHero />
+      </div>
     </>
   );
 }
