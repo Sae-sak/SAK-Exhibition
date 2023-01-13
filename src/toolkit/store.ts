@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 
-import themeReducer from "@features/theme/themeSlice";
+import filterReducer from "@features/filter/filterSlice";
 import alertReducer from "@features/alert/alertSlice";
 
 export const store = configureStore({
   reducer: {
-    theme: themeReducer,
+    filter: filterReducer,
     alert: alertReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),

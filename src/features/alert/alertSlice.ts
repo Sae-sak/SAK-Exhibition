@@ -1,3 +1,4 @@
+import {IAlert, IAlertState} from "@constants/types/alert";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 //--------------------------------------------------------------------------------
@@ -5,17 +6,6 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 // alertType - 알림의 종류, 제목, 아이콘, 색깔을 설정
 // content - 알림의 내용을 설정
 //--------------------------------------------------------------------------------
-
-interface IAlert {
-  alertType: string;
-  content: string;
-}
-
-export interface IAlertState {
-  isAlert: boolean;
-  alertType: string;
-  content: string;
-}
 
 const initialState: IAlertState = {
   isAlert: false,
