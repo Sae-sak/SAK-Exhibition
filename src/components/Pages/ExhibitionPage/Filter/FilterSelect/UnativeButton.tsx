@@ -1,3 +1,7 @@
 export default function UnactiveButton({setIsActive, name}) {
-  return <div onClick={() => setIsActive(name)}>unactive</div>;
+  return (
+    <div className="text-white" onClick={() => setIsActive(name)}>
+      unactive
+    </div>
+  );
 }

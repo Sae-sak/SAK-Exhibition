@@ -3,7 +3,7 @@ import UnactiveButton from "./UnativeButton";
 
 export default function FilterSelect({isActive, setIsActive, names}) {
   return (
-    <div className="fixed z-10 gap-10 p-4 bg-red-300 left-10 col-end">
+    <div className="fixed z-10 w-56 gap-10 p-4 left-10 col-end">
       {names.map((name) =>
         isActive === "" || isActive === name ? (
           <FilterButton key={name} setIsActive={setIsActive} name={name} />
