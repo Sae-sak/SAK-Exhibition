@@ -1,5 +1,5 @@
 const APP = {
-  NAME: "ky-exhibition",
+  NAME: "SAK-EXHIBITION",
 };
 
 export default APP;
