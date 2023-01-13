@@ -41,9 +41,33 @@ p {
   justify-content: center;
   align-items: center;
 }
+.col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
 
 .row-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.row-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.row-center {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }

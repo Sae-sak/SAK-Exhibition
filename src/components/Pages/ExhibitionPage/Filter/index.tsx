@@ -1,26 +1,36 @@
-import {useState} from "react";
-import StudentFilter from "./StudentFilter";
-import StudioFilter from "./StudioFilter";
-import TagFilter from "./TagFilter";
+import FilterList from "./FilterComponents/FilterList";
+import Overlay from "./FilterComponents/Overlay";
+import FilterSelect from "./FilterSelect";
+
+import {useAppDispatch, useAppSelector} from "@toolkit/hook";
+import {openFilter} from "@features/filter/filterSlice";
 
 export default function Filter() {
-  const [isFilter, setIsFilter] = useState(0);
+  const dispatch = useAppDispatch();
+  const isFilter = useAppSelector((state) => state.filter.isFilter);
 
   return (
     <>
-      <div className="gap-10 col-center">
-        {isFilter === 1 ? <StudentFilter setIsFilter={setIsFilter} /> : null}
-        {isFilter === 2 ? <StudioFilter setIsFilter={setIsFilter} /> : null}
-        {isFilter === 3 ? <TagFilter setIsFilter={setIsFilter} /> : null}
-        <div>
-          <h1 className="text-3xl font-bold">Filter 기능</h1>
-        </div>
-        <div className="gap-10 row-center">
-          <button onClick={() => setIsFilter(1)}>Student ?</button>
-          <button onClick={() => setIsFilter(2)}>Studio ?</button>
-          <button onClick={() => setIsFilter(3)}>Tag ?</button>
-        </div>
-      </div>
+      <button
+        onClick={() => {
+          dispatch(openFilter());
+        }}
+      >
+        <h1 className="text-3xl font-bold">----------Filter----------</h1>
+      </button>
+
+      {isFilter ? (
+        <>
+          {/* 필터 분류 선택 */}
+          <FilterSelect />
+
+          {/* 필터 선택 목록 */}
+          <FilterList />
+
+          {/* 배경 */}
+          <Overlay />
+        </>
+      ) : null}
     </>
   );
 }

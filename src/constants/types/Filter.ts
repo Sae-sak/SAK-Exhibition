@@ -1,5 +1,23 @@
-import {Dispatch, SetStateAction} from "react";
+export interface IFilterState {
+  isFilter: boolean;
+  categoryName: string;
+  filterName: string;
+}
 
-export interface IFilter {
-  setIsFilter: Dispatch<SetStateAction<Number>>;
+export const STUDENT = "Student";
+export const STUDIO = "Studio";
+export const TAG = "Tag";
+
+export const CATEGORIES = [STUDENT, STUDIO, TAG];
+
+type TStudent = "Student";
+type TStudio = "Studio";
+type TTag = "Tag";
+
+export interface ICategoryName {
+  categoryName: TStudent | TStudio | TTag;
+}
+
+export interface IFilterName {
+  filterName: string;
 }

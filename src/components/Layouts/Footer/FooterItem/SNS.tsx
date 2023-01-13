@@ -1,6 +1,6 @@
-export default function Links() {
+export default function SNS() {
   return (
-    <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+    <span className="inline-flex justify-center px-4 sm:ml-auto sm:mt-0 sm:justify-start">
       <a className="text-gray-500">
         <svg
           fill="currentColor"
