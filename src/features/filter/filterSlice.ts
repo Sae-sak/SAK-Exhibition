@@ -22,6 +22,8 @@ const filterSlice = createSlice({
     },
     closeFilter(state) {
       state.isFilter = false;
+      state.categoryName = "";
+      state.filterName = "";
     },
     selectCategory(state, action: PayloadAction<ICategoryName>) {
       state.categoryName = action.payload.categoryName;
@@ -32,7 +34,9 @@ const filterSlice = createSlice({
       state.filterName = action.payload.filterName;
     },
     disableFilter(state) {
+      state.isFilter = false;
       state.filterName = "";
+      state.categoryName = "";
     },
   },
 });
