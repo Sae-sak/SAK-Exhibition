@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {useState} from "react";
-import exihibition_poster from "public/images/cover/exhibition_poster.jpg";
+import shape from "public/images/cover/shape.jpg";
 
 export default function Cover() {
   const [active, setActive] = useState(true);
@@ -10,8 +10,6 @@ export default function Cover() {
       ? (window.document.body.style.overflow = "hidden")
       : (window.document.body.style.overflow = "auto");
   }
-
-  const coverImg = `/images/cover/exhibition_poster.jpg`;
 
   return active ? (
     <div className="absolute z-50 w-screen h-screen gap-10 bg-blue-100 col-center">
@@ -28,7 +26,7 @@ export default function Cover() {
           <div className="flex items-center justify-center w-screen h-screen gap-10 p-10">
             <div className="w-1/2 h-full">
               <div className="flex items-center justify-center w-full h-full overflow-hidden">
-                <Image src={exihibition_poster} alt={"exhibition_poster"} />
+                <Image src={shape} alt={"shape"} />
               </div>
             </div>
             <div className="w-1/2 h-full">
