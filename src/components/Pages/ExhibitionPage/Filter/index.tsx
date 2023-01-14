@@ -16,7 +16,7 @@ export default function Filter() {
           dispatch(openFilter());
         }}
       >
-        <h1 className="text-3xl font-bold">----------Filter----------</h1>
+        <h1 className="text-3xl font-bold">- Filter -</h1>
       </button>
 
       {isFilter ? (

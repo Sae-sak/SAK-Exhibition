@@ -32,11 +32,11 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
       </div>
 
       <div>
-        <h1>{title}</h1>
+        <span>{title}</span>
 
         <div>
           <p>Studio: {studio}</p>
-          <p>{name}</p>
+          <p>name: {name}</p>
           <span>Tag: {tags}</span>
         </div>
       </div>

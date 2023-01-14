@@ -13,12 +13,16 @@ export default function Quote() {
     const randint = rand(1, 23);
     setArchitect(quotes[randint].architect);
     setQuote(quotes[randint].quote);
-  }, [architect, quote]);
+  }, []);
 
   return (
     <div className="col-center">
-      <div>{quote}</div>
-      <div>- {architect} -</div>
+      <div>
+        <span className="font-caption">{quote}</span>
+      </div>
+      <div>
+        <span className="font-caption"> - {architect} -</span>
+      </div>
     </div>
   );
 }
