@@ -1,3 +1,5 @@
+import GoToEx from "./CTA/GoToEx";
+
 export default function AboutPage() {
   return (
     <div className="gap-6 col-center">
@@ -31,7 +33,7 @@ export default function AboutPage() {
         </div>
         <p>여러분의 따뜻한 응원과 기대 부탁드립니다. 감사합니다.</p>
       </div>
-      <button>Go to SAK 2022 Exhibition</button>
+      <GoToEx />
       <button>View more</button>
       <div className="gap-4 bg-gray-200 col-center">
         <div className="col-center [&>p]:text-center">

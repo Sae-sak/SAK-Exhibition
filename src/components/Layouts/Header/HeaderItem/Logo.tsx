@@ -6,10 +6,12 @@ export default function Logo() {
   return (
     <Link
       href={"/"}
-      className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0"
+      className="flex items-end font-medium text-gray-900 title-font md:mb-0"
     >
-      <Image src={logo} alt="Home" width={32} height={32} />
-      <span className="ml-3 text-xl">SAK Exhibtion</span>
+      <div>
+        <Image src={logo} alt="Home" width={32} height={32} />
+      </div>
+      <h1 className="ml-3 text-2xl leading-4">SAK Exhibtion</h1>
     </Link>
   );
 }

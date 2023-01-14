@@ -13,28 +13,32 @@ export default function FilterList() {
 
   return (
     <>
-      <div className="fixed z-10 flex flex-wrap w-1/2 gap-4 text-white">
-        {categoryName === STUDENT
-          ? studentNames.map((studentName) => {
-              return <FilterItem key={studentName} filterName={studentName} />;
-            })
-          : null}
+      <div className="z-10 w-1/2 text-white ">
+        <div className="flex-wrap gap-4 row-start">
+          {categoryName === STUDENT
+            ? studentNames.map((studentName) => {
+                return (
+                  <FilterItem key={studentName} filterName={studentName} />
+                );
+              })
+            : null}
 
-        {categoryName === STUDIO
-          ? studioNames.map((studioName) => {
-              return <FilterItem key={studioName} filterName={studioName} />;
-            })
-          : null}
-        {categoryName === TAG
-          ? programTags.map((programTag) => {
-              return <FilterItem key={programTag} filterName={programTag} />;
-            })
-          : null}
-        {categoryName === TAG
-          ? typeTags.map((typeTag) => {
-              return <FilterItem key={typeTag} filterName={typeTag} />;
-            })
-          : null}
+          {categoryName === STUDIO
+            ? studioNames.map((studioName) => {
+                return <FilterItem key={studioName} filterName={studioName} />;
+              })
+            : null}
+          {categoryName === TAG
+            ? programTags.map((programTag) => {
+                return <FilterItem key={programTag} filterName={programTag} />;
+              })
+            : null}
+          {categoryName === TAG
+            ? typeTags.map((typeTag) => {
+                return <FilterItem key={typeTag} filterName={typeTag} />;
+              })
+            : null}
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-export default function Links() {
+export default function KGULinks() {
   return (
     <p className="gap-4 px-4 text-sm font-medium tracking-widest text-gray-500 row-center sm:text-left">
       <a

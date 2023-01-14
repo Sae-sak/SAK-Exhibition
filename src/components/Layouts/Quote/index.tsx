@@ -13,12 +13,18 @@ export default function Quote() {
     const randint = rand(1, 23);
     setArchitect(quotes[randint].architect);
     setQuote(quotes[randint].quote);
-  }, [architect, quote]);
+  }, []);
 
   return (
-    <div className="col-center">
-      <div>{quote}</div>
-      <div>- {architect} -</div>
+    <div className="gap-2 py-8 col-center">
+      <div>
+        <span className="text-3xl font-titleKR">&quot;{quote}&quot;</span>
+      </div>
+      <div>
+        <span className="text-xl text-gray-700 font-titleKR">
+          - {architect} -
+        </span>
+      </div>
     </div>
   );
 }

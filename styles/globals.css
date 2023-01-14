@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "Amagro";
+  src: url("../public/fonts/Amagro.ttf");
+}
+
 .bg-primary {
   @apply bg-white dark:bg-slate-800;
 }
@@ -20,19 +25,23 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-slate-900 dark:text-white;
+  @apply text-slate-900 dark:text-white font-header;
+}
+
+html {
+  @apply font-body;
 }
 
 footer {
-  @apply text-gray-600 bg-gray-100 dark:text-white dark:bg-slate-600/20;
+  @apply text-gray-900 bg-gray-100 dark:text-white dark:bg-slate-600/20;
 }
 
 a {
-  @apply text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-50;
+  @apply text-slate-900 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-50;
 }
 
 p {
-  @apply text-slate-500 dark:text-slate-400;
+  @apply text-slate-900 dark:text-slate-400;
 }
 
 .col-center {
@@ -60,13 +69,13 @@ p {
   align-items: center;
 }
 
-.row-center {
+.row-start {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.row-center {
+.row-end {
   display: flex;
   justify-content: flex-end;
   align-items: center;
