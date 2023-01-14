@@ -6,7 +6,7 @@ export default function FilterItem({filterName}) {
 
   return (
     <button
-      className="cursor-pointer hover:text-red-600"
+      className="w-20 cursor-pointer hover:text-kgu_main_yellow"
       onClick={() => dispatch(enableFilter({filterName}))}
     >
       <span>{filterName}</span>

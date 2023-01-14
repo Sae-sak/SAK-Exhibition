@@ -9,6 +9,10 @@ export default function Filter() {
   const dispatch = useAppDispatch();
   const isFilter = useAppSelector((state) => state.filter.isFilter);
 
+  isFilter
+    ? (window.document.body.style.overflow = "hidden")
+    : (window.document.body.style.overflow = "auto");
+
   return (
     <>
       <button
@@ -20,16 +24,18 @@ export default function Filter() {
       </button>
 
       {isFilter ? (
-        <>
-          {/* 필터 분류 선택 */}
-          <FilterSelect />
+        <div className="relative w-screen h-screen ">
+          <div className="top-0 z-10 gap-24 row-center">
+            {/* 필터 분류 선택 */}
+            <FilterSelect />
 
-          {/* 필터 선택 목록 */}
-          <FilterList />
+            {/* 필터 선택 목록 */}
+            <FilterList />
+          </div>
 
           {/* 배경 */}
           <Overlay />
-        </>
+        </div>
       ) : null}
     </>
   );
