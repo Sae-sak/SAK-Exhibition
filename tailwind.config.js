@@ -29,10 +29,13 @@ module.exports = {
       },
       fontFamily: {
         header: ["Amagro", "serif"],
+        headerKR: ["Nanum Myeongjo", "serif"],
         title: ["PT serif", "serif"],
+        titleKR: ["Noto Serif KR", "serif"],
         subtitle: ["Lustria", "serif"],
         body: ["Barlow", "sans-serif"],
         button: ["Bebas Neue", "cursive"],
+        buttonKR: ["Do Hyeon", "sans-serif"],
         caption: ["Roboto", "sans-serif"],
       },
     },
