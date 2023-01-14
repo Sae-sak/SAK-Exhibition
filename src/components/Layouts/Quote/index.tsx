@@ -16,12 +16,14 @@ export default function Quote() {
   }, []);
 
   return (
-    <div className="col-center">
+    <div className="gap-2 py-8 col-center">
       <div>
-        <span className="font-caption">{quote}</span>
+        <span className="text-3xl font-titleKR">&quot;{quote}&quot;</span>
       </div>
       <div>
-        <span className="font-caption"> - {architect} -</span>
+        <span className="text-xl text-gray-700 font-titleKR">
+          - {architect} -
+        </span>
       </div>
     </div>
   );
