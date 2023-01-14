@@ -1,17 +1,17 @@
 ---
-title: "세운상가 학교 리모델링"
+title: "마크다운 게시물 성공하자 제발"
 date: "2022-05-03"
 year: 2022
 semester: 1
 grade: 5
-studio: "kim-ju-chul"
-namepath: "yoo-ja-yoo"
+studio: "yoo-su-young"
+namepath: "kang-ho-young"
 excerpt: >
   This is a comment intended to demonstrate
   metadata that spans multiple lines, yet
   is treated as a single value.
 student:
-name: "유자유"
+name: "강호영"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
 tag: ["공연장", "도시재생"]

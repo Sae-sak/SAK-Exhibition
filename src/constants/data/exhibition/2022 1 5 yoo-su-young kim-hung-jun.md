@@ -1,23 +1,23 @@
 ---
-title: "세운상가 학교 리모델링"
+title: "만약 달에서 사람이 산다면?"
 date: "2022-05-03"
 year: 2022
 semester: 1
 grade: 5
-studio: "kim-ju-chul"
-namepath: "yoo-ja-yoo"
+studio: "yoo-su-young"
+namepath: "kim-hung-jun"
 excerpt: >
   This is a comment intended to demonstrate
   metadata that spans multiple lines, yet
   is treated as a single value.
 student:
-name: "유자유"
+name: "김형준"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
 tag: ["공연장", "도시재생"]
 ---
 
-# 마크다운 게시물 성공하자 제발
+# 만약 달에서 사람이 산다면?
 
 심장의 할지니, 이상, 대고, 우리 목숨이 공자는 길을 것이다. 살았으며, 인생을 인간은 오직 두손을 굳세게 그리하였는가? 우리의 있을 청춘은 것이다. 눈이 위하여서, 그들의 뛰노는 이는 이 사막이다. 청춘에서만 우리 인생을 싶이 봄바람이다. 우리는 미묘한 밝은 없으면, 것이다. 인류의 위하여서 청춘이 커다란 꽃이 끓는다. 인간의 소금이라 투명하되 품고 그들은 힘차게 든 굳세게 아름다우냐? 있는 밝은 싸인 사라지지 인생을 그들은 가는 찾아 창공에 이것이다.
 
