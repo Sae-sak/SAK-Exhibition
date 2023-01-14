@@ -1,14 +1,15 @@
 import {IProject} from "@constants/types/exhibition";
 import ProjectThumbnail from "./ProjectThumbnail";
+import Image from "next/image";
 
 export default function Projects({projects}: {projects: IProject[]}) {
   return (
     <div className="bg-red-300">
-      <ul className="flex flex-col gap-4">
+      <div className="container flex flex-wrap mx-auto"></div>
+
+      <ul className="container flex flex-wrap mx-auto">
         {projects.map((project: IProject) => (
-          <li key={project.email}>
-            <ProjectThumbnail project={project} />
-          </li>
+          <ProjectThumbnail project={project} key={project.email} />
         ))}
       </ul>
     </div>
