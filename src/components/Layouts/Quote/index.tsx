@@ -17,7 +17,7 @@ export default function Quote() {
 
   return (
     <div className="gap-2 py-8 col-center">
-      <div>
+      <div className="text-center">
         <span className="text-3xl font-titleKR">&quot;{quote}&quot;</span>
       </div>
       <div>
