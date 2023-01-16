@@ -9,9 +9,11 @@ export default function Filter() {
   const dispatch = useAppDispatch();
   const isFilter = useAppSelector((state) => state.filter.isFilter);
 
-  isFilter
-    ? (window.document.body.style.overflow = "hidden")
-    : (window.document.body.style.overflow = "auto");
+  if (typeof window !== "undefined") {
+    isFilter
+      ? (window.document.body.style.overflow = "hidden")
+      : (window.document.body.style.overflow = "auto");
+  }
 
   return (
     <>
