@@ -18,12 +18,19 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
     content,
   } = projectData;
 
-  const thumbnail = `/images/exhibition/projects/${slug}/thumbnail.jpg`;
+  const thumbnailImg = `/images/exhibition/${slug.replaceAll(
+    "/",
+    " "
+  )}/thumbnail.jpg`;
 
   return (
     <article>
-      <ProjectHeader title={title} thumbnail={thumbnail} namepath={namepath} />
-      <ProjectContent content={content} />
+      <div className="container flex-wrap p-5 mx-auto">
+        <ProjectHeader title={title} thumbnailImg={thumbnailImg} />
+        <div>
+          <ProjectContent content={content} />
+        </div>
+      </div>
     </article>
   );
 }

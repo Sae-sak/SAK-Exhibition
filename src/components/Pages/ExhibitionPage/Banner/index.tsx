@@ -3,12 +3,34 @@ import {useAppDispatch, useAppSelector} from "@toolkit/hook";
 
 export default function Banner() {
   const dispatch = useAppDispatch();
-  const filterName = useAppSelector((state) => state.filter.filterName);
+  const studentFilter = useAppSelector((state) => state.filter.studentFilter);
+  const studioFilter = useAppSelector((state) => state.filter.studioFilter);
+  const tagFilter = useAppSelector((state) => state.filter.tagFilter);
 
-  return filterName !== "" ? (
+  return studentFilter !== "" ? (
     <div className="w-screen bg-red-300 col-center ">
       <div className="gap-2 row-center">
-        <span>{filterName}</span>
+        <span>{studentFilter}</span>
+        <i
+          onClick={() => dispatch(disableFilter())}
+          className="cursor-pointer top-10 right-10 ri-close-line"
+        ></i>
+      </div>
+    </div>
+  ) : studioFilter !== "" ? (
+    <div className="w-screen bg-red-300 col-center ">
+      <div className="gap-2 row-center">
+        <span>{studioFilter}</span>
+        <i
+          onClick={() => dispatch(disableFilter())}
+          className="cursor-pointer top-10 right-10 ri-close-line"
+        ></i>
+      </div>
+    </div>
+  ) : tagFilter !== "" ? (
+    <div className="w-screen bg-red-300 col-center ">
+      <div className="gap-2 row-center">
+        <span>{tagFilter}</span>
         <i
           onClick={() => dispatch(disableFilter())}
           className="cursor-pointer top-10 right-10 ri-close-line"

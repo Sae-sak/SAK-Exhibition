@@ -14,7 +14,7 @@ student:
 name: "김진범"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
-tag: ["공연장", "도시재생"]
+tags: "공연장,리모델링"
 ---
 
 # 분당 공동주거 개선 프로젝트

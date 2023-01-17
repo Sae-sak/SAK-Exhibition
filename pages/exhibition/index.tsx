@@ -1,4 +1,4 @@
-import {getAllProjects} from "@components/Base/Util/project-util";
+import {getAllProjects} from "@components/Base/Util/project-filtering";
 import MainLayout from "@components/Layouts/MainLayout";
 import ExhibitionPage from "@components/Pages/ExhibitionPage";
 import {IProject} from "@constants/types/exhibition";

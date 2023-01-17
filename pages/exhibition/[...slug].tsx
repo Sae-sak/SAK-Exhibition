@@ -1,7 +1,7 @@
 import {
   getProjectData,
   getProjectFiles,
-} from "@components/Base/Util/project-util";
+} from "@components/Base/Util/project-filtering";
 import MainLayout from "@components/Layouts/MainLayout";
 import ProjectPage from "@components/Pages/ExhibitionPage/Projects/ProjectPage";
 import {IProject} from "@constants/types/exhibition";

@@ -3,7 +3,7 @@ import fs from "fs";
 
 import matter from "gray-matter";
 import _ from "lodash";
-import {IProject} from "@constants/types/exhibition";
+import {IProject, IFilter} from "@constants/types/exhibition";
 
 const projectDirectory = path.join(
   process.cwd(),
@@ -32,6 +32,7 @@ export function getProjectData(filename: string) {
     email,
     motto,
   } = data;
+  const tags = data.tags.split(","); // tags 배열 변환
 
   const projectData: IProject = {
     slug,
@@ -47,7 +48,7 @@ export function getProjectData(filename: string) {
     name,
     email,
     motto,
-    tags: [],
+    tags,
 
     content,
   };
@@ -70,24 +71,32 @@ export function getAllProjects() {
 }
 
 export function getFilteredProjects(
-  title = "",
-  year = "",
-  semester = "",
-  grade = "",
-  studio = "",
-  name = "",
-  tag = ""
+  allProjects: IProject[],
+  {
+    title = "",
+    year = "",
+    semester = "",
+    grade = "",
+    studio = "",
+    name = "",
+    tag = "",
+  }: IFilter
 ) {
-  const allProjects = getAllProjects();
   let filterObject = {};
 
-  if (title !== "") filterObject[title] = title;
-  if (year !== "") filterObject[year] = year;
-  if (semester !== "") filterObject[semester] = semester;
-  if (grade !== "") filterObject[grade] = grade;
-  if (studio !== "") filterObject[studio] = studio;
-  if (name !== "") filterObject[name] = name;
-  if (tag !== "") filterObject[tag] = tag;
+  // 추후 필터 기능
+  if (title !== "") filterObject["title"] = title;
+  if (year !== "") filterObject["year"] = year;
+  if (semester !== "") filterObject["semester"] = semester;
+  if (grade !== "") filterObject["grade"] = grade;
 
-  return _.filter(allProjects, filterObject);
+  // 현재 필터 기능 (name, studio, tag[])
+  if (name !== "") filterObject["name"] = name;
+  if (studio !== "") filterObject["studio"] = studio;
+
+  if (tag === "") {
+    return _.filter(allProjects, filterObject);
+  } else {
+    return _.filter(allProjects, (i) => i.tags.includes(tag));
+  }
 }
