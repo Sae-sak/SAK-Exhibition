@@ -8,7 +8,9 @@ import {
 const initialState: IFilterState = {
   isFilter: false,
   categoryName: "",
-  filterName: "",
+  studentFilter: "",
+  studioFilter: "",
+  tagFilter: "",
 };
 
 const filterSlice = createSlice({
@@ -18,24 +20,42 @@ const filterSlice = createSlice({
     openFilter(state) {
       state.isFilter = true;
       state.categoryName = "";
-      state.filterName = "";
+      state.studentFilter = "";
+      state.studioFilter = "";
+      state.tagFilter = "";
     },
     closeFilter(state) {
       state.isFilter = false;
       state.categoryName = "";
-      state.filterName = "";
+      state.studentFilter = "";
+      state.studioFilter = "";
+      state.tagFilter = "";
     },
     selectCategory(state, action: PayloadAction<ICategoryName>) {
       state.categoryName = action.payload.categoryName;
     },
-    enableFilter(state, action: PayloadAction<IFilterName>) {
+
+    enableStudentFilter(state, action: PayloadAction<IFilterName>) {
       state.isFilter = false;
       state.categoryName = "";
-      state.filterName = action.payload.filterName;
+      state.studentFilter = action.payload.filterName;
     },
+    enableStudioFilter(state, action: PayloadAction<IFilterName>) {
+      state.isFilter = false;
+      state.categoryName = "";
+      state.studioFilter = action.payload.filterName;
+    },
+    enableTagFilter(state, action: PayloadAction<IFilterName>) {
+      state.isFilter = false;
+      state.categoryName = "";
+      state.tagFilter = action.payload.filterName;
+    },
+
     disableFilter(state) {
       state.isFilter = false;
-      state.filterName = "";
+      state.studentFilter = "";
+      state.studioFilter = "";
+      state.tagFilter = "";
       state.categoryName = "";
     },
   },
@@ -45,7 +65,9 @@ export const {
   openFilter,
   closeFilter,
   selectCategory,
-  enableFilter,
+  enableStudentFilter,
+  enableStudioFilter,
+  enableTagFilter,
   disableFilter,
 } = filterSlice.actions;
 export default filterSlice.reducer;

@@ -1,7 +1,9 @@
 export interface IFilterState {
   isFilter: boolean;
   categoryName: string;
-  filterName: string;
+  studentFilter: string;
+  studioFilter: string;
+  tagFilter: string;
 }
 
 export const STUDENT = "Student";
