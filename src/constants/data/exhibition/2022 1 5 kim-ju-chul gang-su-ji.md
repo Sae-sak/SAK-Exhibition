@@ -4,7 +4,7 @@ date: "2022-05-03"
 year: 2022
 semester: 1
 grade: 5
-studio: "kim-ju-chul"
+studio: "4 Studio"
 namepath: "gang-su-ji"
 excerpt: >
   This is a comment intended to demonstrate
@@ -14,7 +14,7 @@ student:
 name: "강수진"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
-tag: ["공연장", "도시재생"]
+tags: "공연장,신축"
 ---
 
 # 평화시대 한강의 재정의

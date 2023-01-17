@@ -14,7 +14,7 @@ student:
 name: "유자유"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
-tag: ["공연장", "도시재생"]
+tags: "공연장,도시재생"
 ---
 
 # 마크다운 게시물 성공하자 제발

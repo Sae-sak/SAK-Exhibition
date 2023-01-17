@@ -13,7 +13,7 @@ excerpt: >
 name: "김 유"
 email: "yoojacha@naver.com"
 motto: "돈 많이 벌어요~"
-tag: ["전시관", "메모리얼"]
+tags: "공연장,리모델링"
 ---
 
 # 청주 아카이브-기록 전시관

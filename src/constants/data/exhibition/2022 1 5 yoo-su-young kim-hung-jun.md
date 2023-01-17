@@ -14,7 +14,7 @@ student:
 name: "김형준"
 email: "sak@kyonggi.com"
 motto: "르꼬르뷔지에를 따라서..."
-tag: ["공연장", "도시재생"]
+tags: "공연장,리모델링"
 ---
 
 # 만약 달에서 사람이 산다면?
