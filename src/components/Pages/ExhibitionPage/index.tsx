@@ -6,7 +6,7 @@ import {IProject} from "@constants/types/exhibition";
 
 import {useAppSelector} from "@toolkit/hook";
 import {useEffect, useState} from "react";
-import {getFilteredProjects} from "@components/Base/Util/project-util";
+import {getFilteredProjects} from "@components/Base/Util/project-filtering";
 
 export default function ExhibitionPage({projects}: {projects: IProject[]}) {
   const name = useAppSelector((state) => state.filter.studentFilter);
