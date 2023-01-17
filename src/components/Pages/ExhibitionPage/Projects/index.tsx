@@ -1,6 +1,5 @@
 import {IProject} from "@constants/types/exhibition";
 import ProjectThumbnail from "./ProjectThumbnail";
-import Image from "next/image";
 
 export default function Projects({projects}: {projects: IProject[]}) {
   return (
@@ -9,7 +8,7 @@ export default function Projects({projects}: {projects: IProject[]}) {
 
       <ul className="container flex flex-wrap mx-auto">
         {projects.map((project: IProject) => (
-          <ProjectThumbnail project={project} key={project.email} />
+          <ProjectThumbnail project={project} key={project.slug} />
         ))}
       </ul>
     </div>

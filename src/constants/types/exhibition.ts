@@ -1,10 +1,23 @@
 export type ITag =
-  | "리노베이션"
+  | "문화" // programTags
+  | "복합"
+  | "주거"
+  | "숙박"
+  | "상업"
+  | "노유자"
+  | "오피스"
+  | "교육"
+  | "의료"
+  | "공원"
+  | "추모"
+  | "교통"
   | "공모전"
-  | "공공공간"
-  | "공연장"
-  | "도시재생"
-  | "마을재생"
+  | "기타"
+  | "신축" // typeTags
+  | "증축"
+  | "리모델링"
+  | "마스터플랜"
+  | "파빌리온"
   | "";
 
 export interface IProject {
@@ -22,4 +35,14 @@ export interface IProject {
   motto: string;
   tags: ITag[];
   content: string;
+}
+
+export interface IFilter {
+  title: string;
+  year: string;
+  semester: string;
+  grade: string;
+  studio: string;
+  name: string;
+  tag: ITag;
 }
