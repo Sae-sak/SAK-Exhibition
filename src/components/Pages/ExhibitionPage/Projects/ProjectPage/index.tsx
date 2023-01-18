@@ -18,7 +18,7 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
     content,
   } = projectData;
 
-  const thumbnailImg = `/images/exhibition/${slug.replaceAll(
+  const thumbnailImg = `/posts-images/${slug.replaceAll(
     "/",
     "_"
   )}/thumbnail.jpg`;

@@ -1,8 +1,4 @@
 import Image from "next/image";
-import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
-import {atomDark} from "react-syntax-highlighter/dist/cjs/styles/prism";
-
-const imagePath = `/images/exhibition/`;
 
 const MarkdownComponents = {
   p(paragraph) {

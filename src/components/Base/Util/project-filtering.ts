@@ -5,11 +5,10 @@ import matter from "gray-matter";
 import _ from "lodash";
 import {IProject, IFilter} from "@constants/types/exhibition";
 
-const projectDirectory = path.join(
-  process.cwd(),
-  "src/constants/data/exhibition"
-);
+// markdown files 경로 설정 (해당 폴더 안에 파일만 있어야 함)
+const projectDirectory = path.join(process.cwd(), "public/posts");
 
+// 폴더 내 전체 파일 조회
 export function getProjectFiles() {
   return fs.readdirSync(projectDirectory);
 }

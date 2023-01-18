@@ -18,8 +18,9 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
     content,
   } = project;
   const imagePath = `${slug.replaceAll("/", "_")}`;
-  const thumbnailImg = `/images/exhibition/${imagePath}/thumbnail.jpg`;
-  const profileImg = `/images/exhibition/${imagePath}/profile.jpg`;
+  const thumbnailImg = `/posts-images/${imagePath}/thumbnail.jpg`;
+  const profileImg = `/posts-images/${imagePath}/profile.jpg`;
+
   return (
     <li className="w-full p-2 mb-12 rounded lg:w-1/3 md:w-1/2">
       <Link href={`/exhibition/${slug}/`} as={`/exhibition/${slug}/`}>
