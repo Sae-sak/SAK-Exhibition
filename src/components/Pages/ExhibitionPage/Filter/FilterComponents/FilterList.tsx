@@ -3,7 +3,7 @@ import {
   studioNames,
   programTags,
   typeTags,
-} from "@constants/data/filter";
+} from "@constants/filter";
 import {STUDENT, STUDIO, TAG} from "@constants/types/Filter";
 import {useAppSelector} from "@toolkit/hook";
 import FilterItem from "./FilterItem";
