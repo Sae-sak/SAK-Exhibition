@@ -17,10 +17,9 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
     motto,
     content,
   } = project;
-  const imagePath = `${slug.replaceAll("/", " ")}`;
+  const imagePath = `${slug.replaceAll("/", "_")}`;
   const thumbnailImg = `/images/exhibition/${imagePath}/thumbnail.jpg`;
   const profileImg = `/images/exhibition/${imagePath}/profile.jpg`;
-
   return (
     <li className="w-full p-2 mb-12 rounded lg:w-1/3 md:w-1/2">
       <Link href={`/exhibition/${slug}/`} as={`/exhibition/${slug}/`}>
@@ -31,6 +30,7 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
           height={900}
           object-fit="cover"
           className="object-cover h-full"
+          priority
         />
         <div className="h-14">
           <span className="text-sm text-gray-500 font-titleKR">{name}</span>
