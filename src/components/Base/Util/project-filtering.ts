@@ -18,7 +18,7 @@ export function getProjectData(filename: string) {
   const filePath = path.join(projectDirectory, filename);
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const {data, content} = matter(fileContent);
-  const slug = filename.replace(/\.md$/, "").replaceAll(" ", "/");
+  const slug = filename.replace(/\.md$/, "").replaceAll("_", "/");
   const {
     title,
     date,

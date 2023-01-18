@@ -20,7 +20,7 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
 
   const thumbnailImg = `/images/exhibition/${slug.replaceAll(
     "/",
-    " "
+    "_"
   )}/thumbnail.jpg`;
 
   return (

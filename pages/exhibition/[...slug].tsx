@@ -18,7 +18,7 @@ export async function getStaticProps(context) {
   const {params} = context;
   const {slug} = params;
 
-  const filename = slug.join(" ") + ".md";
+  const filename = slug.join("_") + ".md";
   const projectData = getProjectData(filename);
 
   return {
@@ -31,7 +31,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   const filenames = getProjectFiles();
   const slugs = filenames.map((filename) =>
-    filename.replace(/\.md$/, "").split(" ")
+    filename.replace(/\.md$/, "").split("_")
   );
 
   return {
