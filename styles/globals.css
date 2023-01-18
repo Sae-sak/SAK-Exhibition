@@ -105,6 +105,11 @@ p {
   @apply text-slate-900 dark:text-slate-400;
 }
 
+input:focus {
+  outline: none;
+  border-bottom: 0.12rem solid gray;
+}
+
 /* ------------------------------------------------------------------ */
 
 .col-center {
