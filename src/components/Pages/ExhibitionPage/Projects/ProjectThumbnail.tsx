@@ -1,6 +1,7 @@
-import {IProject} from "@constants/types/exhibition";
 import Image from "next/image";
 import Link from "next/link";
+import {motion} from "framer-motion";
+import {IProject} from "@constants/types/exhibition";
 
 export default function ProjectThumbnail({project}: {project: IProject}) {
   const {
@@ -22,7 +23,12 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
   const profileImg = `/posts-images/${imagePath}/profile.jpg`;
 
   return (
-    <li className="w-full p-2 mb-12 rounded lg:w-1/3 md:w-1/2">
+    <motion.div
+      className="w-full p-2 mb-12 rounded lg:w-1/3 md:w-1/2"
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      viewport={{once: true}}
+    >
       <Link href={`/exhibition/${slug}/`} as={`/exhibition/${slug}/`}>
         <Image
           src={thumbnailImg}
@@ -38,6 +44,6 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
           <p className="text-gray-700 font-titleKR">{title}</p>
         </div>
       </Link>
-    </li>
+    </motion.div>
   );
 }
