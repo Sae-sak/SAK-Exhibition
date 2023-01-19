@@ -90,6 +90,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <div className="" id="alert"></div>
       </body>
     </Html>
   );
