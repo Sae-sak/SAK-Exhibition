@@ -28,8 +28,13 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       viewport={{once: true}}
+      transition={{duration: 0.6}}
     >
-      <Link href={`/exhibition/${slug}/`} as={`/exhibition/${slug}/`}>
+      <Link
+        rel="preload"
+        href={`/exhibition/${slug}/`}
+        as={`/exhibition/${slug}/`}
+      >
         <Image
           src={thumbnailImg}
           alt={title}
@@ -37,7 +42,7 @@ export default function ProjectThumbnail({project}: {project: IProject}) {
           height={900}
           object-fit="cover"
           className="object-cover h-full"
-          priority
+          loading="lazy"
         />
         <div className="h-14">
           <span className="text-sm text-gray-500 font-titleKR">{name}</span>
