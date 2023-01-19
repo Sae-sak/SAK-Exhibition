@@ -4,7 +4,7 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import {scrollTop, scrollBotton} from "../Variants/scrollButton";
+import {scrollTop, scrollBotton} from "../Util/Variants/scrollButton";
 
 export default function ScrollButton() {
   const scrollTopAni = useAnimation();
@@ -21,8 +21,10 @@ export default function ScrollButton() {
       scrollBottomAni.start("middle");
     } else if (position !== 0) {
       scrollBottomAni.start("bottom");
+      scrollTopAni.start("middle");
     } else {
       scrollTopAni.start("top");
+      scrollBottomAni.start("middle");
     }
   });
 
@@ -34,7 +36,7 @@ export default function ScrollButton() {
   };
 
   return (
-    <div className="fixed gap-6 bottom-4 right-4 row-center font-button">
+    <div className="fixed z-20 gap-6 bottom-4 right-4 row-center font-button">
       <motion.div variants={scrollTop} animate={scrollTopAni}>
         <button
           onClick={() => scrollToTop()}

@@ -9,7 +9,7 @@ import {IProject} from "@constants/types/exhibition";
 export default function Project({projectData}: {projectData: IProject}) {
   return (
     <MainLayout>
-      <ProjectPage projectData={projectData} />;
+      <ProjectPage projectData={projectData} />
     </MainLayout>
   );
 }

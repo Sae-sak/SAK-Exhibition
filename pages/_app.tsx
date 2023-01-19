@@ -4,7 +4,6 @@ import Head from "next/head";
 import {ThemeProvider} from "next-themes";
 import {Provider} from "react-redux";
 import {store} from "@toolkit/store";
-import ScrollButton from "@components/Base/ScrollButton";
 
 export default function App({Component, pageProps}: AppProps) {
   return (
@@ -22,7 +21,6 @@ export default function App({Component, pageProps}: AppProps) {
       <ThemeProvider attribute="class">
         <Provider store={store}>
           <Component {...pageProps} />
-          <ScrollButton />
         </Provider>
       </ThemeProvider>
     </>
