@@ -1,8 +1,10 @@
 import ProjectHeader from "./ProjectHeader";
 import ProjectContent from "./ProjectContent";
+import AnchorUrl from "./AnchorUrl";
+
 import {IProject} from "@constants/types/exhibition";
 import ProgressBar from "@components/Base/ProgressBar/ProgressBar";
-import AnchorUrl from "./AnchorUrl";
+import ModalImage from "./ModalImage";
 
 export default function ProjectPage({projectData}: {projectData: IProject}) {
   const {
@@ -55,6 +57,8 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
           </div>
         </div>
       </article>
+
+      <ModalImage />
     </>
   );
 }

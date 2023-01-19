@@ -2,11 +2,13 @@ import {configureStore} from "@reduxjs/toolkit";
 
 import filterReducer from "@features/filter/filterSlice";
 import alertReducer from "@features/alert/alertSlice";
+import photoReducer from "@features/photo/photoSlice";
 
 export const store = configureStore({
   reducer: {
     filter: filterReducer,
     alert: alertReducer,
+    photo: photoReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

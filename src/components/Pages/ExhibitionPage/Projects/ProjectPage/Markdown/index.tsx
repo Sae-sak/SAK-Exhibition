@@ -1,44 +1,38 @@
-import {motion} from "framer-motion";
 import Image from "next/image";
+import ImageWrapper from "./ImageWrapper";
+import ParagraphWrapper from "./paragraphWrapper";
 
 const MarkdownComponents = {
   p(paragraph) {
     const {node} = paragraph;
 
     if (node.children[0].tagName === "img") {
-      const image = node.children[0];
+      const image = node.children[0].properties;
       return (
-        <motion.div
-          className="col-center"
-          initial={{opacity: 0}}
-          whileInView={{opacity: 1}}
-          viewport={{once: true}}
-        >
+        <ImageWrapper src={image.src}>
           <Image
             className="w-full"
-            src={`${image.properties.src}`}
-            alt={image.properties.src}
+            src={`${image.src}`}
+            alt={image.src}
             width={600}
             height={300}
-            priority
+            loading="lazy"
           />
-        </motion.div>
+        </ImageWrapper>
       );
     }
     return (
-      <motion.div
-        className="w-full"
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        viewport={{once: true}}
-      >
+      <ParagraphWrapper key={paragraph.choildren}>
         <p>{paragraph.children}</p>
-      </motion.div>
+      </ParagraphWrapper>
     );
   },
   h1(header) {
     return (
-      <h1 id={header.node.children[0].value.replaceAll(" ", "-")}>
+      <h1
+        className="mb-2 text-2xl font-bold font-titleKR"
+        id={header.node.children[0].value.replaceAll(" ", "-")}
+      >
         {header.node.children[0].value}
       </h1>
     );
