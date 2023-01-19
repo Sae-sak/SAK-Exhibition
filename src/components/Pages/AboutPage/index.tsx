@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div className="bg-gray-400 col-center h-72 w-80">SAK 로고 이미지</div>
       </div>
       <div>SAK: School of Architecture in Kynonggi Univ.</div>
-      <div className="bg-gray-200 gap-4 col-center [&>p]:text-center ">
+      <div className=" gap-4 col-center [&>p]:text-center ">
         <p>안녕하세요, 2022 경기대학교 건축학과 학생회 SAK 입니다.</p>
         <p>SAK은 School of Architecture in Kynonggi Univ.의 약자입니다.</p>
         <p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
       </div>
       <GoToEx />
       <button>View more</button>
-      <div className="gap-4 bg-gray-200 col-center">
+      <div className="gap-4 col-center">
         <div className="col-center [&>p]:text-center">
           <p>경기대학교 건축학과는 국제경쟁력을 갖춘 건축사 양성을 위하여</p>
           <p>2009년부터 한국 건축학교육 인증원(KAAB)의 인증실사를 통해</p>

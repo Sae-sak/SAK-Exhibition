@@ -4,7 +4,7 @@ import Hero from "./Hero";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="container px-5">
       <Hero />
       <Guide />
       <CTA />
