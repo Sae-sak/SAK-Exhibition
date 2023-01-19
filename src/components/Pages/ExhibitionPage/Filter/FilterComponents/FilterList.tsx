@@ -4,7 +4,7 @@ import {
   programTags,
   typeTags,
 } from "@constants/filter";
-import {STUDENT, STUDIO, TAG} from "@constants/types/Filter";
+import {STUDENT, STUDIO, TAG} from "@constants/types/filter";
 import {useAppSelector} from "@toolkit/hook";
 import FilterItem from "./FilterItem";
 

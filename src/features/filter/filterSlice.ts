@@ -3,7 +3,7 @@ import {
   IFilterState,
   ICategoryName,
   IFilterName,
-} from "@constants/types/Filter";
+} from "@constants/types/filter";
 
 const initialState: IFilterState = {
   isFilter: false,

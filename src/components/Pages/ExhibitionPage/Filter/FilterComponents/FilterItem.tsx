@@ -1,4 +1,4 @@
-import {STUDENT, STUDIO, TAG} from "@constants/types/Filter";
+import {STUDENT, STUDIO, TAG} from "@constants/types/filter";
 import {
   enableStudentFilter,
   enableStudioFilter,
