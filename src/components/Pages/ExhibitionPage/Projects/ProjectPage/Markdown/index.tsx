@@ -1,6 +1,7 @@
 import Image from "next/image";
+import HeaderWrapper from "./HeaderWrapper";
 import ImageWrapper from "./ImageWrapper";
-import ParagraphWrapper from "./paragraphWrapper";
+import ParagraphWrapper from "./ParagraphWrapper";
 
 const MarkdownComponents = {
   p(paragraph) {
@@ -29,12 +30,9 @@ const MarkdownComponents = {
   },
   h1(header) {
     return (
-      <h1
-        className="mb-2 text-2xl font-bold font-titleKR"
-        id={header.node.children[0].value.replaceAll(" ", "-")}
-      >
+      <HeaderWrapper value={header.node.children[0].value}>
         {header.node.children[0].value}
-      </h1>
+      </HeaderWrapper>
     );
   },
 };

@@ -1,21 +1,17 @@
-import {useEffect, useState} from "react";
 import {motion} from "framer-motion";
-
-import {randomFade} from "@components/Base/Util/Variants/randomfade";
+import {randomFadeIn} from "@components/Base/Util/Variants/randomFadeIn";
+import randomInteger from "@components/Base/Util/random-integer";
 
 export default function ParagraphWrapper({children}) {
-  const [randomAni, setrAndomAni] = useState(null);
-
-  useEffect(() => {
-    setrAndomAni(randomFade[Math.floor(Math.random() * 10)]);
-  }, []);
   return (
     <motion.div
-      className="w-full"
-      initial={randomAni}
-      whileInView={{translateX: 0, translateY: 0, opacity: 1}}
+      variants={randomFadeIn}
+      initial="off"
+      whileInView="on"
+      transition={{duration: 0.7}}
       viewport={{once: true}}
-      transition={{duration: 3}}
+      custom={randomInteger(-20, 20)}
+      className="pb-4"
     >
       {children}
     </motion.div>
