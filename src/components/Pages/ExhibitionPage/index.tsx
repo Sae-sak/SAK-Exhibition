@@ -7,6 +7,7 @@ import {IProject} from "@constants/types/exhibition";
 import {useAppSelector} from "@toolkit/hook";
 import {useEffect, useState} from "react";
 import {getFilteredProjects} from "@components/Base/Util/project-filtering";
+import FilterButton from "./Filter/FilterButton";
 
 export default function ExhibitionPage({projects}: {projects: IProject[]}) {
   const name = useAppSelector((state) => state.filter.studentFilter);
@@ -21,8 +22,16 @@ export default function ExhibitionPage({projects}: {projects: IProject[]}) {
 
   return (
     <>
+      {/* filter screen */}
       <Filter />
+
+      {/* filter screen 활성화 버튼 */}
+      <FilterButton />
+
+      {/* filter selection results */}
       <Banner />
+
+      {/* filtered project list */}
       <Projects projects={filteredProjects} />
     </>
   );
