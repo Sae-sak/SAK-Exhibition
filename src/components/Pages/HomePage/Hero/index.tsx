@@ -3,7 +3,7 @@ import exhibition_poster from "public/images/home/exhibition_poster.jpg";
 
 export default function Hero() {
   return (
-    <div className="p-4 bg-red-100 col-center">
+    <div className="py-4 col-center">
       <div className="gap-6 col-center">
         <div className="gap-2 text-center col-center">
           <h1 className="text-5xl">NEW NORMAL VILLAGE</h1>

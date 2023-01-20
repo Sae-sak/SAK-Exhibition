@@ -1,4 +1,4 @@
-import {CATEGORIES} from "@constants/types/Filter";
+import {CATEGORIES} from "@constants/types/filter";
 import {useAppSelector} from "@toolkit/hook";
 import FilterButton from "./FilterButton";
 import UnactiveButton from "./UnativeButton";

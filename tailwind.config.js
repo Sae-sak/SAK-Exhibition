@@ -26,6 +26,11 @@ module.exports = {
         sak_point_green: "#A1E0C3",
         sak_point_jungle: "#007D88",
         sak_point_blue: "#95BADC",
+
+        alert_success: "#219653",
+        alert_warning: "#F2C94C",
+        alert_danger: "#EB5757",
+        alert_info: "#2F80ED",
       },
       fontFamily: {
         header: ["Amagro", "serif"],

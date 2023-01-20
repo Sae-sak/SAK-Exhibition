@@ -1,9 +1,11 @@
+import {TagType} from "./exhibition";
+
 export interface IFilterState {
   isFilter: boolean;
   categoryName: string;
   studentFilter: string;
   studioFilter: string;
-  tagFilter: string;
+  tagFilter: TagType;
 }
 
 export const STUDENT = "Student";
@@ -21,5 +23,5 @@ export interface ICategoryName {
 }
 
 export interface IFilterName {
-  filterName: string;
+  filterName: TagType;
 }

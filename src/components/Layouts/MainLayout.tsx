@@ -1,6 +1,7 @@
 import Header from "@components/Layouts/Header";
 import Footer from "@components/Layouts/Footer";
-import Quote from "@components/Layouts/Quote";
+import Quote from "@components/Base/Quote";
+import ScrollButton from "@components/Base/ScrollButton";
 
 export default function MainLayout({children}) {
   return (
@@ -9,6 +10,7 @@ export default function MainLayout({children}) {
       <div className="flex flex-col items-center justify-center">
         {children}
       </div>
+      <ScrollButton />
       <Quote />
       <Footer />
     </>
