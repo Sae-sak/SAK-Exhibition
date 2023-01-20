@@ -16,7 +16,7 @@ export default function Filter() {
   }
 
   return (
-    <>
+    <div className="z-90">
       <button
         onClick={() => {
           dispatch(openFilter());
@@ -27,7 +27,7 @@ export default function Filter() {
 
       {isFilter ? (
         <div className="relative w-screen h-screen ">
-          <div className="top-0 z-10 gap-24 row-center">
+          <div className="top-0 gap-24 row-center">
             {/* 필터 분류 선택 */}
             <FilterSelect />
 
@@ -39,6 +39,6 @@ export default function Filter() {
           <Overlay />
         </div>
       ) : null}
-    </>
+    </div>
   );
 }
