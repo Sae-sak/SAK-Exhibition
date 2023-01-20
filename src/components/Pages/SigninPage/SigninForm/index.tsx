@@ -17,7 +17,10 @@ export default function SigninForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onValid)} className="gap-6 col-start">
+    <form
+      onSubmit={handleSubmit(onValid)}
+      className="gap-6 p-4 border col-start"
+    >
       {/* 이메일 */}
       <div className="gap-1 col-start">
         <div className="row-center">
@@ -54,6 +57,7 @@ export default function SigninForm() {
             },
           })}
           placeholder="Password"
+          className="border-b"
           name="password"
           type="password"
           autoComplete="" // 추후 설정

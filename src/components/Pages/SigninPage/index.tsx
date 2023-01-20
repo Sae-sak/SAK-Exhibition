@@ -13,7 +13,7 @@ export default function SigninPage() {
       </div>
     </div>
   ) : (
-    <div className="w-screen h-screen col-center">
+    <div className="p-4">
       {/* 이메일 비밀번호 로그인 */}
       <SigninForm />
     </div>
