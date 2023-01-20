@@ -44,7 +44,7 @@ const Alert = () => {
       default:
         setAlertIcon(<i className="text-xl">?</i>);
     }
-  }, []);
+  }, [alertType]);
 
   return (
     <>
