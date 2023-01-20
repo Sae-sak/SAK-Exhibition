@@ -5,6 +5,7 @@ import AnchorUrl from "./AnchorUrl";
 import {IProject} from "@constants/types/exhibition";
 import ProgressBar from "@components/Base/ProgressBar/ProgressBar";
 import ModalImage from "./ModalImage";
+import StickyUrl from "./StickyUrl";
 
 export default function ProjectPage({projectData}: {projectData: IProject}) {
   const {
@@ -33,17 +34,11 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
       <article className="container p-5 ">
         <ProjectHeader title={title} thumbnailImg={thumbnailImg} />
 
-        {/* body */}
+        {/* body 세등분 */}
         <div className="flex pt-24 flex-nowrap">
+          {/* sticky URLs */}
           <div className="sticky w-1/6 h-5 top-52">
-            <div className="bg-red-200 ">
-              <span>다음 게시물</span>
-              <div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-              </div>
-            </div>
+            <StickyUrl />
           </div>
 
           {/* content */}
