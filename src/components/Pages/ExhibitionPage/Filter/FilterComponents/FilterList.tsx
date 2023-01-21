@@ -13,7 +13,7 @@ export default function FilterList() {
 
   return (
     <>
-      <div className="z-10 w-1/2 text-white ">
+      <div className="z-50 w-1/2 text-white ">
         <div className="flex-wrap gap-4 row-start">
           {categoryName === STUDENT
             ? studentNames.map((studentName) => {

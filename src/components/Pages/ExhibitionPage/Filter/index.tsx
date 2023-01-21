@@ -14,19 +14,21 @@ export default function Filter() {
   }
 
   return (
-    <div className="z-90">
+    <>
       {isFilter ? (
-        <div className="relative w-screen h-screen ">
-          {/* 필터 분류 선택 */}
-          <FilterSelect />
+        <div className="z-50 w-screen h-screen ">
+          <div className="top-0 gap-24 row-center">
+            {/* 필터 분류 선택 */}
+            <FilterSelect />
 
-          {/* 필터 선택 목록 */}
-          <FilterList />
+            {/* 필터 선택 목록 */}
+            <FilterList />
+          </div>
 
           {/* 배경 */}
           <Overlay />
         </div>
       ) : null}
-    </div>
+    </>
   );
 }
