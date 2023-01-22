@@ -1,9 +1,13 @@
 import {useForm} from "react-hook-form";
-import {ISignInForm} from "@constants/types/signin";
-import ErrorMsg from "../ErrorMsg";
 import Link from "next/link";
+import {useRouter} from "next/router";
+
+import ErrorMsg from "../ErrorMsg";
+import {ISignInForm} from "@constants/types/signin";
 
 export default function SigninForm() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
