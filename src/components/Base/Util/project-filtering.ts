@@ -1,9 +1,10 @@
 import path from "path";
 import fs from "fs";
-
 import matter from "gray-matter";
 import _ from "lodash";
-import {IProject, IFilter} from "@constants/types/exhibition";
+
+import {IProject} from "@constants/types/exhibition";
+import {IFilter} from "@constants/types/filter";
 
 // markdown files 경로 설정 (해당 폴더 안에 파일만 있어야 함)
 const projectDirectory = path.join(process.cwd(), "public/posts");

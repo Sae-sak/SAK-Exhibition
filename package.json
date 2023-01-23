@@ -12,8 +12,6 @@
     "@hookform/resolvers": "^2.9.10",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.2",
-    "eslint": "8.30.0",
-    "eslint-config-next": "13.1.1",
     "framer-motion": "^8.0.2",
     "gray-matter": "^4.0.3",
     "jest": "29.3.1",

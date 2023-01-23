@@ -20,6 +20,15 @@ export type TagType =
   | "파빌리온"
   | "";
 
+export type StudioType =
+  | "kim-ei-suk"
+  | "kim-ju-cheol"
+  | "park-jung-dae"
+  | "yoo-su-young"
+  | "";
+
+export type StudioKRType = "김이석" | "김주철" | "박정대" | "유수영" | "";
+
 export interface IProject {
   slug: string;
   title: string;
@@ -35,17 +44,4 @@ export interface IProject {
   motto: string;
   tags: TagType[];
   content: string;
-}
-
-export interface IFilter {
-  // 필터 미구현
-  title?: string;
-  year?: string;
-  semester?: string;
-  grade?: string;
-
-  // 필터 구현
-  studio: string;
-  name: string;
-  tag: TagType;
 }

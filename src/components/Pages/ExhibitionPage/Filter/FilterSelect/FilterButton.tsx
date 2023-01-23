@@ -12,7 +12,6 @@ export default function FilterButton({categoryName}) {
       >
         {categoryName}
       </span>
-      <i className="text-3xl text-white ri-search-line"></i>
     </div>
   );
 }

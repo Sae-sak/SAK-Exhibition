@@ -10,10 +10,11 @@ import {getFilteredProjects} from "@components/Base/Util/project-filtering";
 import FilterButton from "./Filter/FilterButton";
 
 export default function ExhibitionPage({projects}: {projects: IProject[]}) {
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
   const name = useAppSelector((state) => state.filter.studentFilter);
   const studio = useAppSelector((state) => state.filter.studioFilter);
   const tag = useAppSelector((state) => state.filter.tagFilter);
-  const [filteredProjects, setFilteredProjects] = useState([]);
 
   useEffect(() => {
     const filteredProjects = getFilteredProjects(projects, {name, studio, tag});
@@ -23,7 +24,7 @@ export default function ExhibitionPage({projects}: {projects: IProject[]}) {
   return (
     <>
       {/* filter screen */}
-      <Filter />
+      <Filter projects={projects} />
 
       {/* filter screen 활성화 버튼 */}
       <FilterButton />
