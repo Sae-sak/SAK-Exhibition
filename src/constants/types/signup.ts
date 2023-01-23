@@ -1,16 +1,9 @@
 import * as z from "zod";
 
-export interface ISignUpForm {
-  email: string;
-  name: string;
-  phone: string;
-  password: string;
-  passwordCheck: string;
-  extraError?: string;
-}
-
 export const SignupSchema = z
   .object({
+    name: z.string().min(2).max(24),
+    phone: z.string().min(10).max(18).optional(),
     email: z.string().min(1).email(),
     password: z.string().min(6).max(24),
     confirmPassword: z.string().min(6).max(24),

@@ -1,81 +1,79 @@
+/**
+ * The component system  intro, copy pastable before the form is created
+ */
 import {useForm} from "react-hook-form";
-import Link from "next/link";
-import {useRouter} from "next/router";
+import {forwardRef, useImperativeHandle, useRef} from "react";
 
-import ErrorMsg from "../ErrorMsg";
-import {ISignInForm} from "@constants/types/signin";
+import {TextField} from "@components/Base/TextField";
 
-export default function SigninForm() {
-  const router = useRouter();
+import {
+  SigninApi,
+  SigninFormProps,
+  SigninFormValues,
+  SigninSchema,
+} from "@constants/types/signin";
+import {zodResolver} from "@hookform/resolvers/zod";
 
-  const {
-    register,
-    handleSubmit,
-    formState: {errors},
-  } = useForm<ISignInForm>({
-    defaultValues: {},
-  });
+export const SigninForm = forwardRef<SigninApi, SigninFormProps>(
+  (props, ref) => {
+    const {
+      register,
+      handleSubmit,
+      setError,
+      formState: {errors, isSubmitting},
+    } = useForm<SigninFormValues>({
+      resolver: zodResolver(SigninSchema),
+    });
 
-  const onValid = (data: ISignInForm) => {
-    const {email, password} = data;
-  };
+    const setErrorRef = useRef(setError);
+    setErrorRef.current = setError;
 
-  return (
-    <form
-      onSubmit={handleSubmit(onValid)}
-      className="gap-6 p-4 border col-start"
-    >
-      {/* 이메일 */}
-      <div className="gap-1 col-start">
-        <div className="row-center">
-          <ErrorMsg>{errors?.email?.message}</ErrorMsg>
-        </div>
-        <input
-          {...register("email", {
-            required: "이메일을 입력해주세요.",
-            pattern: {
-              value:
-                /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
-              message: "이메일 형식만 가능합니다.",
-            },
-          })}
-          placeholder="Email"
-          className="border-b"
-          name="email"
-          type="text"
-          autoComplete="" // 추후 설정
+    useImperativeHandle(
+      ref,
+      () => {
+        return {
+          setErrors: (errors: Record<string, string>) => {
+            Object.entries(errors).forEach(([key, value]) => {
+              setErrorRef.current(key as "email" | "password", {
+                message: value,
+              });
+            });
+          },
+        };
+      },
+      []
+    );
+
+    return (
+      <form
+        className="gap-3 p-8 border rounded-lg col-center"
+        onSubmit={handleSubmit(props.onSubmitReady)}
+      >
+        <h2>Sign In</h2>
+
+        <TextField
+          id="email"
+          label="email"
+          inputProps={register("email")}
+          error={errors.email?.message as string}
         />
-      </div>
 
-      {/* 비밀번호 */}
-      <div className="gap-1 col-start">
-        <div className="row-center">
-          <ErrorMsg>{errors?.password?.message}</ErrorMsg>
-        </div>
-        <input
-          {...register("password", {
-            required: "비밀번호를 입력해주세요.",
-            minLength: {
-              value: 5,
-              message: "5글자 이상 입력해주세요.",
-            },
-          })}
-          placeholder="Password"
-          className="border-b"
-          name="password"
+        <TextField
+          id="password"
+          label="password"
           type="password"
-          autoComplete="" // 추후 설정
+          inputProps={register("password")}
+          error={errors.password?.message as string}
         />
-        <ErrorMsg>{errors?.extraError?.message}</ErrorMsg>
-      </div>
-      <div className="flex items-center justify-between gap-2">
-        <button type="submit">로그인</button>
-        <div>
-          <Link href="/signup">
-            <span>회원가입하기</span>
-          </Link>
+        <div className="flex items-center justify-between w-full">
+          <button disabled={isSubmitting} color="primary">
+            {isSubmitting ? "Sending..." : "Sign In"}
+          </button>
+          {props.suffix}
         </div>
-      </div>
-    </form>
-  );
-}
+      </form>
+    );
+  }
+);
+
+SigninForm.displayName = "ForwardRefedSigninForm";

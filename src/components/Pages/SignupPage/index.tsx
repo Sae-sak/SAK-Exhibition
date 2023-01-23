@@ -10,13 +10,14 @@ export default function SignUpPage() {
   const router = useRouter();
 
   const handleSubmit = async (data: SignupFormValues) => {
-    console.log("hadnle submit ready data", data);
     const httpRespose = await fetch("/api/sign-up", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        name: data.name,
+        phone: data.phone,
         email: data.email,
         password: data.password,
       }),
@@ -26,7 +27,7 @@ export default function SignUpPage() {
       signupFormRef.current?.setErrors(jsonRespose.errors);
       return;
     }
-    router.replace("/");
+    router.replace("/signin");
     await new Promise((resolve) => setTimeout(resolve, 500));
   };
 
@@ -35,8 +36,8 @@ export default function SignUpPage() {
       ref={signupFormRef}
       onSubmitReady={handleSubmit}
       suffix={
-        <Link href="/login">
-          <button>Sign</button>
+        <Link href="/signin">
+          <button>Sign In</button>
         </Link>
       }
     />

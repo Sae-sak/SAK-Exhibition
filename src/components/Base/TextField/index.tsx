@@ -1,4 +1,5 @@
 import {RefCallback} from "react";
+import ErrorMsg from "./ErrorMsg";
 
 interface TextFieldProps {
   id: string;
@@ -22,19 +23,18 @@ interface TextFieldProps {
 
 export const TextField = (props: TextFieldProps) => {
   return (
-    <div className="w-full max-w-xs form-control">
-      <label htmlFor={props.id} className="label">
-        <span className="label-text">{props.label}</span>
+    <div className="w-full max-w-xs form-control col-start">
+      <label htmlFor={props.id}>
+        <span className="">{props.label}:</span>
       </label>
       <input
         color={"ghost"}
         id={props.id}
         type={props.type ?? "text"}
         {...(props.inputProps ?? {})}
+        className="border-b w-72"
       />
-      {props.error ? (
-        <span className="label-text text-error">{props.error}</span>
-      ) : null}
+      {props.error ? <ErrorMsg>{props.error}</ErrorMsg> : null}
     </div>
   );
 };

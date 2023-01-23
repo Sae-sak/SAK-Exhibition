@@ -35,7 +35,12 @@ export const SignUpForm = forwardRef<SignUpApi, SignUpFormProps>(
           setErrors: (errors: Record<string, string>) => {
             Object.entries(errors).forEach(([key, value]) => {
               setErrorRef.current(
-                key as "email" | "password" | "confirmPassword",
+                key as
+                  | "name"
+                  | "phone"
+                  | "email"
+                  | "password"
+                  | "confirmPassword",
                 {message: value}
               );
             });
@@ -47,17 +52,26 @@ export const SignUpForm = forwardRef<SignUpApi, SignUpFormProps>(
 
     return (
       <form
-        style={{
-          display: "flex",
-          flexFlow: "column",
-          gap: 15,
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
+        className="gap-3 p-8 border rounded-lg col-center"
         onSubmit={handleSubmit(props.onSubmitReady)}
       >
         <h2>Sign Up</h2>
+
+        <TextField
+          id="name"
+          label="name"
+          inputProps={register("name")}
+          error={errors.name?.message as string}
+        />
+
+        <TextField
+          id="phone"
+          label="phone"
+          type="phone-number"
+          inputProps={register("phone")}
+          error={errors.phone?.message as string}
+        />
+
         <TextField
           id="email"
           label="email"
@@ -80,12 +94,12 @@ export const SignUpForm = forwardRef<SignUpApi, SignUpFormProps>(
           inputProps={register("confirmPassword")}
           error={errors.confirmPassword?.message as string}
         />
-
-        <button disabled={isSubmitting} color="primary">
-          {isSubmitting ? "Sending..." : "Register"}
-        </button>
-
-        {props.suffix}
+        <div className="flex items-center justify-between w-full">
+          <button disabled={isSubmitting} color="primary">
+            {isSubmitting ? "Sending..." : "Register"}
+          </button>
+          {props.suffix}
+        </div>
       </form>
     );
   }
