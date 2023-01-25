@@ -9,7 +9,7 @@ export default function UnactiveButton({categoryName}) {
       className="text-white"
       onClick={() => dispatch(selectCategory({categoryName}))}
     >
-      unactive
+      <span>{categoryName}</span>
     </div>
   );
 }

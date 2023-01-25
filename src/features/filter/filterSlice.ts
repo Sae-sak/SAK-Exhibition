@@ -2,7 +2,9 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {
   IFilterState,
   ICategoryName,
-  IFilterName,
+  IStudentFilterName,
+  IStudioFilterName,
+  ITagFilterName,
 } from "@constants/types/filter";
 
 const initialState: IFilterState = {
@@ -10,6 +12,7 @@ const initialState: IFilterState = {
   categoryName: "",
   studentFilter: "",
   studioFilter: "",
+  studioFilterKR: "",
   tagFilter: "",
 };
 
@@ -35,20 +38,21 @@ const filterSlice = createSlice({
       state.categoryName = action.payload.categoryName;
     },
 
-    enableStudentFilter(state, action: PayloadAction<IFilterName>) {
+    enableStudentFilter(state, action: PayloadAction<IStudentFilterName>) {
       state.isFilter = false;
       state.categoryName = "";
-      state.studentFilter = action.payload.filterName;
+      state.studentFilter = action.payload.studentName;
     },
-    enableStudioFilter(state, action: PayloadAction<IFilterName>) {
+    enableStudioFilter(state, action: PayloadAction<IStudioFilterName>) {
       state.isFilter = false;
       state.categoryName = "";
-      state.studioFilter = action.payload.filterName;
+      state.studioFilter = action.payload.studioName;
+      state.studioFilterKR = action.payload.studioNameKR;
     },
-    enableTagFilter(state, action: PayloadAction<IFilterName>) {
+    enableTagFilter(state, action: PayloadAction<ITagFilterName>) {
       state.isFilter = false;
       state.categoryName = "";
-      state.tagFilter = action.payload.filterName;
+      state.tagFilter = action.payload.tagName;
     },
 
     disableFilter(state) {

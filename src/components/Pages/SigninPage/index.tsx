@@ -1,21 +1,43 @@
-import {useState} from "react";
+import {useRef} from "react";
+import Link from "next/link";
+import {useRouter} from "next/router";
 
-import SigninForm from "./SigninForm";
+import {SigninForm} from "./SigninForm";
+import {SigninApi, SigninFormValues} from "@constants/types/signin";
 
 export default function SigninPage() {
-  const [isAuth, setIsAuth] = useState(false);
+  const signinFormRef = useRef<SigninApi>(null);
+  const router = useRouter();
 
-  return isAuth ? (
-    <div>
-      <div>
-        <div>you are already logged in!</div>
-        <button onClick={() => {}}>Go Home</button>
-      </div>
-    </div>
-  ) : (
-    <div className="p-4">
-      {/* 이메일 비밀번호 로그인 */}
-      <SigninForm />
-    </div>
+  const handleSubmit = async (data: SigninFormValues) => {
+    const httpRespose = await fetch("/api/sign-in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password,
+      }),
+    });
+    const jsonRespose = await httpRespose.json();
+    if (!jsonRespose.success) {
+      signinFormRef.current?.setErrors(jsonRespose.errors);
+      return;
+    }
+    router.replace("/");
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  };
+
+  return (
+    <SigninForm
+      ref={signinFormRef}
+      onSubmitReady={handleSubmit}
+      suffix={
+        <Link href="/signup">
+          <button>Sign Up</button>
+        </Link>
+      }
+    />
   );
 }

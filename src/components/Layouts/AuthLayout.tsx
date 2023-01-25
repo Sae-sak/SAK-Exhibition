@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+import SimpleFooter from "./Footer/SimpleFooter";
 import Header from "./Header";
 
 export default function AuthLayout({children}) {
@@ -9,7 +9,7 @@ export default function AuthLayout({children}) {
       </div>
       <div className="w-screen h-screen col-center">{children}</div>
       <div className="fixed bottom-0 w-full">
-        <Footer />
+        <SimpleFooter />
       </div>
     </>
   );

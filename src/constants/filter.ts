@@ -1,33 +1,19 @@
-export const studentNames = [
-  "유호재",
-  "고성아",
-  "강호영",
-  "김형준",
-  "탁유주",
-  "김 유",
-  "성태우",
-  "노희주",
-  "김정용",
-  "유자유",
-  "강수진",
-  "성혜미",
-  "황서하",
-  "이신영",
-  "김진범",
-  "홍효진",
-  "강인태",
-  "배민아",
+import {StudioKRType, StudioType, TagType} from "./types/exhibition";
+
+type studioNamesType = {
+  name: StudioType;
+  nameKR: StudioKRType;
+};
+
+export const studioNames: studioNamesType[] = [
+  {name: "kim-ei-suk", nameKR: "김이석"},
+  {name: "kim-ju-cheol", nameKR: "김주철"},
+  {name: "park-jung-dae", nameKR: "박정대"},
+  {name: "yoo-su-young", nameKR: "유수영"},
 ];
 
-export const studioNames = [
-  "kim-ei-suk",
-  "kim-ju-cheol",
-  "park-jung-dae",
-  "yoo-su-young",
-];
-
-export const programTags = [
-  "문화",
+export const tagNames: TagType[] = [
+  "문화", // programTags
   "복합",
   "주거",
   "숙박",
@@ -41,6 +27,9 @@ export const programTags = [
   "교통",
   "공모전",
   "기타",
+  "신축", // typeTags
+  "증축",
+  "리모델링",
+  "마스터플랜",
+  "파빌리온",
 ];
-
-export const typeTags = ["신축", "증축", "리모델링", "마스터플랜", "파빌리온"];

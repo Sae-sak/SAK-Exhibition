@@ -109,6 +109,11 @@ p {
   @apply text-slate-900 dark:text-slate-400;
 }
 
+input,
+textarea {
+  @apply bg-white dark:bg-black;
+}
+
 input:focus {
   outline: none;
   border-bottom: 0.12rem solid gray;
