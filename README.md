@@ -2,12 +2,12 @@
 
 ## :page_with_curl: 목차 (List)
 
-- [1. 프로젝트명 (Project name)](#-Project-name)
-- [2. 프로젝트 목표 (Vision)](#-Vision)
-- [3. 기술 스택 (Tech Stack)](#-Tech-Stack)
-- [4. 기능 (Features)](#-Features)
-- [5. 웹사이트 활용 방법 (Guide)](#-Guide)
-- [6. 팀원 프로필 (Team Profile)](#-Team-Profile)
+- [1. 프로젝트명 (Project name)](#-project-name)
+- [2. 프로젝트 목표 (Vision)](#-vision)
+- [3. 기술 스택 (Tech Stack)](#-tech-stack)
+- [4. 기능 (Features)](#-features)
+- [5. 웹사이트 활용 방법 (Guide)](#-guide)
+- [6. 팀원 프로필 (Team Profile)](#-team-profile)
 
 
 
