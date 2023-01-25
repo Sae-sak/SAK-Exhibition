@@ -1,69 +1,32 @@
 # SAK Exhibtion Website
 
-#
+## :page_with_curl: 목차 (List)
 
-#
+- [프로젝트명](#project-name)
+- [프로젝트 목표](#vision)
+- [기술 스택](#tech-stack)
+- [기능](#features)
+- [웹사이트 활용 방법](#guide)
+- [팀원 프로필](#team-profile)
 
-# :page_with_curl: 목차 (List)
-
----
-
-[1. 프로젝트명 (Project name)](##-1.-Project-name)
-[2. 프로젝트 목표 (Vision)](##-2.-Vision)
-[3. 기술 스택 (Tech Stack)](##-3.-Tech-Stack)
-[4. 기능 (Features)](##-4.-Features)
-[5. 웹사이트 활용 방법 (Guide)](##-5.-Guide)
-[6. 팀원 프로필 (Team Profile)](##-6.-Team-Profile)
-
----
-
-#
-
-#
-
-#
-
-#
-
-## 1. Project name
-
----
+<a name="project-name"></a>
+# Project Name
 
 **SAK-EXHIBITION**
 
 - "SAK-EXHIBITION”은 경기대학교 건축학과 온라인 졸업 전시회 및 작품 아카이빙을 목적으로 하는 웹사이트입니다.
 
----
 
-#
-
-#
-
-#
-
-#
-
-## 2. Vision
-
----
+<a name="vision"></a>
+# Vision
 
 - 경기대학교 건축학과 재학생과 졸업생들이 시간과 장소에 구애받지 않으며 졸업 작품을 전시하고 아카이빙할 수 있는 온라인 공간을 마련합니다.
 
 - 온라인 전시 관람 가이드 툴킷, 검색 필터, 동적인 애니메이션 효과, 롤링페이퍼 기능을 통해 관객과의 원활한 소통을 유도합니다.
 
----
 
-#
-
-#
-
-#
-
-#
-
-## 3. Tech Stack
-
----
+<a name="tech-stack"></a>
+# Tech Stack
 
 :computer: **Front-End ( TailwindCSS / Typescript(TS) / Nextjs / Redux-Toolkit )**
 
@@ -77,21 +40,11 @@
 - framer-motion
 - next-themes
 
----
 
-#
+<a name="features"></a>
+# Features
 
-#
-
-#
-
-#
-
-## 4. Features
-
----
-
-:o: **Done**
+### :o: **Done**
 
 - About : SAK
 - Exhibition
@@ -105,9 +58,8 @@
 - Progress Bar
 - Thumbnail
 
----
 
-:speech_balloon: **We are going to do**
+### :speech_balloon: **We are going to do**
 
 - Rolling paper/comment
 - Exhibition guide (tool tips)
@@ -123,9 +75,8 @@
   - Loading
   - Search Bar
 
----
 
-:grey_question: **Later**
+### :grey_question: **Later**
 
 - Background Music
 - Dynamic Object Render
@@ -133,35 +84,18 @@
 - CRUD
 - markdown editor
 
----
 
-#
+<a name="guide"></a>
+# Guide
 
-#
-
-#
-
-#
-
-## 5. Guide
-
----
 
 웹사이트 이미지
 
----
 
-#
 
-#
+<a name="team-profile"></a>
+# Team Profile
 
-#
-
-#
-
-## 6. Team Profile
-
----
 
 김 유 (Kim Yoo)
 
