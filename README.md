@@ -59,7 +59,7 @@
 - Progress Bar
 - Thumbnail
 
----
+***
 
 :speech_balloon: **We are going to do**
 
@@ -77,7 +77,7 @@
   - Loading
   - Search Bar
 
----
+***
 
 :grey_question: **Later**
 
