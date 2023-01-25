@@ -11,7 +11,7 @@
 
 
 
-# Project name
+# project name
 
 **SAK-EXHIBITION**
 
@@ -19,7 +19,7 @@
 
 
 
-# Vision
+# vision
 
 - 경기대학교 건축학과 재학생과 졸업생들이 시간과 장소에 구애받지 않으며 졸업 작품을 전시하고 아카이빙할 수 있는 온라인 공간을 마련합니다.
 
@@ -27,7 +27,7 @@
 
 
 
-# Tech Stack
+# tech stack
 
 :computer: **Front-End ( TailwindCSS / Typescript(TS) / Nextjs / Redux-Toolkit )**
 
@@ -43,7 +43,7 @@
 
 
 
-# Features
+# features
 
 ### :o: **Done**
 
@@ -87,7 +87,7 @@
 
 
 
-# Guide
+# guide
 
 
 웹사이트 이미지
@@ -95,7 +95,7 @@
 
 
 
-# Team Profile
+# team profile
 
 
 김 유 (Kim Yoo)
