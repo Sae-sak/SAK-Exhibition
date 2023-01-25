@@ -2,15 +2,14 @@
 
 ## :page_with_curl: 목차 (List)
 
-- [프로젝트명](#-project-name)
-- [프로젝트 목표](#-vision)
-- [기술 스택](#-tech-stack)
-- [기능](#-features)
-- [웹사이트 활용 방법](#-guide)
-- [팀원 프로필](#-team-profile)
+- [프로젝트명](#project-name)
+- [프로젝트 목표](#vision)
+- [기술 스택](#tech-stack)
+- [기능](#features)
+- [웹사이트 활용 방법](#guide)
+- [팀원 프로필](#team-profile)
 
-
-
+<a name="project-name"></a>
 # Project Name
 
 **SAK-EXHIBITION**
@@ -18,7 +17,7 @@
 - "SAK-EXHIBITION”은 경기대학교 건축학과 온라인 졸업 전시회 및 작품 아카이빙을 목적으로 하는 웹사이트입니다.
 
 
-
+<a name="vision"></a>
 # Vision
 
 - 경기대학교 건축학과 재학생과 졸업생들이 시간과 장소에 구애받지 않으며 졸업 작품을 전시하고 아카이빙할 수 있는 온라인 공간을 마련합니다.
@@ -26,7 +25,7 @@
 - 온라인 전시 관람 가이드 툴킷, 검색 필터, 동적인 애니메이션 효과, 롤링페이퍼 기능을 통해 관객과의 원활한 소통을 유도합니다.
 
 
-
+<a name="tech-stack"></a>
 # Tech Stack
 
 :computer: **Front-End ( TailwindCSS / Typescript(TS) / Nextjs / Redux-Toolkit )**
@@ -42,7 +41,7 @@
 - next-themes
 
 
-
+<a name="features"></a>
 # Features
 
 ### :o: **Done**
@@ -86,7 +85,7 @@
 - markdown editor
 
 
-
+<a name="guide"></a>
 # Guide
 
 
@@ -94,7 +93,7 @@
 
 
 
-
+<a name="team-profile"></a>
 # Team Profile
 
 
