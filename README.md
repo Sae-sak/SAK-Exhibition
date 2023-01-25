@@ -45,7 +45,7 @@
 
 # Features
 
-:o: **Done**
+### :o: **Done**
 
 - About : SAK
 - Exhibition
@@ -59,9 +59,8 @@
 - Progress Bar
 - Thumbnail
 
-***
 
-:speech_balloon: **We are going to do**
+### :speech_balloon: **We are going to do**
 
 - Rolling paper/comment
 - Exhibition guide (tool tips)
@@ -77,9 +76,8 @@
   - Loading
   - Search Bar
 
-***
 
-:grey_question: **Later**
+### :grey_question: **Later**
 
 - Background Music
 - Dynamic Object Render
