@@ -28,6 +28,8 @@
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants"],
       "@constants/*": ["./src/constants/*"],
+      "@customHook": ["./src/customHook"],
+      "@customHook/*": ["./src/customHook/*"],
       "@features": ["./src/features"],
       "@features/*": ["./src/features/*"],
       "@src": ["./src"],
