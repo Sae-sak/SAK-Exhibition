@@ -1,4 +1,4 @@
-export type ITag =
+export type TagType =
   | "문화" // programTags
   | "복합"
   | "주거"
@@ -33,16 +33,19 @@ export interface IProject {
   name: string;
   email: string;
   motto: string;
-  tags: ITag[];
+  tags: TagType[];
   content: string;
 }
 
 export interface IFilter {
-  title: string;
-  year: string;
-  semester: string;
-  grade: string;
+  // 필터 미구현
+  title?: string;
+  year?: string;
+  semester?: string;
+  grade?: string;
+
+  // 필터 구현
   studio: string;
   name: string;
-  tag: ITag;
+  tag: TagType;
 }

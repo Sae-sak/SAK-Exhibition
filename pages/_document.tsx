@@ -90,6 +90,10 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <div
+          className="fixed left-0 right-0 mx-auto top-10 col-center"
+          id="alert"
+        ></div>
       </body>
     </Html>
   );

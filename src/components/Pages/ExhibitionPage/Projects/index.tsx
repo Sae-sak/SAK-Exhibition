@@ -3,7 +3,7 @@ import ProjectThumbnail from "./ProjectThumbnail";
 
 export default function Projects({projects}: {projects: IProject[]}) {
   return (
-    <div className="bg-red-300">
+    <div className="">
       <div className="container flex flex-wrap mx-auto"></div>
 
       <ul className="container flex flex-wrap mx-auto">

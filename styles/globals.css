@@ -56,6 +56,10 @@
 
 /* ------------------------------------------------------------------ */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto";
   font-weight: 500;
@@ -105,6 +109,11 @@ p {
   @apply text-slate-900 dark:text-slate-400;
 }
 
+input:focus {
+  outline: none;
+  border-bottom: 0.12rem solid gray;
+}
+
 /* ------------------------------------------------------------------ */
 
 .col-center {
@@ -134,12 +143,12 @@ p {
 
 .row-start {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .row-end {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
 }
