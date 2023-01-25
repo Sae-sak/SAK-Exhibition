@@ -25,7 +25,7 @@ export default function NavLink({linkpath, name}) {
   const link = `/${linkpath}`;
 
   return (
-    <Link href={link} className="mr-5">
+    <Link href={link}>
       <span
         className={`block w-32 border-b-2 px-auto col-center font-title ${
           "/" === router.pathname && "/" === link
