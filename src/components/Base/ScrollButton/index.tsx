@@ -36,23 +36,21 @@ export default function ScrollButton() {
   };
 
   return (
-    <div className="fixed z-20 gap-6 bottom-4 right-4 row-center font-button">
+    <div className="fixed z-20 gap-3 bottom-4 right-4 col-center ">
       <motion.div variants={scrollTop} animate={scrollTopAni}>
         <button
           onClick={() => scrollToTop()}
-          className="pr-2 pt-0.5 text-lg  bg-slate-200 rounded-lg row-center"
+          className="w-8 h-8 bg-white rounded-full shadow-md row-center"
         >
           <i className="text-3xl ri-arrow-up-s-line"></i>
-          <span>TOP</span>
         </button>
       </motion.div>
       <motion.div variants={scrollBotton} animate={scrollBottomAni}>
         <button
           onClick={() => scrollToBottom()}
-          className=" bg-slate-200 rounded-lg pr-2 pt-0.5 text-lg row-center"
+          className="w-8 h-8 bg-white rounded-full shadow-md row-center"
         >
           <i className="text-3xl ri-arrow-down-s-line"></i>
-          <span>BOTTOM</span>
         </button>
       </motion.div>
     </div>
