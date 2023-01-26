@@ -27,7 +27,7 @@ export default function NavLink({linkpath, name}) {
   return (
     <Link href={link}>
       <span
-        className={`block w-32 border-b-2 px-auto col-center font-title ${
+        className={`block w-24 border-b-2 px-auto col-center font-title ${
           "/" === router.pathname && "/" === link
             ? colorVariants.orange.active
             : "/about" === router.pathname && "/about" === link
