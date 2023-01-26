@@ -12,21 +12,30 @@ const amagro = localFont({
   variable: "--font-amagro",
 });
 
-const nanumMyeongjo = Nanum_Myeongjo({
+export const nanumMyeongjo = Nanum_Myeongjo({
   weight: ["400", "700", "800"],
-  subsets: ["korean"],
+  subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
   variable: "--font-nanumMyeongjo",
 });
 
-const notoSerifKR = Noto_Serif_KR({
+export const notoSerifKR = Noto_Serif_KR({
   weight: ["200", "300", "400", "500", "700"],
-  subsets: ["korean"],
+  subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
   variable: "--font-notoSerifKR",
 });
 
-const roboto = Roboto({
+export const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
   variable: "--font-roboto",
 });
 
@@ -46,9 +55,7 @@ export default function App({Component, pageProps}: AppProps) {
 
       <ThemeProvider attribute="class">
         <Provider store={store}>
-          <main
-            className={` ${amagro.variable} ${nanumMyeongjo.className} ${notoSerifKR.className} ${roboto.className} `}
-          >
+          <main className={` ${amagro.variable} ${notoSerifKR.className}`}>
             <Component {...pageProps} />
           </main>
         </Provider>
