@@ -1,9 +1,7 @@
-import {
-  getProjectData,
-  getProjectFiles,
-} from "@components/Base/Util/project-filtering";
-import MainLayout from "@components/Layouts/MainLayout";
-import { IProject } from "@constants/types/exhibition";
+import MainLayout from "@layouts/MainLayout";
+import Project from "@scenes/Exhibition/Project";
+import { IProject } from "@type/exhibition";
+import { getProjectData, getProjectFiles } from "@util/project-filtering";
 
 export default function ProjectPage({
   projectData,

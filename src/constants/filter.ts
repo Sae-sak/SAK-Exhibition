@@ -1,4 +1,4 @@
-import {StudioKRType, StudioType, TagType} from "./types/exhibition";
+import { StudioKRType, StudioType, TagType } from "@type/exhibition";
 
 type studioNamesType = {
   name: StudioType;
@@ -6,10 +6,10 @@ type studioNamesType = {
 };
 
 export const studioNames: studioNamesType[] = [
-  {name: "kim-ei-suk", nameKR: "김이석"},
-  {name: "kim-ju-cheol", nameKR: "김주철"},
-  {name: "park-jung-dae", nameKR: "박정대"},
-  {name: "yoo-su-young", nameKR: "유수영"},
+  { name: "kim-ei-suk", nameKR: "김이석" },
+  { name: "kim-ju-cheol", nameKR: "김주철" },
+  { name: "park-jung-dae", nameKR: "박정대" },
+  { name: "yoo-su-young", nameKR: "유수영" },
 ];
 
 export const tagNames: TagType[] = [

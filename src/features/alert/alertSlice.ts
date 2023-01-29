@@ -1,5 +1,5 @@
-import {IAlert, IAlertState} from "@constants/types/alert";
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { IAlert, IAlertState } from "@type/alert";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 //--------------------------------------------------------------------------------
 // isAlert - 알림 활성 / 알림 비활성

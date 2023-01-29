@@ -1,4 +1,5 @@
-import MainLayout from "@components/Layouts/MainLayout";
+import MainLayout from "@layouts/MainLayout";
+import ContactUs from "@scenes/ContactUs";
 
 export default function ContactUsPage() {
   return (

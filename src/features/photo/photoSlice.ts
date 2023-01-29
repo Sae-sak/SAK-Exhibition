@@ -1,5 +1,5 @@
-import {IPhoto, IPhotoState} from "@constants/types/photo";
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { IPhoto, IPhotoState } from "@type/photo";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: IPhotoState = {
   selectedId: null,
