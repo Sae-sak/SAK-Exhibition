@@ -2,14 +2,18 @@ import ProjectHeader from "./ProjectHeader";
 import ProjectContent from "./ProjectContent";
 import AnchorUrl from "./AnchorUrl";
 
-import {IProject} from "@constants/types/exhibition";
+import { IProject } from "@constants/types/exhibition";
 import ProgressBar from "@components/Base/ProgressBar/ProgressBar";
 import Carousel from "@components/Pages/ExhibitionPage/Projects/ProjectPage/Carousel";
 import ModalImage from "./ModalImage";
 import StickyUrl from "./StickyUrl";
 import Comment from "./Comment";
 
-export default function ProjectPage({projectData}: {projectData: IProject}) {
+export default function ProjectPage({
+  projectData,
+}: {
+  projectData: IProject;
+}) {
   const {
     slug,
     title,
@@ -40,6 +44,7 @@ export default function ProjectPage({projectData}: {projectData: IProject}) {
       <article className="container p-5 ">
         <ProjectHeader
           title={title}
+          name={name}
           excerpt={excerpt}
           thumbnailImg={thumbnailImg}
         />
