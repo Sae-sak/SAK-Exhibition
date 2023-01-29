@@ -1,10 +1,10 @@
-import {studioNames} from "@constants/Filter";
-import {IProject} from "@constants/types/exhibition";
-import {STUDENT, STUDIO, TAG} from "@constants/types/filter";
-import {useAppSelector} from "@toolkit/hook";
+import { studioNames } from "@constants/filter";
+import { IProject } from "@constants/types/exhibition";
+import { STUDENT, STUDIO, TAG } from "@constants/types/Filter";
+import { useAppSelector } from "@toolkit/hook";
 import FilterItem from "./FilterItem";
 
-export default function FilterList({projects}: {projects: IProject[]}) {
+export default function FilterList({ projects }: { projects: IProject[] }) {
   const categoryName = useAppSelector((state) => state.filter.categoryName);
 
   const studentNames = projects.map((project) => project.name);

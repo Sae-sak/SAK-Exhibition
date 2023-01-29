@@ -1,11 +1,11 @@
-import {StudioKRType, StudioType, TagType} from "@constants/types/exhibition";
-import {STUDENT, STUDIO, TAG} from "@constants/types/filter";
+import { StudioKRType, StudioType, TagType } from "@constants/types/exhibition";
+import { STUDENT, STUDIO, TAG } from "@constants/types/Filter";
 import {
   enableStudentFilter,
   enableStudioFilter,
   enableTagFilter,
 } from "@features/filter/filterSlice";
-import {useAppDispatch, useAppSelector} from "@toolkit/hook";
+import { useAppDispatch, useAppSelector } from "@toolkit/hook";
 
 export default function FilterItem({
   studentName = "",
@@ -27,11 +27,11 @@ export default function FilterItem({
         className="cursor-pointer w-28 hover:text-kgu_main_yellow"
         onClick={() => {
           categoryName === STUDENT
-            ? dispatch(enableStudentFilter({studentName}))
+            ? dispatch(enableStudentFilter({ studentName }))
             : categoryName === STUDIO
-            ? dispatch(enableStudioFilter({studioName, studioNameKR}))
+            ? dispatch(enableStudioFilter({ studioName, studioNameKR }))
             : categoryName === TAG
-            ? dispatch(enableTagFilter({tagName}))
+            ? dispatch(enableTagFilter({ tagName }))
             : null;
         }}
       >

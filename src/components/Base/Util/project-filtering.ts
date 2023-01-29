@@ -3,8 +3,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import _ from "lodash";
 
-import {IProject} from "@constants/types/exhibition";
-import {IFilter} from "@constants/types/filter";
+import { IProject } from "@constants/types/exhibition";
+import { IFilter } from "@constants/types/Filter";
 
 // markdown files 경로 설정 (해당 폴더 안에 파일만 있어야 함)
 const projectDirectory = path.join(process.cwd(), "public/posts");
@@ -17,7 +17,7 @@ export function getProjectFiles() {
 export function getProjectData(filename: string) {
   const filePath = path.join(projectDirectory, filename);
   const fileContent = fs.readFileSync(filePath, "utf-8");
-  const {data, content} = matter(fileContent);
+  const { data, content } = matter(fileContent);
   const slug = filename.replace(/\.md$/, "").replaceAll("_", "/");
   const {
     title,

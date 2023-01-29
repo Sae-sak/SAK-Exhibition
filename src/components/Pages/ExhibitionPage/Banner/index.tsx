@@ -1,7 +1,7 @@
-import {disableFilter} from "@features/filter/filterSlice";
-import {useAppDispatch, useAppSelector} from "@toolkit/hook";
-import {studioNames} from "@constants/Filter";
-import {StudioKRType} from "@constants/types/exhibition";
+import { disableFilter } from "@features/filter/filterSlice";
+import { useAppDispatch, useAppSelector } from "@toolkit/hook";
+import { studioNames } from "@constants/filter";
+import { StudioKRType } from "@constants/types/exhibition";
 
 export default function Banner() {
   const dispatch = useAppDispatch();

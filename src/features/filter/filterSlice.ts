@@ -1,11 +1,11 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
   IFilterState,
   ICategoryName,
   IStudentFilterName,
   IStudioFilterName,
   ITagFilterName,
-} from "@constants/types/filter";
+} from "@constants/types/Filter";
 
 const initialState: IFilterState = {
   isFilter: false,
