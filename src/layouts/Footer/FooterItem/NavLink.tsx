@@ -29,7 +29,7 @@ export default function NavLink({ linkpath, name }) {
       <Link href={link} className="mb-3 text-sm font-medium tracking-widest">
         <span
           className={`block font-title ${
-            "/" === router.pathname && "/" === link
+            "/home" === router.pathname && "/" === link
               ? colorVariants.orange.active
               : "/about" === router.pathname && "/about" === link
               ? colorVariants.yellow.active
