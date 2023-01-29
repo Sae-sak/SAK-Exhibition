@@ -52,19 +52,19 @@ export default function ProjectPage({
         {/* body 세등분 */}
         <section className="flex pt-24 flex-nowrap">
           {/* sticky URLs */}
-          <section className="sticky w-1/6 h-5 top-52">
+          <section className="sticky hidden h-5 top-52 lg:w-1/6 lg:block">
             <StickyUrl />
           </section>
 
           {/* content */}
-          <section className="w-2/3">
+          <section className="w-full lg:w-2/3">
             <ProjectContent content={content} />
             <Carousel data={drawingImgs} />
             <Comment />
           </section>
 
           {/* anchor URLs */}
-          <section className="sticky w-1/6 h-5 top-52">
+          <section className="sticky hidden h-5 top-52 lg:w-1/6 lg:block">
             <AnchorUrl content={content} />
           </section>
         </section>
