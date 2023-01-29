@@ -4,13 +4,13 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import {scrollTop, scrollBotton} from "../Util/Variants/scrollButton";
+import { scrollTop, scrollBotton } from "../Util/Variants/scrollButton";
 
 export default function ScrollButton() {
   const scrollTopAni = useAnimation();
   const scrollBottomAni = useAnimation();
 
-  const {scrollY} = useScroll();
+  const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (position) => {
     if (
@@ -40,7 +40,7 @@ export default function ScrollButton() {
       <motion.div variants={scrollTop} animate={scrollTopAni}>
         <button
           onClick={() => scrollToTop()}
-          className="w-8 h-8 bg-white rounded-full shadow-md row-center"
+          className="w-8 h-8 bg-white rounded-full shadow-sm shadow-gray-400 dark:bg-black row-center"
         >
           <i className="text-3xl ri-arrow-up-s-line"></i>
         </button>
@@ -48,7 +48,7 @@ export default function ScrollButton() {
       <motion.div variants={scrollBotton} animate={scrollBottomAni}>
         <button
           onClick={() => scrollToBottom()}
-          className="w-8 h-8 bg-white rounded-full shadow-md row-center"
+          className="w-8 h-8 bg-white rounded-full shadow-sm shadow-gray-400 dark:bg-black row-center"
         >
           <i className="text-3xl ri-arrow-down-s-line"></i>
         </button>
