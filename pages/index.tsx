@@ -1,9 +1,7 @@
-import CoverPage from "@components/Pages/CoverPage";
-
-export default function Home() {
+export default function CoverPage() {
   return (
     <>
-      <CoverPage />
+      <Cover />
     </>
   );
 }

@@ -1,10 +1,9 @@
 import HomeLayout from "@components/Layouts/HomeLayout";
-import HomePage from "@components/Pages/HomePage";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <HomeLayout>
-      <HomePage />
+      <Home />
     </HomeLayout>
   );
 }

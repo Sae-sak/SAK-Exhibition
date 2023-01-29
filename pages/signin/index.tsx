@@ -1,10 +1,9 @@
 import AuthLayout from "@components/Layouts/AuthLayout";
-import SigninPage from "@components/Pages/SigninPage";
 
-export default function Signin() {
+export default function SigninPage() {
   return (
     <AuthLayout>
-      <SigninPage />
+      <Signin />
     </AuthLayout>
   );
 }
