@@ -5,7 +5,7 @@ import logo from "public/favicon/favicon.png";
 export default function Logo() {
   return (
     <Link
-      href={"/"}
+      href={"/home"}
       className="flex items-end font-medium text-gray-900 title-font md:mb-0"
     >
       <div>

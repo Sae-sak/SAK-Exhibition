@@ -1,9 +1,11 @@
 import Image from "next/image";
-import {useState} from "react";
+import { useState } from "react";
 import shape from "public/images/cover/shape.jpg";
+import { useRouter } from "next/router";
 
 export default function Cover() {
   const [active, setActive] = useState(true);
+  const router = useRouter();
 
   if (typeof window !== "undefined") {
     active
@@ -40,7 +42,13 @@ export default function Cover() {
 
         {/* 하단 우측 링크*/}
         <button
-          onClick={(prev) => setActive(!prev)}
+          onClick={(prev) => {
+            setActive(!prev);
+
+            // 문 열림 애니메이션 위치
+
+            router.push("/home");
+          }}
           className="absolute col-center bottom-14 right-14"
         >
           <span className="text-3xl">입장하기</span>

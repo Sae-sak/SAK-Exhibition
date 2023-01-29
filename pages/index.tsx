@@ -1,10 +1,9 @@
-import HomeLayout from "@components/Layouts/HomeLayout";
-import HomePage from "@components/Pages/HomePage";
+import Cover from "@components/Pages/HomePage/Cover/Cover";
 
 export default function Home() {
   return (
-    <HomeLayout>
-      <HomePage />
-    </HomeLayout>
+    <>
+      <Cover />
+    </>
   );
 }

@@ -4,16 +4,22 @@ export default function KGULinks() {
       <a
         href={"http://www.kyonggi.ac.kr/KyonggiUp.kgu"}
         className="text-gray-500"
+        target="_blank"
       >
         KGU
       </a>
       <a
         href={"https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp"}
         className="text-gray-500"
+        target="_blank"
       >
         KUTIS
       </a>
-      <a href={"https://lms.kyonggi.ac.kr/"} className="text-gray-500">
+      <a
+        href={"https://lms.kyonggi.ac.kr/"}
+        className="text-gray-500"
+        target="_blank"
+      >
         LMS
       </a>
     </p>

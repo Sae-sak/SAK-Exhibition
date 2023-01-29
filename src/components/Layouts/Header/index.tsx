@@ -16,7 +16,7 @@ export default function Header() {
 
         {/* 네비게이션 */}
         <nav className="gap-2 text-base row-center sm:mt-auto ">
-          <NavLink linkpath={""} name={"Home"} />
+          <NavLink linkpath={"home"} name={"Home"} />
           <NavLink linkpath={"about"} name={"About"} />
           <NavLink linkpath={"exhibition"} name={"Exhibition"} />
           <NavLink linkpath={"contactus"} name={"Contact Us"} />
