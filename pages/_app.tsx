@@ -12,64 +12,6 @@ const amagro = localFont({
   variable: "--font-amagro",
 });
 
-export const nanumMyeongjo = localFont({
-  src: [
-    {
-      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
-  ],
-  display: "fallback",
-  style: "normal",
-  fallback: ["system-ui"],
-  variable: "--font-nanumMyeongjo",
-});
-
-export const notoSerifKR = localFont({
-  src: [
-    {
-      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-SemiBold.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  display: "fallback",
-  style: "normal",
-  fallback: ["system-ui"],
-  variable: "--font-notoSerifKR",
-});
-
 export const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -95,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <ThemeProvider attribute="class">
         <Provider store={store}>
-          <main className={` ${amagro.variable} ${notoSerifKR.className}`}>
+          <main className={` ${amagro.variable} `}>
             <Component {...pageProps} />
           </main>
         </Provider>

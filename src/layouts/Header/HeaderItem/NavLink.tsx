@@ -28,7 +28,7 @@ export default function NavLink({ linkpath, name }) {
     <Link href={link}>
       <span
         className={`block w-24 border-b-2 px-auto col-center font-title ${
-          "/home" === router.pathname && "/" === link
+          "/home" === router.pathname && "/home" === link
             ? colorVariants.orange.active
             : "/about" === router.pathname && "/about" === link
             ? colorVariants.yellow.active
@@ -38,7 +38,7 @@ export default function NavLink({ linkpath, name }) {
             ? colorVariants.green.active
             : null
         } ${
-          "/" === link
+          "/home" === link
             ? colorVariants.orange.hover
             : "/about" === link
             ? colorVariants.yellow.hover
