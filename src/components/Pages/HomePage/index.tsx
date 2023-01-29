@@ -1,11 +1,17 @@
 import CTA from "./CTA";
-import Hero from "./Hero";
+import Greetings from "./Greetings";
+import Introduce from "./Introduce";
+import Overview from "./Overview";
+import Points from "./Points";
 
 export default function HomePage() {
   return (
     <div className="container px-5">
-      <Hero />
+      <Greetings />
+      <Introduce />
+      <Points />
       <CTA />
+      <Overview />
     </div>
   );
 }
