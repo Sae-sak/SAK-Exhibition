@@ -4,6 +4,40 @@ import Head from "next/head";
 import {ThemeProvider} from "next-themes";
 import {Provider} from "react-redux";
 import {store} from "@toolkit/store";
+import localFont from "@next/font/local";
+import {Roboto, Noto_Serif_KR, Nanum_Myeongjo} from "@next/font/google";
+
+const amagro = localFont({
+  src: "../assets/fonts/Amagro/Amagro.ttf",
+  variable: "--font-amagro",
+});
+
+export const nanumMyeongjo = Nanum_Myeongjo({
+  weight: ["400", "700", "800"],
+  subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
+  variable: "--font-nanumMyeongjo",
+});
+
+export const notoSerifKR = Noto_Serif_KR({
+  weight: ["200", "300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
+  variable: "--font-notoSerifKR",
+});
+
+export const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "fallback",
+  style: "normal",
+  fallback: ["system-ui"],
+  variable: "--font-roboto",
+});
 
 export default function App({Component, pageProps}: AppProps) {
   return (
@@ -18,9 +52,12 @@ export default function App({Component, pageProps}: AppProps) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       </Head>
+
       <ThemeProvider attribute="class">
         <Provider store={store}>
-          <Component {...pageProps} />
+          <main className={` ${amagro.variable} ${notoSerifKR.className}`}>
+            <Component {...pageProps} />
+          </main>
         </Provider>
       </ThemeProvider>
     </>

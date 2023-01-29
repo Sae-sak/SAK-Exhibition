@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+const {fontFamily} = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -33,14 +33,10 @@ module.exports = {
         alert_info: "#2F80ED",
       },
       fontFamily: {
-        header: ["Amagro", "serif"],
-        headerKR: ["Nanum Myeongjo", "serif"],
-        title: ["PT serif", "serif"],
-        titleKR: ["Noto Serif KR", "serif"],
-        subtitle: ["Lustria", "serif"],
-        body: ["Roboto", "sans-serif"],
-        button: ["Bebas Neue", "cursive"],
-        buttonKR: ["Do Hyeon", "sans-serif"],
+        header: "var(--font-amagro)",
+        title: "var(--font-nanumMyeongjo)",
+        body: "var(--font-notoSerifKR)",
+        bodySans: "var(--font-roboto)",
       },
     },
   },
