@@ -5,25 +5,65 @@ import { ThemeProvider } from "next-themes";
 import { Provider } from "react-redux";
 import { store } from "@toolkit/store";
 import localFont from "@next/font/local";
-import { Roboto, Noto_Serif_KR, Nanum_Myeongjo } from "@next/font/google";
+import { Roboto } from "@next/font/google";
 
 const amagro = localFont({
   src: "../public/fonts/Amagro/Amagro.ttf",
   variable: "--font-amagro",
 });
 
-export const nanumMyeongjo = Nanum_Myeongjo({
-  weight: ["400", "700", "800"],
-  subsets: ["latin"],
+export const nanumMyeongjo = localFont({
+  src: [
+    {
+      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   display: "fallback",
   style: "normal",
   fallback: ["system-ui"],
   variable: "--font-nanumMyeongjo",
 });
 
-export const notoSerifKR = Noto_Serif_KR({
-  weight: ["200", "300", "400", "500", "700"],
-  subsets: ["latin"],
+export const notoSerifKR = localFont({
+  src: [
+    {
+      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-SemiBold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Noto_Serif_KR/NotoSerifKR-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   display: "fallback",
   style: "normal",
   fallback: ["system-ui"],
