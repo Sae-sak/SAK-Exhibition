@@ -1,14 +1,14 @@
 import "../styles/globals.css";
-import type {AppProps} from "next/app";
+import type { AppProps } from "next/app";
 import Head from "next/head";
-import {ThemeProvider} from "next-themes";
-import {Provider} from "react-redux";
-import {store} from "@toolkit/store";
+import { ThemeProvider } from "next-themes";
+import { Provider } from "react-redux";
+import { store } from "@toolkit/store";
 import localFont from "@next/font/local";
-import {Roboto, Noto_Serif_KR, Nanum_Myeongjo} from "@next/font/google";
+import { Roboto, Noto_Serif_KR, Nanum_Myeongjo } from "@next/font/google";
 
 const amagro = localFont({
-  src: "../assets/fonts/Amagro/Amagro.ttf",
+  src: "../public/fonts/Amagro/Amagro.ttf",
   variable: "--font-amagro",
 });
 
@@ -39,7 +39,7 @@ export const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-export default function App({Component, pageProps}: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
