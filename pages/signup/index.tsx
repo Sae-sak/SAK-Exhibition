@@ -1,15 +1,10 @@
-import Alert from "@components/Base/Alert";
-import AuthLayout from "@components/Layouts/AuthLayout";
-import SignupPage from "@components/Pages/SignupPage";
-import {alertActions} from "@features/alert/alertSlice";
-import {useAppDispatch, useAppSelector} from "@toolkit/hook";
+import AuthLayout from "@layouts/AuthLayout";
+import Signup from "@scenes/Signup";
 
-export default function Signup() {
-  const dispatch = useAppDispatch();
-
+export default function SignupPage() {
   return (
     <AuthLayout>
-      <SignupPage />
+      <Signup />
     </AuthLayout>
   );
 }

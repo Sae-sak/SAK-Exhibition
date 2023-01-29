@@ -1,10 +1,10 @@
-import AuthLayout from "@components/Layouts/AuthLayout";
-import SigninPage from "@components/Pages/SigninPage";
+import AuthLayout from "@layouts/AuthLayout";
+import Signin from "@scenes/Signin";
 
-export default function Signin() {
+export default function SigninPage() {
   return (
     <AuthLayout>
-      <SigninPage />
+      <Signin />
     </AuthLayout>
   );
 }

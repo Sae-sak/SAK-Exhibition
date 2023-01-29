@@ -5,7 +5,7 @@ import {
   IStudentFilterName,
   IStudioFilterName,
   ITagFilterName,
-} from "@constants/types/Filter";
+} from "@type/Filter";
 
 const initialState: IFilterState = {
   isFilter: false,

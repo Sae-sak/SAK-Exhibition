@@ -22,8 +22,6 @@
     "baseUrl": "./",
     "outDir": "./out",
     "paths": {
-      "@toolkit": ["./src/toolkit"],
-      "@toolkit/*": ["./src/toolkit/*"],
       "@components": ["./src/components"],
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants"],
@@ -32,10 +30,18 @@
       "@customHook/*": ["./src/customHook/*"],
       "@features": ["./src/features"],
       "@features/*": ["./src/features/*"],
+      "@layouts": ["./src/layouts"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@scenes": ["./src/scenes"],
+      "@scenes/*": ["./src/scenes/*"],
+      "@toolkit": ["./src/toolkit"],
+      "@toolkit/*": ["./src/toolkit/*"],
+      "@type": ["./src/type"],
+      "@type/*": ["./src/type/*"],
+      "@util": ["./src/util"],
+      "@util/*": ["./src/util/*"],
       "@src": ["./src"],
-      "@src/*": ["./src/*"],
-      "@": ["./"],
-      "@/*": ["./*"]
+      "@src/*": ["./src/*"]
     }
   },
   "include": [
@@ -45,7 +51,8 @@
     "styles/**/*",
     "public/**/*",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["coverage", ".next", "dist", "out", "node_modules"]
 }

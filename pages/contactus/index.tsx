@@ -1,10 +1,10 @@
-import MainLayout from "@components/Layouts/MainLayout";
-import ContactUsPage from "@components/Pages/ContactUsPage/intex";
+import MainLayout from "@layouts/MainLayout";
+import ContactUs from "@scenes/ContactUs";
 
-export default function ContactUs() {
+export default function ContactUsPage() {
   return (
     <MainLayout>
-      <ContactUsPage />
+      <ContactUs />
     </MainLayout>
   );
 }

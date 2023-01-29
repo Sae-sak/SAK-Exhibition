@@ -1,22 +1,23 @@
-import {
-  getProjectData,
-  getProjectFiles,
-} from "@components/Base/Util/project-filtering";
-import MainLayout from "@components/Layouts/MainLayout";
-import ProjectPage from "@components/Pages/ExhibitionPage/Projects/ProjectPage";
-import {IProject} from "@constants/types/exhibition";
+import MainLayout from "@layouts/MainLayout";
+import Project from "@scenes/Exhibition/Project";
+import { IProject } from "@type/exhibition";
+import { getProjectData, getProjectFiles } from "@util/project-filtering";
 
-export default function Project({projectData}: {projectData: IProject}) {
+export default function ProjectPage({
+  projectData,
+}: {
+  projectData: IProject;
+}) {
   return (
     <MainLayout>
-      <ProjectPage projectData={projectData} />
+      <Project projectData={projectData} />
     </MainLayout>
   );
 }
 
 export async function getStaticProps(context) {
-  const {params} = context;
-  const {slug} = params;
+  const { params } = context;
+  const { slug } = params;
 
   const filename = slug.join("_") + ".md";
   const projectData = getProjectData(filename);
@@ -35,7 +36,7 @@ export async function getStaticPaths() {
   );
 
   return {
-    paths: slugs.map((slug) => ({params: {slug: slug}})),
+    paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: false,
   };
 }

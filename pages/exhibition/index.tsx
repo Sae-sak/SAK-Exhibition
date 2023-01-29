@@ -1,12 +1,12 @@
-import {getAllProjects} from "@components/Base/Util/project-filtering";
-import MainLayout from "@components/Layouts/MainLayout";
-import ExhibitionPage from "@components/Pages/ExhibitionPage";
-import {IProject} from "@constants/types/exhibition";
+import MainLayout from "@layouts/MainLayout";
+import Exhibition from "@scenes/Exhibition";
+import { IProject } from "@type/exhibition";
+import { getAllProjects } from "@util/project-filtering";
 
-export default function Exhibition({projects}: {projects: IProject[]}) {
+export default function ExhibitionPage({ projects }: { projects: IProject[] }) {
   return (
     <MainLayout>
-      <ExhibitionPage projects={projects} />
+      <Exhibition projects={projects} />
     </MainLayout>
   );
 }
