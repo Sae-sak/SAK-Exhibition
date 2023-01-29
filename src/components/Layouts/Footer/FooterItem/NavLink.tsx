@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const colorVariants = {
   orange: {
@@ -20,7 +20,7 @@ const colorVariants = {
   },
 };
 
-export default function NavLink({linkpath, name}) {
+export default function NavLink({ linkpath, name }) {
   const router = useRouter();
   const link = `/${linkpath}`;
 
@@ -33,7 +33,8 @@ export default function NavLink({linkpath, name}) {
               ? colorVariants.orange.active
               : "/about" === router.pathname && "/about" === link
               ? colorVariants.yellow.active
-              : "/exhibition" === router.pathname && "/exhibition" === link
+              : router.pathname.includes("/exhibition") &&
+                "/exhibition" === link
               ? colorVariants.blue.active
               : "/contactus" === router.pathname && "/contactus" === link
               ? colorVariants.green.active
