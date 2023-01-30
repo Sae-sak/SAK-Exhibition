@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { IProject } from "@type/exhibition";
 
-export default function ProjectThumbnail({ project }: { project: IProject }) {
+export default function ThumbnailItem({ project }: { project: IProject }) {
   const {
     slug,
     title,
