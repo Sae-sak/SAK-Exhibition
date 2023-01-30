@@ -1,4 +1,4 @@
-import {Html, Head, Main, NextScript} from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -90,10 +90,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div
-          className="fixed left-0 right-0 mx-auto top-10 col-center"
-          id="alert"
-        ></div>
+        <div className="fixed top-0 left-0 col-center" id="portal"></div>
       </body>
     </Html>
   );

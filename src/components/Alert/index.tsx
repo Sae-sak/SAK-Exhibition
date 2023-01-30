@@ -1,10 +1,10 @@
-import {useState, useEffect} from "react";
-import {motion} from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import {useAppDispatch, useAppSelector} from "@src/toolkit/hook";
-import {alertActions} from "@features/alert/alertSlice";
-import AlertPortal from "./AlertPortal";
+import { useAppDispatch, useAppSelector } from "@toolkit/hook";
+import { alertActions } from "@features/alert/alertSlice";
 import Overlay from "./Overlay";
+import Portal from "@components/Portal";
 
 //--------------------------------------------------------------------------------
 // isAlert - 알림 활성 / 알림 비활성
@@ -14,7 +14,9 @@ import Overlay from "./Overlay";
 
 const Alert = () => {
   const dispatch = useAppDispatch();
-  const {isAlert, alertType, content} = useAppSelector((state) => state.alert);
+  const { isAlert, alertType, content } = useAppSelector(
+    (state) => state.alert
+  );
   const [alertIcon, setAlertIcon] = useState(<div></div>);
 
   // message.alertType 별 분기 처리 및 컴포넌트 할당
@@ -53,12 +55,12 @@ const Alert = () => {
           <Overlay />
 
           {/* 알람 영역 */}
-          <div className="z-40 p-4">
+          <div className="z-40 p-4 pt-14">
             <div className="max-w-xl ">
               <motion.div
-                initial={{opacity: 0, scale: 0.5}}
-                animate={{opacity: 1, scale: 1}}
-                transition={{duration: 0.3}}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
                 className="gap-4 px-4 py-3 bg-white rounded-md row-center"
               >
                 <div className="row-center">{alertIcon}</div>
@@ -83,4 +85,4 @@ const Alert = () => {
 };
 
 // HOC 적용
-export default AlertPortal(Alert);
+export default Portal(Alert);
