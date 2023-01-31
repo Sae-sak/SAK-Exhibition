@@ -3,21 +3,24 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "Noto Serif KR";
-  src: url("../public/fonts/Noto_Serif_KR/NotoSerifKR-Light.otf"),
-    url("../public/fonts/Noto_Serif_KR/NotoSerifKR-Medium.otf"),
-    url("../public/fonts/Noto_Serif_KR/NotoSerifKR-Regular.otf"),
-    url("../public/fonts/Noto_Serif_KR/NotoSerifKR-SemiBold.otf");
+  font-family: "Kimjungchul Gothic";
+  src: url("../public/fonts/Kimjungchul/KimjungchulGothic-Light.ttf"),
+    url("../public/fonts/Kimjungchul/KimjungchulGothic-Regular.ttf"),
+    url("../public/fonts/Kimjungchul/KimjungchulGothic-Bold.ttf");
 }
 @font-face {
-  font-family: "Nanum Myeongjo";
-  src: url("../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf"),
-    url("../public/fonts/Nanum_Myeongjo/NanumMyeongjo-Bold.ttf"),
-    url("../public/fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf");
+  font-family: "Kimjungchul Myungjo";
+  src: url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Light.ttf"),
+    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Regular.ttf"),
+    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Bold.ttf");
+}
+@font-face {
+  font-family: "Frank The Architect";
+  src: url("../public/fonts/FrankTheArchitect/FrankTheArchitect.ttf");
 }
 
 html {
-  font-family: "Noto Serif KR", ui-sans-serif, system-ui, -apple-system,
+  font-family: "Kimjungchul Myungjo", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
