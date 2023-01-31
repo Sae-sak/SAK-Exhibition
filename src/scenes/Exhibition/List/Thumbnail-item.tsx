@@ -53,7 +53,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           <Image
             src={thumbnailImg}
             alt={title}
-            width={400}
+            width={630}
             height={400}
             className="object-cover h-full"
             loading="lazy"
