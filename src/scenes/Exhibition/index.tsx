@@ -1,13 +1,13 @@
+import { useEffect, useState } from "react";
+import { useAppSelector } from "@toolkit/hook";
+
 import Filter from "./Filter";
-import Projects from "./Projects";
+import FilterButton from "./Filter/FilterButton";
+import List from "./List";
 import Banner from "./Banner";
 
 import { IProject } from "@type/exhibition";
-
-import { useAppSelector } from "@toolkit/hook";
-import { useEffect, useState } from "react";
 import { getFilteredProjects } from "@util/project-filtering";
-import FilterButton from "./Filter/FilterButton";
 
 export default function Exhibition({ projects }: { projects: IProject[] }) {
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -37,7 +37,7 @@ export default function Exhibition({ projects }: { projects: IProject[] }) {
       <Banner />
 
       {/* filtered project list */}
-      <Projects projects={filteredProjects} />
+      <List projects={filteredProjects} />
     </>
   );
 }

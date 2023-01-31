@@ -1,9 +1,11 @@
-import SimpleFooter from "./Footer/SimpleFooter";
-import Header from "./Header";
+import { motion } from "framer-motion";
 
-export default function AuthLayout({children}) {
+import Header from "@layouts/Header";
+import SimpleFooter from "@layouts/Footer/SimpleFooter";
+
+export default function AuthLayout({ children }) {
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <div className="fixed top-0 w-full">
         <Header />
       </div>
@@ -11,6 +13,6 @@ export default function AuthLayout({children}) {
       <div className="fixed bottom-0 w-full">
         <SimpleFooter />
       </div>
-    </>
+    </motion.div>
   );
 }

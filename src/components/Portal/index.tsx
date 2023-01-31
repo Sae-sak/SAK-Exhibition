@@ -1,11 +1,11 @@
 import ReactDOM from "react-dom";
 
 // HOC
-const AlertPortal = (Component) => (props) => {
+const Portal = (Component) => (props) => {
   return ReactDOM.createPortal(
     <Component {...props} />,
-    document.getElementById("alert")
+    document.getElementById("portal")
   );
 };
 
-export default AlertPortal;
+export default Portal;

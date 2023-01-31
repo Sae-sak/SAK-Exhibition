@@ -1,4 +1,4 @@
-import {configureStore} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 import filterReducer from "@features/filter/filterSlice";
 import alertReducer from "@features/alert/alertSlice";
