@@ -1,26 +1,5 @@
 import { Tdelay, Tdirection, Tduration, Ttype } from "@type/variants";
 
-export const navVariants = {
-  hidden: {
-    opacity: 0,
-    y: -50,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 140,
-    },
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 80,
-      delay: 1,
-    },
-  },
-};
-
 export const slideIn = (
   direction: Tdirection,
   type: Ttype,
@@ -43,16 +22,6 @@ export const slideIn = (
   },
 });
 
-export const staggerContainer: any = (staggerChildren, delayChildren) => ({
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren,
-      delayChildren,
-    },
-  },
-});
-
 export const textVariant = (delay: Tdelay) => ({
   hidden: {
     y: 50,
@@ -68,16 +37,6 @@ export const textVariant = (delay: Tdelay) => ({
     },
   },
 });
-
-export const textContainer = {
-  hidden: {
-    opacity: 0,
-  },
-  show: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.1 },
-  }),
-};
 
 export const textVariant2 = {
   hidden: {
@@ -151,27 +110,6 @@ export const zoomIn = (delay: Tdelay, duration: Tduration) => ({
   },
 });
 
-export const footerVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 140,
-    },
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 80,
-      delay: 0.5,
-    },
-  },
-};
-
 export const scrollTo = {
   top: {
     top: {
@@ -182,7 +120,7 @@ export const scrollTo = {
     },
   },
   bottom: {
-    ottom: {
+    bottom: {
       opacity: 0,
     },
     middle: {

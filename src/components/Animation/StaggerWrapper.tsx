@@ -1,4 +1,4 @@
-import { staggerContainer } from "@util/variants";
+import { staggerContainer } from "@util/variants/container";
 import { motion } from "framer-motion";
 
 export default function StaggerWrapper({
