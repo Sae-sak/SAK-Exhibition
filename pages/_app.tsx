@@ -6,25 +6,8 @@ import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 
-import localFont from "@next/font/local";
-import { Roboto } from "@next/font/google";
-
 import { Provider } from "react-redux";
 import { store } from "@toolkit/store";
-
-const amagro = localFont({
-  src: "../public/fonts/Amagro/Amagro.ttf",
-  variable: "--font-amagro",
-});
-
-export const roboto = Roboto({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "fallback",
-  style: "normal",
-  fallback: ["system-ui"],
-  variable: "--font-roboto",
-});
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -44,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <ThemeProvider attribute="class">
         <Provider store={store}>
-          <main className={` ${amagro.variable} `}>
+          <main>
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.route} />
             </AnimatePresence>

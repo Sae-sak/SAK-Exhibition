@@ -11,7 +11,9 @@ export default function Logo() {
       <div>
         <Image src={logo} alt="Home" width={32} height={32} />
       </div>
-      <h1 className="ml-3 text-2xl leading-4">SAK Exhibtion</h1>
+      <h1 className="ml-3 text-2xl leading-4 border-gray-300 border-y">
+        SAK Exhibtion
+      </h1>
     </Link>
   );
 }
