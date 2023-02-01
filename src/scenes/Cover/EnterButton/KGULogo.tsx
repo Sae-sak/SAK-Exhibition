@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 export default function KGULogo() {
   return (
     <motion.div
-      exit={{ scale: 100, transition: { duration: 1, delay: 0.4 } }}
+      exit={{
+        scale: 100,
+        background: "#FBFBFB",
+        transition: { duration: 1, delay: 0.4 },
+      }}
       className="col-center"
     >
       <div className="relative">
