@@ -1,23 +1,29 @@
-import { useState } from "react";
-import Image from "next/image";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+import { textVariant } from "@util/variants";
+import { staggerContainer } from "@util/variants/container";
+import KGULogo from "./KGULogo";
+import EnterButton from "./EnterButton";
+
 export default function Cover() {
-  const [active, setActive] = useState(true);
-  const router = useRouter();
+  // if (typeof window !== "undefined") {
+  //   window.document.body.style.overflow = "hidden";
+  // }
 
-  if (typeof window !== "undefined") {
-    active
-      ? (window.document.body.style.overflow = "hidden")
-      : (window.document.body.style.overflow = "auto");
-  }
-
-  return active ? (
-    <div className="absolute z-50 w-screen h-screen gap-10 text-white bg-black col-center">
+  return (
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      animate="show"
+      className="absolute z-50 w-screen h-screen gap-10 text-white bg-night_bg_1 col-center"
+    >
       <div className="relative w-screen h-screen ">
-        {/* 상당 우측 텍스트*/}
-        <div className="absolute text-left top-14 left-14 text-night_gray_3">
+        {/* 상단 좌측 텍스트 */}
+        <motion.div
+          variants={textVariant(1.1)}
+          className="fixed text-left top-14 left-14 text-night_gray_3"
+        >
           <span className="font-bold">
             <span className="text-2xl text-kgu_main_orange">S</span>CHOOL OF{" "}
             <span className="text-2xl text-kgu_main_yellow">A</span>RCHITECTURE{" "}
@@ -30,10 +36,13 @@ export default function Cover() {
               <span>XHIBITION</span>
             </div>
           </span>
-        </div>
+        </motion.div>
 
-        {/* 이미지 & 타이틀 */}
-        <div className="w-screen h-screen col-center ">
+        {/* 가운데 타이틀 */}
+        <motion.div
+          variants={textVariant(1.2)}
+          className="fixed w-screen h-screen col-center "
+        >
           <div className="flex items-center justify-center w-screen h-screen gap-10 p-10">
             <div className="w-1/2 h-full">
               <div className="w-full h-full gap-4 col-center">
@@ -42,21 +51,23 @@ export default function Cover() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* 하단 우측 링크*/}
-        <Link
-          href={"/home"}
-          className="absolute text-white row-center bottom-14 right-14 group"
+        <motion.div
+          variants={textVariant(1.3)}
+          initial="hidden"
+          animate="show"
+          whileHover="hover"
+          exit="exit"
+          className="absolute bottom-14 right-14"
         >
-          <div className="z-10 gap-4 group-hover:-mr-4 row-center font-header">
-            <span className="text-2xl leading-4 bg-black border-gray-500 border-y">
-              Exhibition Enter
-            </span>
-          </div>
-          <div className="group-hover:rotate-12 transform-gpu w-20 h-24 border-[12px] border-t-kgu_main_yellow border-l-kgu_main_orange border-r-kgu_main_green border-b-kgu_main_blue"></div>
-        </Link>
+          <Link href={"/home"} className="gap-2 text-white row-center group">
+            <EnterButton />
+            <KGULogo />
+          </Link>
+        </motion.div>
       </div>
-    </div>
-  ) : null;
+    </motion.div>
+  );
 }
