@@ -1,6 +1,7 @@
 "use client";
 
-import { textContainer, textVariant2 } from "@util/variants";
+import { textVariant2 } from "@util/variants";
+import { textContainer } from "@util/variants/container";
 import { motion } from "framer-motion";
 
 export const TypingText = ({
