@@ -8,7 +8,7 @@ export default function FullName() {
       className="fixed text-left top-14 left-14 text-night_gray_3"
     >
       <span className="font-bold">
-        <span className="text-2xl text-kgu_main_orange">S</span>CHOOL OF{" "}
+        <span className="text-2xl text-kgu_main_red">S</span>CHOOL OF{" "}
         <span className="text-2xl text-kgu_main_yellow">A</span>RCHITECTURE{" "}
         <div>
           IN <span className="text-2xl text-kgu_main_green">K</span>

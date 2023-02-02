@@ -10,10 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        kgu_main_orange: "#F25822",
-        kgu_main_yellow: "#F7941D",
-        kgu_main_blue: "#005AAB",
-        kgu_main_green: "#00AB5B",
+        kgu_main_red: "#E9511D",
+        kgu_main_yellow: "#F49800",
+        kgu_main_green: "#009E59",
+        kgu_main_blue: "#0050A0",
 
         light_gray_1: "#303030",
         light_gray_2: "#808080",
