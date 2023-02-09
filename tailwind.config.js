@@ -20,6 +20,7 @@ module.exports = {
         light_gray_3: "#BDBDBD",
         light_gray_4: "#EEEEEE",
         light_bg_1: "#FBFBFB",
+        light_font_1: "#000000",
 
         night_main_yellow: "#FFE922",
 
@@ -28,6 +29,7 @@ module.exports = {
         night_gray_3: "#808080",
         night_gray_4: "#303030",
         night_bg_1: "#101010",
+        night_font_1: "#FFFFFF",
 
         alert_success: "#219653",
         alert_warning: "#F2C94C",
