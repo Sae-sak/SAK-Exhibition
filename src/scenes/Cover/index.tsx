@@ -1,18 +1,11 @@
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { textVariant } from "@util/variants";
 import { staggerContainer } from "@util/variants/container";
-import KGULogo from "./EnterButton/KGULogo";
 import EnterButton from "./EnterButton";
 import FullName from "./FullName";
 import Title from "./Title";
 
 export default function Cover() {
-  // if (typeof window !== "undefined") {
-  //   window.document.body.style.overflow = "hidden";
-  // }
-
   return (
     <motion.div
       variants={staggerContainer}
