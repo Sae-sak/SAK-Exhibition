@@ -32,53 +32,28 @@ html {
   scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-header;
-}
-
 /* ------------------------------------------------------------------ */
 
-.bg-primary {
-  @apply bg-white dark:bg-slate-800;
-}
-
-.btn-project {
-  @apply inline-flex px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded dark:text-white focus:outline-none hover:bg-indigo-600;
-}
-
-.project-card {
-  @apply flex flex-col w-full m-3 transition duration-300 transform border border-gray-300 rounded-xl hover:scale-105 hover:shadow-lg dark:border-gray-200/50 dark:hover:shadow-gray-400/40 hover:text-blue-600;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply text-slate-900 dark:text-white;
+  @apply text-light_font_1 font-header dark:text-night_font_1;
 }
 
-footer {
-  @apply text-gray-900 bg-gray-100 dark:text-white dark:bg-slate-600/20;
+a,
+p,
+i {
+  @apply text-light_font_1 dark:text-night_font_1;
 }
 
-a {
-  @apply text-slate-900 dark:text-slate-400;
-}
-
-p {
-  @apply text-slate-900 dark:text-slate-400;
-}
-
+html,
+body,
 input,
 textarea {
-  @apply bg-white dark:bg-black;
+  @apply bg-light_bg_1 dark:bg-night_bg_1;
 }
 
 input:focus {
@@ -86,6 +61,9 @@ input:focus {
   border-bottom: 0.12rem solid gray;
 }
 
+footer {
+  @apply text-gray-900 bg-light_bg_1 dark:text-night_font_1 dark:bg-night_bg_1;
+}
 /* ------------------------------------------------------------------ */
 
 .col-center {

@@ -90,7 +90,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div className="fixed top-0 left-0 col-center" id="portal"></div>
+        <div className="fixed top-0 left-0 z-40 " id="portal"></div>
       </body>
     </Html>
   );

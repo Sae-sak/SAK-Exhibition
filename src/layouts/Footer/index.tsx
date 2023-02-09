@@ -1,12 +1,10 @@
-import SNS from "./FooterItem/SNS";
 import NavLink from "./FooterItem/NavLink";
-import KGULinks from "./FooterItem/KGULinks";
-import Copywrite from "./FooterItem/Copywrite";
 import Logo from "./FooterItem/Logo";
+import SimpleFooter from "./SimpleFooter";
 
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 border-t border-t-light_gray_3/30 dark:border-t-night_gray_3/30">
       {/* main footer */}
       <div className="container flex flex-wrap justify-between px-5 py-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
         {/* 네비게이션 */}
@@ -24,13 +22,7 @@ export default function Footer() {
       </div>
 
       {/* sub footer */}
-      <div className="bg-gray-200">
-        <div className="container flex-wrap gap-2 px-5 py-4 mx-auto col-center sm:flex-row">
-          <KGULinks />
-          <Copywrite />
-          <SNS />
-        </div>
-      </div>
+      <SimpleFooter />
     </footer>
   );
 }

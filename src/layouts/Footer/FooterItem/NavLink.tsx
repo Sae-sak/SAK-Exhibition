@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const colorVariants = {
-  orange: {
-    active: "text-kgu_main_orange",
-    hover: "hover:text-kgu_main_orange",
+  red: {
+    active: "text-kgu_main_red",
+    hover: "hover:text-kgu_main_red",
   },
   yellow: {
     active: "text-kgu_main_yellow",
@@ -30,7 +30,7 @@ export default function NavLink({ linkpath, name }) {
         <span
           className={`block font-title ${
             "/home" === router.pathname && "/home" === link
-              ? colorVariants.orange.active
+              ? colorVariants.red.active
               : "/about" === router.pathname && "/about" === link
               ? colorVariants.yellow.active
               : router.pathname.includes("/exhibition") &&
@@ -41,7 +41,7 @@ export default function NavLink({ linkpath, name }) {
               : null
           } ${
             "/home" === link
-              ? colorVariants.orange.hover
+              ? colorVariants.red.hover
               : "/about" === link
               ? colorVariants.yellow.hover
               : "/exhibition" === link
