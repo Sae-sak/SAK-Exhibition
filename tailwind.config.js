@@ -37,7 +37,6 @@ module.exports = {
         alert_info: "#2F80ED",
       },
       fontFamily: {
-        header: ["Frank The Architect", "serif"],
         title: ["Kimjungchul Myungjo"],
         body: ["Kimjungchul Gothic"],
       },
