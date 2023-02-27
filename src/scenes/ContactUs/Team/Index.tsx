@@ -34,15 +34,6 @@ export default function Team() {
             email={"kimyoo@kakao.com"}
             kakao={""}
           />
-          <Profile
-            name={"김민선"}
-            job={"Designer"}
-            description={
-              "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware."
-            }
-            email={"pom990524@gmail.com"}
-            kakao={""}
-          />
         </div>
       </div>
     </section>
