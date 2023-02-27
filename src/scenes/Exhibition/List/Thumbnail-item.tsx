@@ -25,6 +25,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
     tags,
     name,
     motto,
+    excerpt,
     content,
   } = project;
   const imagePath = `${slug.replaceAll("/", "_")}`;
@@ -34,11 +35,11 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
   return (
     <>
       <motion.div
-        className="w-full p-2 mb-12 rounded lg:w-1/3 md:w-1/2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
+        className="w-full p-2 pt-4 mb-12 lg:w-1/3 md:w-1/2 group"
       >
         <Link
           rel="preload"
@@ -50,17 +51,23 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
             router.push(e.currentTarget.href);
           }}
         >
-          <Image
-            src={thumbnailImg}
-            alt={title}
-            width={630}
-            height={400}
-            className="object-cover h-full"
-            loading="lazy"
-          />
-          <div className="h-14">
-            <span className="text-sm text-gray-500 font-titleKR">{name}</span>
-            <p className="text-gray-700 font-titleKR">{title}</p>
+          <div className="relative h-full border border-light_font_1 dark:border-night_font_1">
+            <Image
+              src={thumbnailImg}
+              alt={title}
+              width={630}
+              height={400}
+              className="object-cover h-full transition-all bg-black group-hover:opacity-30"
+              loading="lazy"
+            />
+
+            <div className="absolute top-0 hidden p-4 transition-all group-hover:block">
+              <p className="text-lg font-body">{excerpt}</p>
+            </div>
+          </div>
+          <div className="px-3 border border-t-0 border-light_font_1 col-center h-14 dark:border-night_font_1">
+            <span className="text-sm font-bold font-body">{name}</span>
+            <p className="font-bold text-center font-body">{title}</p>
           </div>
         </Link>
       </motion.div>
