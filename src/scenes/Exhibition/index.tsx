@@ -26,7 +26,7 @@ export default function Exhibition({ projects }: { projects: IProject[] }) {
   }, [name, studio, tag, projects]);
 
   return (
-    <>
+    <div className="container px-3 col-center">
       {/* filter screen */}
       <Filter projects={projects} />
 
@@ -38,6 +38,6 @@ export default function Exhibition({ projects }: { projects: IProject[] }) {
 
       {/* filtered project list */}
       <List projects={filteredProjects} />
-    </>
+    </div>
   );
 }
