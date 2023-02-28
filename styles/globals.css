@@ -122,3 +122,13 @@ footer {
     rgba(0, 171, 91, 1) 100%
   );
 }
+
+/* default border color */
+div,
+span,
+section,
+p,
+footer,
+header {
+  @apply border-light_font_1 dark:border-night_font_1;
+}
