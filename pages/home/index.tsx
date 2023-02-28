@@ -1,10 +1,10 @@
-import HomeLayout from "@layouts/HomeLayout";
+import MainLayout from "@layouts/MainLayout";
 import Home from "@scenes/Home";
 
 export default function HomePage() {
   return (
-    <HomeLayout>
+    <MainLayout>
       <Home />
-    </HomeLayout>
+    </MainLayout>
   );
 }
