@@ -1,4 +1,5 @@
 import { IProject } from "@type/exhibition";
+import Quote from "@components/Quote";
 
 import ProjectHeader from "./ProjectHeader";
 import ProjectContent from "./ProjectContent";
@@ -10,6 +11,7 @@ import ProgressBar from "./ProgressBar";
 import ModalImage from "./ModalImage";
 import Carousel from "./Carousel";
 import Comment from "./Comment";
+import Student from "./Student";
 
 export default function Project({ projectData }: { projectData: IProject }) {
   const {
@@ -39,31 +41,31 @@ export default function Project({ projectData }: { projectData: IProject }) {
   return (
     <>
       <ProgressBar />
-      <article className="container p-5 ">
+      <article className="container px-5 pb-5 ">
         <ProjectHeader
           title={title}
           name={name}
           excerpt={excerpt}
           thumbnailImg={thumbnailImg}
         />
+        <section className="flex mt-4 border-r flex-nowrap lg:border-x">
+          <section className="sticky hidden h-5 px-4 top-[90px] lg:w-1/4 lg:block">
+            {/* anchor URLs */}
+            <AnchorUrl content={content} />
 
-        {/* body 세등분 */}
-        <section className="flex pt-24 flex-nowrap">
-          {/* sticky URLs */}
-          <section className="sticky hidden h-5 top-52 lg:w-1/6 lg:block">
+            {/* sticky URLs */}
             <StickyUrl />
           </section>
 
           {/* content */}
-          <section className="w-full lg:w-2/3">
-            <ProjectContent content={content} />
-            <Carousel data={drawingImgs} />
-            <Comment />
-          </section>
-
-          {/* anchor URLs */}
-          <section className="sticky hidden h-5 top-52 lg:w-1/6 lg:block">
-            <AnchorUrl content={content} />
+          <section className="w-full px-4 border-l lg:w-3/4">
+            <div className="pt-2 border-t">
+              <ProjectContent content={content} />
+              <Carousel data={drawingImgs} />
+              <Student />
+              <Comment />
+              <Quote />
+            </div>
           </section>
         </section>
       </article>

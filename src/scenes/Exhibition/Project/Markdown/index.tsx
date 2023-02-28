@@ -5,7 +5,7 @@ import ParagraphWrapper from "./ParagraphWrapper";
 
 const MarkdownComponents = {
   p(paragraph) {
-    const {node} = paragraph;
+    const { node } = paragraph;
 
     if (node.children[0].tagName === "img") {
       const image = node.children[0].properties;
@@ -24,7 +24,7 @@ const MarkdownComponents = {
     }
     return (
       <ParagraphWrapper key={paragraph.choildren}>
-        <p>{paragraph.children}</p>
+        <p className="font-body">{paragraph.children}</p>
       </ParagraphWrapper>
     );
   },
