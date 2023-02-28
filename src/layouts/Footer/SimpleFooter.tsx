@@ -6,7 +6,7 @@ export default function SimpleFooter() {
   return (
     <footer className="border-t">
       {/* sub footer */}
-      <div className="container flex-wrap gap-2 px-5 py-4 mx-auto col-center sm:flex-row">
+      <div className="container flex-wrap gap-2 px-5 py-2 mx-auto col-center sm:flex-row">
         <KGULinks />
         <Copywrite />
         <SNS />
