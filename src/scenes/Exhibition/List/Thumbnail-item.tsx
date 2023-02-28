@@ -51,13 +51,13 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
             router.push(e.currentTarget.href);
           }}
         >
-          <div className="relative h-full border border-light_font_1 dark:border-night_font_1">
+          <div className="relative h-full border ">
             <Image
               src={thumbnailImg}
               alt={title}
               width={630}
               height={400}
-              className="object-cover h-full transition-all bg-black group-hover:opacity-30"
+              className="object-cover h-full transition-all group-hover:opacity-30"
               loading="lazy"
             />
 
@@ -65,7 +65,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
               <p className="text-lg font-body">{excerpt}</p>
             </div>
           </div>
-          <div className="px-3 border border-t-0 border-light_font_1 col-center h-14 dark:border-night_font_1">
+          <div className="px-3 border border-t-0 col-center h-14">
             <span className="text-sm font-bold font-body">{name}</span>
             <p className="font-bold text-center font-body">{title}</p>
           </div>

@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function GoToAb() {
   return (
-    <Link href="/about">
-      <button className="rounded-lg bg-sak_main_olivegreen">
-        <div className="gap-4 p-4 row-center">
-          <span className="text-white">About SAK</span>
-          <i className="text-white ri-arrow-right-line"></i>
+    <motion.button className="text-2xl font-bold font-body">
+      <Link href="/about">
+        <div className="p-4">
+          <span className="">About SAK</span>
         </div>
-      </button>
-    </Link>
+      </Link>
+    </motion.button>
   );
 }

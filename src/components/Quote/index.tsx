@@ -1,5 +1,5 @@
-import {quotes} from "@constants/quotes";
-import {useEffect, useState} from "react";
+import { quotes } from "@constants/quotes";
+import { useEffect, useState } from "react";
 
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -19,12 +19,12 @@ export default function Quote() {
     <div className="container mx-auto">
       <div className="gap-2 py-8 col-center">
         <div className="text-center">
-          <span className="text-3xl font-titleKR">&quot;{quote}&quot;</span>
+          <span className="text-2xl font-bold font-title">
+            &quot;{quote}&quot;
+          </span>
         </div>
         <div>
-          <span className="text-xl text-gray-700 font-titleKR">
-            - {architect} -
-          </span>
+          <span className="font-bold text-md font-title">- {architect} -</span>
         </div>
       </div>
     </div>
