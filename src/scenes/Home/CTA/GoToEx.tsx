@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function GoToEx() {
   return (
-    <Link href="/exhibition">
-      <button className="rounded-lg bg-sak_main_olivegreen">
-        <div className="gap-4 p-4 row-center">
-          <span className="text-white">Go To Exhibition 2023</span>
-          <i className="text-white ri-arrow-right-line"></i>
+    <motion.button className="kgu-gradient__font">
+      <Link href="/exhibition">
+        <div className="gap-2 p-4 text-2xl font-bold font-body row-center">
+          <span className="">Go To Exhibition 2023</span>
+          <i className=" ri-arrow-right-line"></i>
         </div>
-      </button>
-    </Link>
+      </Link>
+    </motion.button>
   );
 }
