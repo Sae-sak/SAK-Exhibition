@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useAppSelector } from "@toolkit/hook";
 
+import FilterScreen from "./FilterScreen";
 import Filter from "./Filter";
-import FilterButton from "./FilterButton";
 import List from "./List";
 
 import { IProject } from "@type/exhibition";
@@ -27,10 +27,10 @@ export default function Exhibition({ projects }: { projects: IProject[] }) {
   return (
     <div className="container px-3 py-5 col-center">
       {/* filter screen */}
-      <Filter projects={projects} />
+      <FilterScreen projects={projects} />
 
-      {/* filter screen 활성화 버튼 */}
-      <FilterButton />
+      {/* filter button and banner */}
+      <Filter />
 
       {/* filtered project list */}
       <List projects={filteredProjects} />
