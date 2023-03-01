@@ -16,7 +16,7 @@ export default function Banner() {
   });
 
   return studentFilter !== "" ? (
-    <div className="w-screen bg-red-300 col-center ">
+    <div className="bg-red-300 col-center ">
       <div className="gap-2 row-center">
         <span>{studentFilter}</span>
         <i
@@ -26,7 +26,7 @@ export default function Banner() {
       </div>
     </div>
   ) : studioFilter !== "" ? (
-    <div className="w-screen bg-red-300 col-center ">
+    <div className="bg-red-300 col-center ">
       <div className="gap-2 row-center">
         <span>{studioFilterKR}</span>
         <i
@@ -36,7 +36,7 @@ export default function Banner() {
       </div>
     </div>
   ) : tagFilter !== "" ? (
-    <div className="w-screen bg-red-300 col-center ">
+    <div className="bg-red-300 col-center ">
       <div className="gap-2 row-center">
         <span>{tagFilter}</span>
         <i
