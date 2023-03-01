@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppSelector } from "@toolkit/hook";
 
 import Filter from "./Filter";
-import FilterButton from "./Filter/FilterButton";
+import FilterButton from "./FilterButton";
 import List from "./List";
 import Banner from "./Banner";
 

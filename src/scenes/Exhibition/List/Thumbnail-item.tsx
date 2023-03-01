@@ -44,11 +44,12 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
         <Link
           rel="preload"
           href={`/exhibition/${slug}/`}
-          onClick={(e) => {
+          onClick={async (e) => {
             if (e.ctrlKey || e.metaKey) return;
             e.preventDefault();
             setIsLoading(true);
-            router.push(e.currentTarget.href);
+            setTimeout(() => {}, 3000);
+            await router.push(e.currentTarget.href);
           }}
         >
           <div className="relative h-full border ">
@@ -71,6 +72,8 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           </div>
         </Link>
       </motion.div>
+
+      {/* 썸네일 클릭시 3초 보여주기 */}
       {isLoading && <Loading />}
     </>
   );
