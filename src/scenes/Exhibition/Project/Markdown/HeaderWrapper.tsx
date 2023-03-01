@@ -1,7 +1,7 @@
-export default function HeaderWrapper({children, value}) {
+export default function HeaderWrapper({ children, value }) {
   return (
     <h1
-      className="mb-2 text-2xl font-bold font-titleKR"
+      className="mb-2 text-[20px] font-bold font-titleKR md:text-2xl"
       id={value.replaceAll(" ", "-")}
     >
       {children}

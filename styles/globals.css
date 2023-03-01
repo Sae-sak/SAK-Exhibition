@@ -14,10 +14,6 @@
     url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Regular.ttf"),
     url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Bold.ttf");
 }
-@font-face {
-  font-family: "Frank The Architect";
-  src: url("../public/fonts/FrankTheArchitect/FrankTheArchitect.ttf");
-}
 
 html {
   font-family: "Kimjungchul Myungjo", ui-sans-serif, system-ui, -apple-system,
@@ -40,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif KR", sans-serif;
+  font-family: "Kimjungchul Gothic", serif;
 }
 
 h1,
