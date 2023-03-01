@@ -15,35 +15,33 @@ export default function Banner() {
     if (data.name === studentFilter) studioName = data.nameKR;
   });
 
-  return studentFilter !== "" ? (
-    <div className="bg-red-300 col-center ">
-      <div className="gap-2 row-center">
-        <span>{studentFilter}</span>
-        <i
-          onClick={() => dispatch(disableFilter())}
-          className="cursor-pointer top-10 right-10 ri-close-line"
-        ></i>
-      </div>
+  return (
+    <div className="pb-[4px]">
+      {studentFilter !== "" ? (
+        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <span>{studentFilter}</span>
+          <i
+            onClick={() => dispatch(disableFilter())}
+            className="cursor-pointer top-10 right-10 ri-close-line"
+          ></i>
+        </div>
+      ) : studioFilter !== "" ? (
+        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <span>{studioFilterKR}</span>
+          <i
+            onClick={() => dispatch(disableFilter())}
+            className="cursor-pointer top-10 right-10 ri-close-line"
+          ></i>
+        </div>
+      ) : tagFilter !== "" ? (
+        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <span>{tagFilter}</span>
+          <i
+            onClick={() => dispatch(disableFilter())}
+            className="cursor-pointer top-10 right-10 ri-close-line"
+          ></i>
+        </div>
+      ) : null}
     </div>
-  ) : studioFilter !== "" ? (
-    <div className="bg-red-300 col-center ">
-      <div className="gap-2 row-center">
-        <span>{studioFilterKR}</span>
-        <i
-          onClick={() => dispatch(disableFilter())}
-          className="cursor-pointer top-10 right-10 ri-close-line"
-        ></i>
-      </div>
-    </div>
-  ) : tagFilter !== "" ? (
-    <div className="bg-red-300 col-center ">
-      <div className="gap-2 row-center">
-        <span>{tagFilter}</span>
-        <i
-          onClick={() => dispatch(disableFilter())}
-          className="cursor-pointer top-10 right-10 ri-close-line"
-        ></i>
-      </div>
-    </div>
-  ) : null;
+  );
 }
