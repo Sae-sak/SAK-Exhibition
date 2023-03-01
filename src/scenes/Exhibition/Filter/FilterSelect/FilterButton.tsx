@@ -1,17 +1,15 @@
-import {selectCategory} from "@features/filter/filterSlice";
-import {useAppDispatch} from "@toolkit/hook";
+import { selectCategory } from "@features/filter/filterSlice";
+import { useAppDispatch } from "@toolkit/hook";
 
-export default function FilterButton({categoryName}) {
+export default function FilterButton({ categoryName }) {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="gap-4 cursor-pointer row-center">
-      <span
-        className="text-4xl text-right text-white"
-        onClick={() => dispatch(selectCategory({categoryName}))}
-      >
-        {categoryName}
-      </span>
-    </div>
+    <span
+      className="text-3xl font-bold text-right transition-all cursor-pointer"
+      onClick={() => dispatch(selectCategory({ categoryName }))}
+    >
+      {categoryName}
+    </span>
   );
 }

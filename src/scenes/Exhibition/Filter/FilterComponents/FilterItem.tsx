@@ -1,5 +1,6 @@
 import { StudioKRType, StudioType, TagType } from "@type/exhibition";
 import { STUDENT, STUDIO, TAG } from "@type/Filter";
+import { motion } from "framer-motion";
 
 import {
   enableStudentFilter,
@@ -23,29 +24,30 @@ export default function FilterItem({
   const categoryName = useAppSelector((state) => state.filter.categoryName);
 
   return (
-    <>
-      <button
-        className="cursor-pointer w-28 hover:text-kgu_main_yellow"
-        onClick={() => {
-          categoryName === STUDENT
-            ? dispatch(enableStudentFilter({ studentName }))
-            : categoryName === STUDIO
-            ? dispatch(enableStudioFilter({ studioName, studioNameKR }))
-            : categoryName === TAG
-            ? dispatch(enableTagFilter({ tagName }))
-            : null;
-        }}
-      >
-        <span>
-          {studentName !== ""
-            ? studentName
-            : studioName !== ""
-            ? studioNameKR
-            : tagName !== ""
-            ? tagName
-            : null}
-        </span>
-      </button>
-    </>
+    <motion.button
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="cursor-pointer w-28"
+      onClick={() => {
+        categoryName === STUDENT
+          ? dispatch(enableStudentFilter({ studentName }))
+          : categoryName === STUDIO
+          ? dispatch(enableStudioFilter({ studioName, studioNameKR }))
+          : categoryName === TAG
+          ? dispatch(enableTagFilter({ tagName }))
+          : null;
+      }}
+    >
+      <span>
+        {studentName !== ""
+          ? studentName
+          : studioName !== ""
+          ? studioNameKR
+          : tagName !== ""
+          ? tagName
+          : null}
+      </span>
+    </motion.button>
   );
 }

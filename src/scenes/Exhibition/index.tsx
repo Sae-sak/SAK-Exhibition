@@ -4,7 +4,6 @@ import { useAppSelector } from "@toolkit/hook";
 import Filter from "./Filter";
 import FilterButton from "./FilterButton";
 import List from "./List";
-import Banner from "./Banner";
 
 import { IProject } from "@type/exhibition";
 import { getFilteredProjects } from "@util/project-filtering";
@@ -32,9 +31,6 @@ export default function Exhibition({ projects }: { projects: IProject[] }) {
 
       {/* filter screen 활성화 버튼 */}
       <FilterButton />
-
-      {/* filter selection results */}
-      <Banner />
 
       {/* filtered project list */}
       <List projects={filteredProjects} />
