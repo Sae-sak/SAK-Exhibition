@@ -13,7 +13,7 @@ export default function MainLayout({ children }) {
       exit={{ opacity: 0 }}
     >
       <Header />
-      <div className="pt-[72px] flex flex-col items-center justify-center">
+      <div className="pt-[72px] flex flex-col min-h-[826px] items-center justify-start">
         {children}
       </div>
       <ScrollButton />
