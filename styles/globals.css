@@ -26,6 +26,7 @@ html {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* anchor url offset */
 }
 
 /* ------------------------------------------------------------------ */
@@ -59,11 +60,6 @@ body,
 input,
 textarea {
   @apply bg-light_bg_1 dark:bg-night_bg_1;
-}
-
-/* anchor url offset */
-html {
-  scroll-padding-top: 80px;
 }
 
 input:focus {
@@ -145,4 +141,16 @@ p,
 footer,
 header {
   @apply border-light_font_1 dark:border-night_font_1;
+}
+
+.half-circle {
+  width: 120px;
+  height: 60px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  border-bottom: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
