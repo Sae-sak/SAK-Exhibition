@@ -1,8 +1,8 @@
-import {useState} from "react";
-import {useAppDispatch} from "@toolkit/hook";
-import {photoActions} from "@features/photo/photoSlice";
+import { useState } from "react";
+import { useAppDispatch } from "@toolkit/hook";
+import { photoActions } from "@features/photo/photoSlice";
 
-export default function Carousel(props: {data: string[]}) {
+export default function Carousel(props: { data: string[] }) {
   const data = props.data;
   const dataLen = data.length;
 
@@ -16,8 +16,8 @@ export default function Carousel(props: {data: string[]}) {
   return (
     <div className="max-w-[1400px] h-[580px] w-full m-auto py-16 relative group">
       <div
-        style={{backgroundImage: `url(${data[Math.abs(count) % dataLen]})`}}
-        className="w-full h-full duration-500 bg-center bg-cover rounded-2xl"
+        style={{ backgroundImage: `url(${data[Math.abs(count) % dataLen]})` }}
+        className="w-full h-full duration-500 bg-center bg-cover border rounded-md"
         onClick={() =>
           dispatch(
             photoActions.openPhoto({
@@ -29,18 +29,18 @@ export default function Carousel(props: {data: string[]}) {
 
       {/* Left Arrow */}
       <button
-        className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-2xl p-1 bg-black/70 text-white cursor-pointer"
+        className="hidden group-hover:flex group-hover:justify-center group-hover:items-center absolute w-10 h-10 pr-[2px] top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full bg-black/70"
         onClick={() => setCount(count - 1)}
       >
-        <i className="text-3xl ri-arrow-left-s-line"></i>
+        <i className="text-3xl text-white ri-arrow-left-s-line"></i>
       </button>
 
       {/* Right Arrow */}
       <button
-        className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-2xl p-1 bg-black/70 text-white cursor-pointer"
+        className="hidden group-hover:flex group-hover:justify-center group-hover:items-center absolute w-10 h-10 pl-[2px] top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full bg-black/70"
         onClick={() => setCount(count + 1)}
       >
-        <i className="text-3xl ri-arrow-right-s-line"></i>
+        <i className="text-3xl text-white ri-arrow-right-s-line"></i>
       </button>
 
       {/* Dots */}
@@ -55,8 +55,8 @@ export default function Carousel(props: {data: string[]}) {
               <div
                 className={`w-2 h-2 ${
                   Math.abs(count) % dataLen === slideIndex
-                    ? "bg-black"
-                    : "bg-gray-300"
+                    ? "bg-black dark:bg-white"
+                    : "bg-gray-300 dark:bg-gray-600"
                 } rounded-full`}
               ></div>
             </div>
