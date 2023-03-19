@@ -1,68 +1,70 @@
 export default function ContactUsForm() {
   return (
-    <section className="relative text-gray-600 body-font">
+    <section className=" relative text-gray-600 body-font">
       <div className="w-full mb-12 text-center col-center">
         <h1 className="mb-4 text-2xl font-bold text-gray-900 font-title sm:text-3xl title-font">
           Contact Us
         </h1>
-        <p className="mx-auto font-body lg:w-2/3">
-          Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-          gentrify.
-        </p>
       </div>
       <div className="mx-auto lg:w-1/2 md:w-2/3">
-        <div className="flex flex-wrap -m-2">
+        <div className="flex flex-wrap ">
           <div className="w-1/2 p-2">
             <div className="relative">
-              <label htmlFor="name" className="text-sm leading-7 text-gray-600">
-                Name
+              <label
+                htmlFor="name"
+                className=" font-body text-sm leading-8 text-gray-600"
+              >
+                Email *
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full px-3 py-1 leading-8 text-gray-700 transition-colors duration-200 ease-in-out border-b border-gray-600 outline-none focus:border hover:bg-white hover:ring-1 hover:ring-gray-500 hover:rounded hover:border-gray-500 focus:rounded focus:border-gray-500 focus:bg-white"
+              />
+            </div>
+          </div>
+          <div className="w-1/2 p-2">
+            <div className="relative">
+              <label
+                htmlFor="name"
+                className=" font-body text-sm leading-8 text-gray-600"
+              >
+                Password *
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-3 py-1 leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                className="w-full px-3 py-1 leading-8 text-gray-700 transition-colors duration-200 ease-in-out border-b border-gray-600 outline-none focus:border focus:rounded focus:border-gray-500 focus:bg-white"
               />
             </div>
           </div>
-          <div className="w-1/2 p-2">
+          <div className="w-full m-4">
             <div className="relative">
               <label
-                htmlFor="email"
-                className="text-sm leading-7 text-gray-600"
+                htmlFor="name"
+                className=" font-body text-sm leading-8 text-gray-600"
               >
-                Email
+                Message *
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-3 py-1 leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                type="text"
+                id="name"
+                name="name"
+                className="w-full px-3 py-1 leading-8 text-gray-700 transition-colors duration-200 ease-in-out border-b border-gray-600 outline-none focus:border focus:rounded focus:border-gray-500 focus:bg-white"
               />
             </div>
           </div>
+
           <div className="w-full p-2">
-            <div className="relative">
-              <label
-                htmlFor="message"
-                className="text-sm leading-7 text-gray-600"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="w-full h-32 px-3 py-1 leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-              ></textarea>
-            </div>
-          </div>
-          <div className="w-full p-2">
-            <button className="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">
-              Button
+            <button className="flex mx-auto text-lg text-black border-b border-b-black focus:outline-none hover:text-gray-500 hover:border-b-gray-500 font-mono">
+              submit →
             </button>
           </div>
-          <div className="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
-            <a className="text-indigo-500">example@email.com</a>
+          <div className="w-full p-2 pt-8 mt-8 text-start border-gray-200">
+            <a className="text-gray-700">example@email.com</a>
             <p className="my-5 leading-normal">
               49 Smith St.
               <br />
