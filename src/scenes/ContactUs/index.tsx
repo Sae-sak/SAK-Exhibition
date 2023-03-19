@@ -12,9 +12,11 @@ export default function ContactUs() {
       <HBorder />
       <Team />
       <HBorder />
-      <div className="w-full gap-4 row-center">
+      <div className="gap-4 w-fit col-center md:flex md:flex-row md:justify-center md:items-center ">
         <Clock />
-        <VBorder height={'h-64'}/>
+        <div className="rotate-90 md:rotate-0">
+          <VBorder height={"h-96"} />
+        </div>
         <ContactUsForm />
       </div>
     </div>

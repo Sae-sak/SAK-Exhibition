@@ -9,9 +9,9 @@ export default function Clock() {
 
   return (
     <div className=" w-full col-start gap-4 ">
-      <span className=" text-3xl">00:03:16 (UTC+09:00)</span>
-      <div>Kimyoo04eco@naver.com</div>
-      <div>010-8131-5224</div>
+      <span className=" font-extrabold text-3xl">00:03:16 (UTC+09:00)</span>
+      <div className=" font-semibold">Kimyoo04eco@naver.com</div>
+      <div className=" font-semibold">010-8131-5224</div>
     </div>
   );
 }
