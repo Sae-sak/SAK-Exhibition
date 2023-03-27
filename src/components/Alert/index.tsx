@@ -37,7 +37,7 @@ const Alert = () => {
           <i className="text-3xl ri-close-circle-fill text-alert_danger"></i>
         );
         break;
-      case "Infomation":
+      case "Information":
         setAlertIcon(
           <i className="text-3xl ri-information-fill text-alert_info"></i>
         );
@@ -50,24 +50,28 @@ const Alert = () => {
   return (
     <>
       {isAlert ? (
-        <>
+        <div className="relative w-screen h-screen">
           {/* 오버레이 영역 */}
           <Overlay />
 
           {/* 알람 영역 */}
-          <div className="z-40 p-4 pt-14">
-            <div className="max-w-xl ">
+          <div className="absolute z-40 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <div className="max-w-xl">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="gap-4 px-4 py-3 bg-white rounded-md row-center"
+                className="flex items-center justify-between h-24 gap-4 px-4 py-3 mx-auto bg-white rounded-md w-80"
               >
-                <div className="row-center">{alertIcon}</div>
+                <div className="gap-4 row-center">
+                  <div className="row-center">{alertIcon}</div>
 
-                <div className="col-start">
-                  <span className="text-xl font-semibold">{alertType}</span>
-                  <span className="text-sm">{content}</span>
+                  <div className="gap-1 col-start">
+                    <span className="text-xl font-semibold font-body">
+                      {alertType}
+                    </span>
+                    <span className="text-sm font-body">{content}</span>
+                  </div>
                 </div>
                 <div className="">
                   <i
@@ -78,7 +82,7 @@ const Alert = () => {
               </motion.div>
             </div>
           </div>
-        </>
+        </div>
       ) : null}
     </>
   );

@@ -1,10 +1,10 @@
 export interface IAlert {
-  alertType: string;
+  alertType: "Success" | "Warning" | "Danger" | "Information" | "";
   content: string;
 }
 
 export interface IAlertState {
   isAlert: boolean;
-  alertType: string;
+  alertType: "Success" | "Warning" | "Danger" | "Information" | "";
   content: string;
 }
