@@ -172,13 +172,13 @@ header {
 .cursor {
   width: 0.6rem;
   height: 0.6rem;
-  background-color: black;
+  @apply bg-light_font_1 dark:bg-night_font_1;
 }
 
 .cursor-effect {
   width: 2.4rem;
   height: 2.4rem;
-  border: 1px solid black;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+  @apply border border-light_font_1 dark:border-night_font_1;
 }
