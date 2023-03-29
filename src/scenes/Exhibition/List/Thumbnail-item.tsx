@@ -53,6 +53,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           }}
         >
           <div className="relative h-full border ">
+            {/* 썸네일 이미지 */}
             <Image
               src={thumbnailImg}
               alt={title}
@@ -62,10 +63,13 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
               loading="lazy"
             />
 
+            {/* hover 시 설명 노출 */}
             <div className="absolute top-0 hidden p-4 transition-all group-hover:block">
               <p className="text-lg font-body">{excerpt}</p>
             </div>
           </div>
+
+          {/* 학생이름, 프로젝트 제목 */}
           <div className="px-3 border border-t-0 col-center h-14">
             <span className="text-sm font-bold font-body">{name}</span>
             <p className="font-bold text-center font-body">{title}</p>

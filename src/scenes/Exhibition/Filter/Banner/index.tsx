@@ -2,6 +2,7 @@ import { disableFilter } from "@features/filter/filterSlice";
 import { useAppDispatch, useAppSelector } from "@toolkit/hook";
 import { studioNames } from "@constants/filter";
 import { StudioKRType } from "@type/exhibition";
+import HBorder from "@components/HBorder";
 
 export default function Banner() {
   const dispatch = useAppDispatch();
@@ -16,32 +17,36 @@ export default function Banner() {
   });
 
   return (
-    <div className="pb-[4px]">
-      {studentFilter !== "" ? (
-        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
-          <span>{studentFilter}</span>
-          <i
-            onClick={() => dispatch(disableFilter())}
-            className="cursor-pointer top-10 right-10 ri-close-line"
-          ></i>
-        </div>
-      ) : studioFilter !== "" ? (
-        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
-          <span>{studioFilterKR}</span>
-          <i
-            onClick={() => dispatch(disableFilter())}
-            className="cursor-pointer top-10 right-10 ri-close-line"
-          ></i>
-        </div>
-      ) : tagFilter !== "" ? (
-        <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
-          <span>{tagFilter}</span>
-          <i
-            onClick={() => dispatch(disableFilter())}
-            className="cursor-pointer top-10 right-10 ri-close-line"
-          ></i>
-        </div>
-      ) : null}
-    </div>
+    <>
+      <div className="pb-[4px] mt-1">
+        {studentFilter !== "" ? (
+          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+            <span>{studentFilter}</span>
+            <i
+              onClick={() => dispatch(disableFilter())}
+              className="cursor-pointer top-10 right-10 ri-close-line"
+            ></i>
+          </div>
+        ) : studioFilter !== "" ? (
+          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+            <span>{studioFilterKR}</span>
+            <i
+              onClick={() => dispatch(disableFilter())}
+              className="cursor-pointer top-10 right-10 ri-close-line"
+            ></i>
+          </div>
+        ) : tagFilter !== "" ? (
+          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+            <span>{tagFilter}</span>
+            <i
+              onClick={() => dispatch(disableFilter())}
+              className="cursor-pointer top-10 right-10 ri-close-line"
+            ></i>
+          </div>
+        ) : null}
+      </div>
+
+      <HBorder />
+    </>
   );
 }

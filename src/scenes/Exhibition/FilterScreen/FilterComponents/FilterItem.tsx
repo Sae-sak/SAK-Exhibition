@@ -1,5 +1,5 @@
 import { StudioKRType, StudioType, TagType } from "@type/exhibition";
-import { STUDENT, STUDIO, TAG } from "@type/Filter";
+import { STUDENT, STUDIO, TAG } from "@constants/filter";
 import { motion } from "framer-motion";
 
 import {

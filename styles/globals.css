@@ -25,6 +25,7 @@ html {
 /* ------------------------------------------------------------------ */
 
 html {
+  cursor: none;
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* anchor url offset */
 }
@@ -153,4 +154,31 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.cursor,
+.cursor-effect {
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 2s ease-in-out;
+  z-index: 1000;
+}
+
+.cursor {
+  width: 0.6rem;
+  height: 0.6rem;
+  @apply bg-light_font_1 dark:bg-night_font_1;
+}
+
+.cursor-effect {
+  width: 2.4rem;
+  height: 2.4rem;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  @apply border border-light_font_1 dark:border-night_font_1;
 }

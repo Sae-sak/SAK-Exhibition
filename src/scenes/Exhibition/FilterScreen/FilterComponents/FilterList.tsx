@@ -1,9 +1,8 @@
 import { useAppSelector } from "@toolkit/hook";
 
 import { IProject } from "@type/exhibition";
-import { STUDENT, STUDIO, TAG } from "@type/Filter";
 
-import { studioNames } from "@constants/filter";
+import { STUDENT, STUDIO, studioNames, TAG } from "@constants/filter";
 import FilterItem from "./FilterItem";
 import { AnimatePresence } from "framer-motion";
 
@@ -23,8 +22,8 @@ export default function FilterList({ projects }: { projects: IProject[] }) {
   }
 
   return (
-    <div className="z-50 w-1/2">
-      <div className="flex-wrap gap-4 row-start">
+    <div className="z-50 w-full col-center">
+      <div className="flex-wrap p-4 gap-4 row-start max-w-[700px]">
         <AnimatePresence mode="wait">
           {categoryName === STUDENT
             ? studentNames.map((studentName) => {

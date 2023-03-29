@@ -11,10 +11,12 @@ export default function MenuToggle() {
         {isClicked && <Menu setIsClicked={setIsClicked} />}
       </AnimatePresence>
 
-      <i
-        onClick={() => setIsClicked(true)}
-        className="text-2xl ri-menu-3-line"
-      />
+      <button>
+        <i
+          onClick={() => setIsClicked(true)}
+          className="text-2xl ri-menu-3-line"
+        />
+      </button>
     </>
   );
 }
