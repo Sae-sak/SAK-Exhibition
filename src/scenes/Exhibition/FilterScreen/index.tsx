@@ -1,5 +1,3 @@
-import FilterList from "./FilterComponents/FilterList";
-import Overlay from "./FilterComponents/Overlay";
 import FilterSelect from "./FilterSelect";
 
 import { useAppSelector } from "@toolkit/hook";
@@ -17,17 +15,11 @@ export default function FilterScreen({ projects }: { projects: IProject[] }) {
   return (
     <>
       {isFilter ? (
-        <div className="z-50 w-screen h-screen">
-          <div className="gap-32 mt-12 col-center">
-            {/* 필터 분류 선택 */}
-            <FilterSelect />
+        <div className="fixed top-0 z-50 w-screen h-screen">
+          {/* 필터 분류 선택 */}
+          <FilterSelect projects={projects} />
 
-            {/* 필터 선택 목록 */}
-            <FilterList projects={projects} />
-          </div>
-
-          {/* 배경 */}
-          <Overlay />
+          {/* 필터 선택 목록 */}
         </div>
       ) : null}
     </>
