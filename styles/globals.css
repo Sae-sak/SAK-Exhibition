@@ -25,7 +25,6 @@ html {
 /* ------------------------------------------------------------------ */
 
 html {
-  cursor: none;
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* anchor url offset */
 }
@@ -154,6 +153,10 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  @apply lg:cursor-none;
 }
 
 .cursor,
