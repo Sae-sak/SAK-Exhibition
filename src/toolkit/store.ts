@@ -3,12 +3,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import filterReducer from "@features/filter/filterSlice";
 import alertReducer from "@features/alert/alertSlice";
 import photoReducer from "@features/photo/photoSlice";
+import chatReducer from "@features/chat/chatSlice";
 
 export const store = configureStore({
   reducer: {
     filter: filterReducer,
     alert: alertReducer,
     photo: photoReducer,
+    chat: chatReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
