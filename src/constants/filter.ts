@@ -1,4 +1,5 @@
 import { StudioKRType, StudioType, TagType } from "@type/exhibition";
+import { TStudent, TStudio, TTag } from "@type/Filter";
 
 type studioNamesType = {
   name: StudioType;
@@ -33,3 +34,9 @@ export const tagNames: TagType[] = [
   "마스터플랜",
   "파빌리온",
 ];
+
+export const STUDENT = "Student";
+export const STUDIO = "Studio";
+export const TAG = "Tag";
+
+export const CATEGORIES: [TStudent, TStudio, TTag] = [STUDENT, STUDIO, TAG];

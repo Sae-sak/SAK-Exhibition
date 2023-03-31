@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 import { Provider } from "react-redux";
 import { store } from "@toolkit/store";
-
+import Cursor from "@components/Cursor";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class">
         <Provider store={store}>
           <main>
+            <Cursor />
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.route} />
             </AnimatePresence>

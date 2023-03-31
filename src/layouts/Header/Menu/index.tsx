@@ -1,6 +1,6 @@
 import Portal from "@components/Portal";
 import ThemeChanger from "@util/Theme/ThemeChanger";
-import {motion, LayoutGroup } from "framer-motion";
+import { motion, LayoutGroup } from "framer-motion";
 import NavLink from "./NavLink";
 import Overlay from "./Overlay";
 
@@ -24,8 +24,8 @@ const Menu = ({ setIsClicked }) => {
             </LayoutGroup>
           </nav>
 
-          <div className="absolute -left-[250px] rotate-45 w-[300px] h-[300px] border-[50px] border-t-kgu_main_red border-r-kgu_main_yellow md:w-[600px] md:h-[600px] md:border-[100px] md:-left-[500px] dark:border-t-kgu_main_red dark:border-r-kgu_main_yellow "></div>
-          <div className="absolute -right-[250px] rotate-45 w-[300px] h-[300px] border-[50px] border-l-kgu_main_blue border-b-kgu_main_green md:w-[600px] md:h-[600px] md:border-[100px] md:-right-[500px] dark:border-l-kgu_main_blue dark:border-b-kgu_main_green"></div>
+          <div className="absolute -left-[230px] rotate-45 w-[280px] h-[280px] border-[50px] border-t-kgu_main_red border-r-kgu_main_yellow md:w-[600px] md:h-[600px] md:border-[100px] md:-left-[500px] dark:border-t-kgu_main_red dark:border-r-kgu_main_yellow "></div>
+          <div className="absolute -right-[230px] rotate-45 w-[280px] h-[280px] border-[50px] border-l-kgu_main_blue border-b-kgu_main_green md:w-[600px] md:h-[600px] md:border-[100px] md:-right-[500px] dark:border-l-kgu_main_blue dark:border-b-kgu_main_green"></div>
 
           {/* 토글 버튼 */}
           <ThemeChanger />

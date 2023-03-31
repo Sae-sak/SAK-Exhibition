@@ -1,4 +1,4 @@
-import {StudioKRType, StudioType, TagType} from "./exhibition";
+import { StudioKRType, StudioType, TagType } from "./exhibition";
 
 export interface IFilterState {
   isFilter: boolean;
@@ -22,15 +22,9 @@ export interface IFilter {
   tag: TagType;
 }
 
-export const STUDENT = "Student";
-export const STUDIO = "Studio";
-export const TAG = "Tag";
-
-export const CATEGORIES = [STUDENT, STUDIO, TAG];
-
-type TStudent = "Student";
-type TStudio = "Studio";
-type TTag = "Tag";
+export type TStudent = "Student";
+export type TStudio = "Studio";
+export type TTag = "Tag";
 
 // 3 categories -> filter names -> student, studio, tag
 export interface ICategoryName {
