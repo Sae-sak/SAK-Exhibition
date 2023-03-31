@@ -14,7 +14,10 @@ export default function EnterButton() {
       exit="exit"
       className="absolute bottom-14 right-14"
     >
-      <Link href={"/home"} className="gap-2 text-white row-center group">
+      <Link
+        href={"/home"}
+        className="gap-2 text-light_font_1 row-center group dark:text-night_font_1"
+      >
         {/* 문에 들어가는 글자 */}
         <motion.div
           exit={{
@@ -25,7 +28,7 @@ export default function EnterButton() {
           }}
           className="z-10 gap-4 row-center font-header"
         >
-          <span className="text-3xl leading-4 transition-all bg-black border-gray-500 border-y group-hover:translate-x-12 ">
+          <span className="text-3xl leading-5 transition-all border-y group-hover:translate-x-12 bg-light_bg_1 dark:bg-night_bg_1">
             Exhibition Enter
           </span>
         </motion.div>
