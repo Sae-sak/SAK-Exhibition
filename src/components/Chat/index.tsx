@@ -22,13 +22,15 @@ function Chat() {
   }
 
   return (
-    <div>
-      <header>
-        <h1>무엇이든 물어보세요!</h1>
-        <SignOut />
+    <div className="flex flex-col justify-between p-4 border rounded-md h-72 bg-light_bg_1 dark:bg-night_bg_1 font-body">
+      <header className="flex items-end justify-between w-72">
+        <h1 className="text-xl font-bold">SAK-Exhibition Chat</h1>
+        {user && <SignOut />}
       </header>
 
-      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+      <section className="row-center">
+        {user ? <ChatRoom /> : <SignIn />}
+      </section>
     </div>
   );
 }
@@ -49,7 +51,7 @@ function SignIn() {
   }
 
   return (
-    <button className="sign-in" onClick={() => signInWithGoogle()}>
+    <button className="" onClick={() => signInWithGoogle()}>
       Sign in with Google
     </button>
   );

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { IMessage, ISendForm } from "@type/chat";
 
 import ChatMessage from "../ChatMessage";
-import { TextField } from "@components/TextField";
+import SendMessage from "../SendMessage";
 
 import {
   collection,
@@ -63,10 +63,13 @@ export default function ChatRoom() {
         <div ref={dummy}></div>
       </main>
 
-      <form onSubmit={handleSubmit(onValid)}>
-        <TextField
+      <form
+        onSubmit={handleSubmit(onValid)}
+        className="flex items-end justify-between w-full"
+      >
+        <SendMessage
           id="chat"
-          label="chat"
+          autoComplete={"off"}
           error={errors.chat?.message as string}
           inputProps={{
             ...register("chat", {
@@ -76,8 +79,12 @@ export default function ChatRoom() {
           }}
         />
 
-        <button type="submit" disabled={!formValue}>
-          {">>"}
+        <button
+          className="block w-12 px-1 py-1 border rounded-md cursor-pointer"
+          type="submit"
+          disabled={!formValue}
+        >
+          <span>전송</span>
         </button>
       </form>
     </>
