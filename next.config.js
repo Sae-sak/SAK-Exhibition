@@ -18,10 +18,7 @@ const nextConfig = (phase) => {
             pathname: "/avatars/23/abott@adorable.png",
           },
           {
-            protocol: "https",
-            hostname: "lh3.googleusercontent.com",
-            port: "",
-            pathname: "/a/*",
+            hostname: "*.googleusercontent.com",
           },
         ],
       },
