@@ -1,8 +1,5 @@
-import Alert from "@components/Alert";
 import Logo from "./HeaderItem/Logo";
 import MenuToggle from "./HeaderItem/MenuToggle";
-import Chat from "@components/Chat";
-import ChatButton from "./ChatButton";
 
 export default function Header() {
   return (
@@ -11,9 +8,6 @@ export default function Header() {
         <div className="container flex flex-wrap items-center justify-between gap-4 p-5 mx-auto">
           <Logo />
           <MenuToggle />
-          <Alert />
-          <ChatButton />
-          <Chat />
         </div>
       </header>
     </div>

@@ -10,6 +10,7 @@ const nextConfig = (phase) => {
         return config;
       },
       images: {
+        domains: ["firebasestorage.googleapis.com"],
         remotePatterns: [
           {
             protocol: "https",
@@ -33,6 +34,20 @@ const nextConfig = (phase) => {
     webpack: (config) => {
       config.resolve.fallback = { fs: false };
       return config;
+    },
+    images: {
+      domains: ["firebasestorage.googleapis.com"],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "api.adorable.io",
+          port: "",
+          pathname: "/avatars/23/abott@adorable.png",
+        },
+        {
+          hostname: "*.googleusercontent.com",
+        },
+      ],
     },
     env: {
       markdownPath: "",
