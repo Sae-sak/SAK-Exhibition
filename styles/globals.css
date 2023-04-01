@@ -45,13 +45,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  @apply text-light_font_1 dark:text-night_font_1;
-}
-
+h6,
 a,
 p,
-i {
+i,
+button,
+span,
+p,
+label,
+input {
   @apply text-light_font_1 dark:text-night_font_1;
 }
 
@@ -136,10 +138,13 @@ footer {
 /* default border color */
 div,
 span,
+main,
 section,
 p,
 footer,
-header {
+header,
+input,
+button {
   @apply border-light_font_1 dark:border-night_font_1;
 }
 

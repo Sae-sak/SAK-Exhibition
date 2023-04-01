@@ -49,7 +49,7 @@ export default function ChatMessage(props: { message: IMessage }) {
 
         {/* 텍스트 */}
         <div
-          className={`py-1 px-2 rounded-lg shadow max-w-[220px] dark:shadow-gray-600 ${messageBg}`}
+          className={`py-1 px-2 rounded-lg shadow max-w-[200px] dark:shadow-gray-600 ${messageBg}`}
         >
           <p className="text-sm">{text}</p>
           {/* <span>{time}</span> */}
