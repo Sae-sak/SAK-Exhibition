@@ -7,7 +7,7 @@ export interface IMessage {
   displayName: string;
   text: string;
   photoURL: string;
-  createdAt: string;
+  createdAt: { seconds: number; nanoseconds: number };
 }
 
 export interface ISendForm {
