@@ -29,15 +29,17 @@ export default function ScrollButton() {
   };
 
   return (
-    <div className="fixed z-20 gap-3 bottom-16 right-4 col-center ">
-      <motion.div variants={scrollTo.top} animate={scrollTopAni}>
-        <button
-          onClick={() => scrollToTop()}
-          className="w-8 h-8 bg-white rounded-full shadow-sm shadow-gray-400 dark:bg-black row-center"
-        >
-          <i className="text-3xl ri-arrow-up-s-line"></i>
-        </button>
-      </motion.div>
-    </div>
+    <motion.button
+      variants={scrollTo.top}
+      animate={scrollTopAni}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{
+        scale: 0.9,
+      }}
+      onClick={() => scrollToTop()}
+      className="fixed z-20 w-8 h-8 bg-white border rounded-full shadow-sm bottom-16 right-4 shadow-gray-400 dark:bg-black row-center "
+    >
+      <i className="text-3xl ri-arrow-up-s-line"></i>
+    </motion.button>
   );
 }
