@@ -1,5 +1,4 @@
 import { TextFieldProps } from "@type/textField";
-import ErrorMsg from "./ErrorMsg";
 
 export default function SendMessage(props: TextFieldProps) {
   return (
