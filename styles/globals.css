@@ -139,7 +139,8 @@ span,
 section,
 p,
 footer,
-header {
+header,
+button {
   @apply border-light_font_1 dark:border-night_font_1;
 }
 
