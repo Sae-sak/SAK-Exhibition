@@ -185,3 +185,32 @@ html {
   transition-timing-function: ease-in-out;
   @apply border border-light_font_1 dark:border-night_font_1;
 }
+
+/* ------------------------------------------------------------------ */
+
+.sent-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.received-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sent-bg {
+  background-color: whitesmoke;
+  border-bottom-right-radius: 0;
+}
+
+.sent-bg p {
+  color: black;
+}
+
+.received-bg {
+  border-top-left-radius: 0;
+}
