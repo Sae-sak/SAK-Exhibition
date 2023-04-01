@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useAppSelector } from "@toolkit/hook";
 
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -11,7 +12,7 @@ import ChatMessages from "./ChatMessages";
 
 export default function Chat() {
   const isChat = useAppSelector((state) => state.chat.isChat);
-  const showChat = isChat ? "hidden" : "";
+  const showChat = isChat ? "" : "opacity-0 scale-0";
 
   const [user, loading, error] = useAuthState(auth);
 
@@ -19,9 +20,9 @@ export default function Chat() {
   if (error) return <p>error occur</p>;
 
   return (
-    <div className="fixed z-40 bottom-12 right-16">
+    <motion.div className="fixed z-40 bottom-8 right-16">
       <div
-        className={`${showChat} flex flex-col justify-between h-full p-4 border rounded-md bg-light_bg_1 dark:bg-night_bg_1 font-body`}
+        className={`${showChat} origin-bottom-right flex flex-col justify-between h-full p-4 border rounded-md bg-light_bg_1 dark:bg-night_bg_1 font-body transition-all`}
       >
         <header className="flex items-end justify-between pb-4 w-72">
           <h1 className="text-xl font-bold">SAK-Exhibition Chat</h1>
@@ -39,6 +40,6 @@ export default function Chat() {
           )}
         </section>
       </div>
-    </div>
+    </motion.div>
   );
 }
