@@ -25,7 +25,6 @@ html {
 /* ------------------------------------------------------------------ */
 
 html {
-  cursor: none;
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* anchor url offset */
 }
@@ -156,6 +155,10 @@ header {
   box-sizing: border-box;
 }
 
+html {
+  @apply lg:cursor-none;
+}
+
 .cursor,
 .cursor-effect {
   pointer-events: none;
@@ -181,4 +184,33 @@ header {
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
   @apply border border-light_font_1 dark:border-night_font_1;
+}
+
+/* ------------------------------------------------------------------ */
+
+.sent-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.received-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sent-bg {
+  background-color: whitesmoke;
+  border-bottom-right-radius: 0;
+}
+
+.sent-bg p {
+  color: black;
+}
+
+.received-bg {
+  border-top-left-radius: 0;
 }

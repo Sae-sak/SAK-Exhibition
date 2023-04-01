@@ -7,7 +7,7 @@ export default function FullName() {
   return (
     <motion.div
       variants={textVariant(1.1)}
-      className="fixed text-left top-14 left-14 text-night_gray_3"
+      className="fixed text-left top-14 left-14 text-light_gray_2 dark:text-night_gray_2"
     >
       <span className="font-bold">
         <div>

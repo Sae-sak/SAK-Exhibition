@@ -6,7 +6,7 @@ export default function Cursor() {
   const requestRef = useRef(null);
 
   useEffect(() => {
-    if (window) {
+    if (window.innerWidth) {
       window.document.addEventListener("mousemove", mouseMoveEvent);
       window.document.addEventListener("scroll", mouseMoveEvent);
 
@@ -27,8 +27,8 @@ export default function Cursor() {
 
   return (
     <>
-      <div ref={cursorDot} className="cursor"></div>
-      <div ref={cursorOutline} className="cursor-effect"></div>
+      <div ref={cursorDot} className="hidden cursor lg:block"></div>
+      <div ref={cursorOutline} className="hidden cursor-effect lg:block"></div>
     </>
   );
 }

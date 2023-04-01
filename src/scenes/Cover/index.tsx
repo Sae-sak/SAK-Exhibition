@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { textVariant } from "@util/variants";
 import { staggerContainer } from "@util/variants/container";
+
 import EnterButton from "./EnterButton";
 import FullName from "./FullName";
 import Title from "./Title";
@@ -11,7 +11,7 @@ export default function Cover() {
       variants={staggerContainer}
       initial="hidden"
       animate="show"
-      className="absolute z-50 w-screen h-screen gap-10 text-white bg-night_bg_1 col-center"
+      className="absolute z-50 w-screen h-screen gap-10 text-light_font_1 bg-light_bg_1 col-center dark:text-night_font_1 dark:bg-night_bg_1"
     >
       <div className="relative w-screen h-screen ">
         {/* 상단 좌측 텍스트 */}

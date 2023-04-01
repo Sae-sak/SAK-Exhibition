@@ -1,6 +1,8 @@
 import Alert from "@components/Alert";
 import Logo from "./HeaderItem/Logo";
 import MenuToggle from "./HeaderItem/MenuToggle";
+import Chat from "@components/Chat";
+import ChatButton from "./ChatButton";
 
 export default function Header() {
   return (
@@ -10,6 +12,8 @@ export default function Header() {
           <Logo />
           <MenuToggle />
           <Alert />
+          <ChatButton />
+          <Chat />
         </div>
       </header>
     </div>

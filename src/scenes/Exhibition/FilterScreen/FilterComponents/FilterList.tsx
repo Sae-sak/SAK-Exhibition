@@ -22,8 +22,8 @@ export default function FilterList({ projects }: { projects: IProject[] }) {
   }
 
   return (
-    <div className="z-50 w-full col-center">
-      <div className="flex-wrap p-4 gap-4 row-start max-w-[700px]">
+    <div className="z-50 w-full">
+      <div className="flex-wrap gap-3 flex justify-end max-w-[700px]">
         <AnimatePresence mode="wait">
           {categoryName === STUDENT
             ? studentNames.map((studentName) => {

@@ -1,8 +1,11 @@
 import Portal from "@components/Portal";
-import ThemeChanger from "@util/Theme/ThemeChanger";
-import { motion, LayoutGroup } from "framer-motion";
-import NavLink from "./NavLink";
+
+import { motion } from "framer-motion";
+
 import Overlay from "./Overlay";
+import KGUCorner from "./KGUCorner";
+import ThemeChanger from "@util/Theme/ThemeChanger";
+import NavLinks from "./NavLinks";
 
 const Menu = ({ setIsClicked }) => {
   return (
@@ -15,21 +18,17 @@ const Menu = ({ setIsClicked }) => {
         className="relative z-40 w-screen h-screen col-center"
       >
         <div className="z-30 gap-10 col-center">
-          <nav className="w-48 gap-4 col-start sm:mt-auto ">
-            <LayoutGroup>
-              <NavLink linkpath={"home"} name={"Home"} />
-              <NavLink linkpath={"about"} name={"About"} />
-              <NavLink linkpath={"exhibition"} name={"Exhibition"} />
-              <NavLink linkpath={"contactus"} name={"Contact Us"} />
-            </LayoutGroup>
-          </nav>
+          {/* 네비게이션 버튼들 */}
+          <NavLinks />
 
-          <div className="absolute -left-[230px] rotate-45 w-[280px] h-[280px] border-[50px] border-t-kgu_main_red border-r-kgu_main_yellow md:w-[600px] md:h-[600px] md:border-[100px] md:-left-[500px] dark:border-t-kgu_main_red dark:border-r-kgu_main_yellow "></div>
-          <div className="absolute -right-[230px] rotate-45 w-[280px] h-[280px] border-[50px] border-l-kgu_main_blue border-b-kgu_main_green md:w-[600px] md:h-[600px] md:border-[100px] md:-right-[500px] dark:border-l-kgu_main_blue dark:border-b-kgu_main_green"></div>
+          {/* KGU 로고의 양쪽 코너 */}
+          <KGUCorner />
 
           {/* 토글 버튼 */}
           <ThemeChanger />
         </div>
+
+        {/* 화면 덮기 */}
         <Overlay setIsClicked={setIsClicked} />
       </motion.div>
     </>
