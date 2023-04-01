@@ -48,12 +48,14 @@ export default function ChatMessages() {
   );
 
   return (
-    <main className="border h-[400px] overflow-scroll">
+    <section className="border h-[400px] overflow-scroll">
       {reversedMsg &&
         reversedMsg.map((msg, indx) => (
           <ChatMessage key={`${msg.uid}${indx}`} message={msg} />
         ))}
+
+      {/* scroll bottom 용 div */}
       <div ref={scrollBottomDiv}></div>
-    </main>
+    </section>
   );
 }
