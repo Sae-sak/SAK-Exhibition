@@ -88,8 +88,8 @@ export default function Document() {
         <link rel="/manifest" href="/favicon/manifest.json" />
       </Head>
       <body>
+        <div className="fixed z-40 bottom-12 right-16 " id="chat"></div>
         <div className="fixed top-0 left-0 z-40 " id="portal"></div>
-        <div className="fixed z-40 bottom-16 right-16 " id="chat"></div>
         <Main />
         <NextScript />
       </body>
