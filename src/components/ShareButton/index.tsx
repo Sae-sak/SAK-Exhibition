@@ -3,7 +3,7 @@ import { useAppDispatch } from "@toolkit/hook";
 import { ICompany } from "@type/company";
 import { useRouter } from "next/router";
 
-export default function ShareButton({ company }: ICompany) {
+export default function ShareButton({ company, emailPath }: ICompany) {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const sendText = "SAK-Exhibition 2023"; // 전달할 텍스트
@@ -38,6 +38,16 @@ export default function ShareButton({ company }: ICompany) {
     console.log(router);
   }
 
+  function shareEmail() {
+    navigator.clipboard.writeText(emailPath); // 링크 복사
+    dispatch(
+      alertActions.alert({
+        alertType: "Information",
+        content: "이메일이 복사되었습니다!",
+      })
+    );
+  }
+
   switch (company) {
     case "Twitter":
       return (
@@ -57,6 +67,13 @@ export default function ShareButton({ company }: ICompany) {
       return (
         <button onClick={() => shareLink()}>
           <i className="text-3xl ri-share-line"></i>
+        </button>
+      );
+
+    case "CopyEmail":
+      return (
+        <button onClick={() => shareEmail()}>
+          <i className="text-xl ri-mail-line"></i>
         </button>
       );
 
