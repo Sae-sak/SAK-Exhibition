@@ -1,13 +1,14 @@
+import ShareButton from "@components/ShareButton";
 import Image from "next/image";
 
-export default function Profile({name, job, description, email, kakao}) {
+export default function Profile({ name, job, description, email, kakao }) {
   return (
     <div className="p-4">
       <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
         {/* 프로필 이미지 */}
         <Image
           alt="team"
-          className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"
+          className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-md sm:mb-0"
           src={`/images/contactus/team/${name}.jpg`}
           width={200}
           height={200}
@@ -25,9 +26,7 @@ export default function Profile({name, job, description, email, kakao}) {
           {/* SNS Links */}
           <span className="row-center sm:justify-start">
             {/* 이메일 */}
-            <a href={`${email}`} className="mt-1 text-gray-500">
-              <i className="text-xl font-thin ri-mail-line"></i>
-            </a>
+            <ShareButton company={"CopyEmail"} emailPath={email} />
 
             {/* 카카오톡 */}
             <a href={`${kakao}`} className="ml-2 text-gray-500">
