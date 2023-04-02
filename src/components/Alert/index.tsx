@@ -24,22 +24,22 @@ const Alert = () => {
     switch (alertType) {
       case "Success":
         setAlertIcon(
-          <i className="text-3xl ri-checkbox-circle-fill text-alert_success"></i>
+          <i className="text-3xl ri-checkbox-circle-fill text-alert_success dark:text-alert_success"></i>
         );
         break;
       case "Warning":
         setAlertIcon(
-          <i className="text-3xl ri-error-warning-fill text-alert_warning"></i>
+          <i className="text-3xl ri-error-warning-fill text-alert_warning dark:text-alert_warning"></i>
         );
         break;
       case "Danger":
         setAlertIcon(
-          <i className="text-3xl ri-close-circle-fill text-alert_danger"></i>
+          <i className="text-3xl ri-close-circle-fill text-alert_danger dark:text-alert_danger"></i>
         );
         break;
       case "Information":
         setAlertIcon(
-          <i className="text-3xl ri-information-fill text-alert_info"></i>
+          <i className="text-3xl ri-information-fill text-alert_info dark:text-alert_info"></i>
         );
         break;
       default:
@@ -67,15 +67,22 @@ const Alert = () => {
                   <div className="row-center">{alertIcon}</div>
 
                   <div className="gap-1 col-start">
-                    <span className="text-xl font-semibold font-body">
+                    {/* 알림 유형 */}
+                    <span className="text-xl font-semibold font-body text-light_font_1 dark:text-light_font_1">
                       {alertType}
                     </span>
-                    <span className="text-sm font-body">{content}</span>
+
+                    {/* 알림 메시지 */}
+                    <span className="text-sm font-body text-light_font_1 dark:text-light_font_1">
+                      {content}
+                    </span>
                   </div>
                 </div>
+
+                {/* close 버튼 */}
                 <div className="">
                   <i
-                    className="text-2xl ri-close-fill"
+                    className="text-2xl ri-close-fill text-light_font_1 dark:text-light_font_1"
                     onClick={() => dispatch(alertActions.alertClose())}
                   ></i>
                 </div>
