@@ -19,7 +19,7 @@ export default function ContactUsForm() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:bg-white hover:ring-gray-500 hover:rounded"
+                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded"
               />
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function ContactUsForm() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:bg-white hover:ring-gray-500 hover:rounded "
+                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded "
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function ContactUsForm() {
               <textarea
                 id="name"
                 name="name"
-                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500  hover:bg-white hover:ring-1 hover:ring-gray-500 hover:rounded hover:border-gray-500"
+                className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500  hover:ring-1 hover:ring-gray-500 hover:rounded hover:border-gray-500"
               />
             </div>
           </div>
