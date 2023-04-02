@@ -16,23 +16,18 @@ export default function Clock() {
   }, []);
 
   // 시, 분, 초 추출, AM/PM 설정(12시간제)
-  const hours = time.getHours();
-  const ampm = hours >= 12 ? "PM" : "AM";
-  const displayHours = hours % 12 || 12;
-
-  //  getMinutes, getSeconds가 반환하는 1자리수 숫자 앞에 0 추가
-  const displayMinutes = time.getMinutes().toString().padStart(2, "0");
-  const displaySeconds = time.getSeconds().toString().padStart(2, "0");
+  const fixTime = time.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
 
   // 시, 분, 초와 AM/PM을 포함하는 시계 반환
   return (
-    <div className=" w-full col-start gap-4 ">
-      <div className=" font-extrabold text-3xl">
-        {`${ampm}  ${displayHours}:${displayMinutes}:${displaySeconds} `}
-      </div>
-      <span className=" font-extrabold text-3xl">(UTC+09:00)</span>
-      <div className=" font-semibold">Kimyoo04eco@naver.com</div>
-      <div className=" font-semibold">010-8131-5224</div>
+    <div className="w-full gap-4 col-center">
+      <div className="text-4xl font-extrabold ">{`${fixTime}`}</div>
+      <div className="font-semibold ">Kimyoo04eco@naver.com</div>
+      <div className="font-semibold ">010-8131-5224</div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import HBorder from "@components/HBorder";
-import VBorder from "@components/VBorder";
 import Clock from "./Clock";
 import ContactUsForm from "./ContactUsForm";
 import StudentCouncil from "./StudentCouncil";
@@ -12,11 +11,20 @@ export default function ContactUs() {
       <HBorder />
       <Team />
       <HBorder />
-      <div className="gap-4 w-fit col-center md:flex md:flex-row md:justify-center md:items-center ">
+
+      <div className="w-full gap-20 col-center md:flex md:justify-between md:flex-row">
         <Clock />
-        <div className="rotate-90 md:rotate-0">
-          <VBorder height={"h-96"} />
+
+        {/* vborder */}
+        <div className="hidden md:block">
+          <div className={`border-r-[1px] h-96 w-[1px]`}></div>
         </div>
+
+        {/* hborder */}
+        <div className="w-full md:hidden">
+          <div className="border-t-[1px] h-[1px] w-full"></div>
+        </div>
+
         <ContactUsForm />
       </div>
     </div>
