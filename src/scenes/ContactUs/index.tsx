@@ -1,4 +1,6 @@
 import HBorder from "@components/HBorder";
+import VBorder from "@components/VBorder";
+import Clock from "./Clock";
 import ContactUsForm from "./ContactUsForm";
 import StudentCouncil from "./StudentCouncil";
 import Team from "./Team/Index";
@@ -10,7 +12,13 @@ export default function ContactUs() {
       <HBorder />
       <Team />
       <HBorder />
-      <ContactUsForm />
+      <div className="gap-4 w-fit col-center md:flex md:flex-row md:justify-center md:items-center ">
+        <Clock />
+        <div className="rotate-90 md:rotate-0">
+          <VBorder height={"h-96"} />
+        </div>
+        <ContactUsForm />
+      </div>
     </div>
   );
 }
