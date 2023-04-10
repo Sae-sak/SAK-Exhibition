@@ -1,8 +1,18 @@
 import EmailField from "./ContactUsItem/EmailField";
 import MessageArea from "./ContactUsItem/MessageArea";
-import PasswordField from "./ContactUsItem/PasswordField";
+import NameField from "./ContactUsItem/NameField";
 
 export default function ContactUsForm() {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const name = event.currentTarget.name.value;
+    const email = event.currentTarget.email.value;
+    const message = event.currentTarget.message.value;
+
+    window.location.href = `mailto:jyjcy1128@naver.com?subject=Message from ${name} (${email})&body=${message}`;
+  }
+
   return (
     <div className="">
       {/* 제목 */}
@@ -13,12 +23,12 @@ export default function ContactUsForm() {
       </div>
 
       {/* form */}
-      <form className="flex flex-wrap md:mx-4">
+      <form className="flex flex-wrap md:mx-4" onSubmit={handleSubmit}>
+        {/* name textfield */}
+        <NameField />
+
         {/* Email textfield */}
         <EmailField />
-
-        {/* password textfield */}
-        <PasswordField />
 
         {/* message textarea */}
         <MessageArea />
@@ -29,7 +39,7 @@ export default function ContactUsForm() {
             <a className="text-gray-500">kimyoo04@gmail.com</a>
           </div>
           <div className="w-full p-2 pt-2 mt-2 col-end">
-            <button className="flex font-mono text-xl border-b">
+            <button className="flex font-mono text-xl border-b" type="submit">
               <span>submit</span>
               <i className="ri-arrow-right-line"></i>
             </button>

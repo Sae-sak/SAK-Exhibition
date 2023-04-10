@@ -1,10 +1,11 @@
-export default function PasswordField() {
+export default function NameField() {
   return (
     <div className="w-1/2 p-2">
       <div className="relative">
         <label htmlFor="name" className="text-sm leading-8 font-body">
-          Password *
+          Name *
         </label>
+        
         <input
           type="text"
           id="name"
