@@ -1,4 +1,6 @@
-export default function NameField() {
+import { TextFieldProps } from "@type/textField";
+
+export default function NameField(props: TextFieldProps) {
   return (
     <div className="w-1/2 p-2">
       <div className="relative">
@@ -7,6 +9,7 @@ export default function NameField() {
         </label>
         
         <input
+        {...(props.inputProps ?? {})}
           type="text"
           id="name"
           name="name"
@@ -17,3 +20,5 @@ export default function NameField() {
     </div>
   );
 }
+
+
