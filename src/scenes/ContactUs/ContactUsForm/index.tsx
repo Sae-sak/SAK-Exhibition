@@ -88,7 +88,7 @@ export default function ContactUsForm() {
                   className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded hover:border-gray-500"
                   rows={4} // 원하는 행 수
                   cols={50} // 원하는 열 수
-                  placeholder="메시지를 입력하세요."
+                  placeholder="문의 사항을 입력해 주세요."
                 />
               )}
             />

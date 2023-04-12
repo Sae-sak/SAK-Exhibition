@@ -14,6 +14,7 @@ export default function EmailField(props: TextFieldProps) {
           id="email"
           name="email"
           autoComplete="off"
+          placeholder="이메일"
           className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded"
         />
       </div>

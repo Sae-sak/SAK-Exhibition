@@ -14,6 +14,7 @@ export default function NameField(props: TextFieldProps) {
           id="name"
           name="name"
           autoComplete="off"
+          placeholder="이름 / 소속"
           className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded "
         />
       </div>
