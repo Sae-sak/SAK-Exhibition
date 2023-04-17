@@ -1,14 +1,12 @@
 import { IContactForm } from "@type/email";
 import { Controller, useForm } from "react-hook-form";
-import EmailField from "./ContactUsItem/EmailField";
-import MessageArea from "./ContactUsItem/MessageArea";
-import NameField from "./ContactUsItem/NameField";
 import axios from "axios";
-import { useState } from "react";
+import ErrorMsg from "./ContactUsItem/ErrorMsg";
+import { useAppDispatch } from "@toolkit/hook";
+import { alertActions } from "@features/alert/alertSlice";
 
 export default function ContactUsForm() {
-  const [nameValue, setNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
+  const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
@@ -30,10 +28,27 @@ export default function ContactUsForm() {
         message: data.message,
       });
       console.log(response.data);
-      alert("메일 전송이 완료되었습니다.");
+      function mailSuccess() {
+        dispatch(
+          alertActions.alert({
+            alertType: "Success",
+            content: "메일이 정상적으로 전송되었습니다.",
+          })
+        );
+      }
+      mailSuccess();
     } catch (error) {
       console.log(error);
-      alert("메일 전송에 실패했습니다. 다시 시도해주세요.");
+
+      function mailFail() {
+        dispatch(
+          alertActions.alert({
+            alertType: "Danger",
+            content: "메일 전송에 실패했습니다.",
+          })
+        );
+      }
+      mailFail();
     }
   };
   return (
@@ -48,28 +63,58 @@ export default function ContactUsForm() {
       {/* form */}
       <form className="flex flex-wrap md:mx-4" onSubmit={handleSubmit(onValid)}>
         {/* name textfield */}
-        <NameField
-          id="name"
-          inputProps={{
-            ...register("name", {
-              onChange: (e) => {
-                setNameValue(e.target.value);
-              },
-            }),
-          }}
-        />
+        <div className="w-1/2 p-2">
+          <div className="relative">
+            <label htmlFor="name" className="text-sm leading-8 font-body">
+              Name *
+            </label>
+            <input
+              {...register("name", {
+                required: "이름을 입력해 주세요.",
+              })}
+              type="text"
+              id="name"
+              name="name"
+              autoComplete="off"
+              placeholder="이름 / 소속"
+              maxLength={10}
+              className="textfield"
+            />
+          </div>
+          <ErrorMsg>{errors?.name?.message}</ErrorMsg>
+        </div>
 
         {/* Email textfield */}
-        <EmailField
-          id="email"
-          inputProps={{
-            ...register("email", {
-              onChange: (e) => {
-                setEmailValue(e.target.value);
-              },
-            }),
-          }}
-        />
+        <div className="w-1/2 p-2">
+          <div className="relative">
+            <label htmlFor="email" className="text-sm leading-8 font-body">
+              Email *
+            </label>
+            <input
+              {...register("email", {
+                required: "이메일을 입력해 주세요.",
+                validate: {
+                  onlyEmail: (value) => {
+                    return (
+                      [
+                        /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
+                      ].every((pattern) => pattern.test(value)) ||
+                      "이메일 형식만 입력 가능합니다."
+                    );
+                  },
+                },
+              })}
+              type="text"
+              id="email"
+              name="email"
+              autoComplete="off"
+              placeholder="이메일"
+              maxLength={320}
+              className="textfield"
+            />
+          </div>
+          <ErrorMsg>{errors?.email?.message}</ErrorMsg>
+        </div>
 
         {/* message textarea */}
         <div className="w-full p-2">
@@ -78,21 +123,26 @@ export default function ContactUsForm() {
               Message *
             </label>
             <Controller
-              {...register("message")}
+              {...register("message", {
+                required: "메시지를 입력해주세요.",
+                minLength: {
+                  value: 6,
+                  message: "최소 다섯 글자 이상 입력해주세요.",
+                },
+              })}
               name="message"
               control={control}
               defaultValue=""
               render={({ field }) => (
                 <textarea
                   {...field}
-                  className="w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded hover:border-gray-500"
-                  rows={4} // 원하는 행 수
-                  cols={50} // 원하는 열 수
+                  className="textareafield"
                   placeholder="문의 사항을 입력해 주세요."
                 />
               )}
             />
           </div>
+          <ErrorMsg>{errors?.message?.message}</ErrorMsg>
         </div>
 
         {/* submit area */}
