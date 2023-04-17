@@ -144,7 +144,8 @@ p,
 footer,
 header,
 input,
-button {
+button,
+textarea {
   @apply border-light_font_1 dark:border-night_font_1;
 }
 
@@ -218,4 +219,12 @@ html {
 
 .received-bg {
   border-top-left-radius: 0;
+}
+
+.textfield {
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs;
+}
+
+.textareafield {
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
 }
