@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useAppSelector } from "@toolkit/hook";
 
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -12,7 +11,7 @@ import ChatMessages from "./ChatMessages";
 
 export default function Chat() {
   const isChat = useAppSelector((state) => state.chat.isChat);
-  const showChat = isChat ? "" : "opacity-0 scale-0";
+  const showChat = isChat ? "" : "opacity-0 scale-0 -z-10";
 
   const [user, loading, error] = useAuthState(auth);
 
@@ -20,13 +19,15 @@ export default function Chat() {
   if (error) return <p>error occur</p>;
 
   return (
-    <motion.div className="fixed z-40 bottom-8 right-16">
-      <div
-        className={`${showChat} origin-bottom-right flex flex-col justify-between h-full p-4 border rounded-md bg-light_bg_1 dark:bg-night_bg_1 font-body transition-all`}
-      >
+    <div
+      className={`fixed z-40 bottom-8 right-16 ${showChat} transition-all origin-bottom-right`}
+    >
+      <div className="flex flex-col justify-between h-full p-4 border rounded-md bg-light_bg_1 dark:bg-night_bg_1 font-body">
         {/* 헤더와 Sign out 버튼 */}
         <header className="flex items-end justify-between pb-4 w-72">
-          <h1 className="text-xl font-bold">SAK-Exhibition Chat</h1>
+          <h1 className="text-xl font-bold kgu-gradient__font">
+            SAK-Exhibition Chat
+          </h1>
           {user && <SignOut />}
         </header>
 
@@ -42,6 +43,6 @@ export default function Chat() {
           )}
         </section>
       </div>
-    </motion.div>
+    </div>
   );
 }
