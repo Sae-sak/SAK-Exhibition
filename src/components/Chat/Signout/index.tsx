@@ -1,5 +1,5 @@
 import { useSignOut } from "react-firebase-hooks/auth";
-import { auth } from "../config/firebaseApp";
+import { auth } from "@config/firebaseApp";
 
 import LoadingIcon from "../LoadingIcon";
 import ErrorMsg from "../ErrorMsg";

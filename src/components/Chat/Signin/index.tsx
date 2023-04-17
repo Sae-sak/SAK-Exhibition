@@ -1,5 +1,5 @@
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { auth } from "../config/firebaseApp";
+import { auth } from "@config/firebaseApp";
 import LoadingIcon from "../LoadingIcon";
 
 export default function SignIn() {

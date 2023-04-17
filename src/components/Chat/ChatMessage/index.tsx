@@ -1,6 +1,6 @@
 import { IMessage } from "@type/chat";
 import Image from "next/image";
-import { auth } from "../config/firebaseApp";
+import { auth } from "@config/firebaseApp";
 
 export default function ChatMessage(props: { message: IMessage }) {
   const user = auth;

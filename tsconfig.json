@@ -22,6 +22,8 @@
     "baseUrl": "./",
     "outDir": "./out",
     "paths": {
+      "@config": ["./config"],
+      "@config/*": ["./config/*"],
       "@components": ["./src/components"],
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants"],
