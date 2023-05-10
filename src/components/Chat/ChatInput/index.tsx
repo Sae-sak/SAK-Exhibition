@@ -40,6 +40,7 @@ export default function ChatInput() {
         남기고 싶은 말씀을 적어주세요!
       </label>
 
+      {/* 텍스트 입력창 */}
       <div className="flex items-end justify-between w-full ">
         <SendMessage
           id="chat"
@@ -54,6 +55,7 @@ export default function ChatInput() {
           }}
         />
 
+        {/* 전송 버튼 */}
         <button
           className="block border-t border-b border-r w-7 h-7 col-center"
           type="submit"
