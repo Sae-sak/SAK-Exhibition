@@ -1,7 +1,7 @@
 import { useAppSelector } from "@toolkit/hook";
 
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./config/firebaseApp";
+import { auth } from "@config/firebaseApp";
 
 import ChatInput from "./ChatInput";
 import LoadingIcon from "./LoadingIcon";

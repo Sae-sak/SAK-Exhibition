@@ -5,7 +5,7 @@ import { ISendForm } from "@type/chat";
 import SendMessage from "../SendMessage";
 
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { auth, db } from "../config/firebaseApp";
+import { auth, db } from "@config/firebaseApp";
 
 export default function ChatInput() {
   const [formValue, setFormValue] = useState("");

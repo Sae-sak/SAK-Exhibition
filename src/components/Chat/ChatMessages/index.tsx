@@ -9,7 +9,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import { db } from "../config/firebaseApp";
+import { db } from "@config/firebaseApp";
 
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useEffect, useRef } from "react";
