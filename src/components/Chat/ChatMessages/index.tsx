@@ -30,14 +30,14 @@ export default function ChatMessages() {
     snapshotListenOptions: { includeMetadataChanges: true },
   };
 
-  // 메시지 쿼리 생성
+  // 메시지 쿼리 생성 (내림차순으로 최근 50개 메시지)
   const messagesQuery = query(
     messagesRef,
     orderBy("createdAt", "desc"),
     limit(50)
   );
 
-  // 메시지들 받기
+  // 메시지들 받아오기
   const [messages, loading, error] = useCollectionData(messagesQuery, options);
   const reversedMsg = messages?.reverse();
 
@@ -49,6 +49,7 @@ export default function ChatMessages() {
 
   return (
     <section className="border h-[400px] overflow-scroll">
+      {/* 메시지 출력 영역 */}
       {reversedMsg &&
         reversedMsg.map((msg, indx) => (
           <ChatMessage key={`${msg.uid}${indx}`} message={msg} />

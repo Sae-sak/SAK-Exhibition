@@ -6,6 +6,7 @@ export default function ChatMessage(props: { message: IMessage }) {
   const user = auth;
   const { uid, text, displayName, photoURL, createdAt } = props.message;
 
+  // 받은 메세지와 보낸 메세지 구분
   const messageProfile =
     uid === user.currentUser?.uid ? "sent-profile" : "received-profile";
   const messageBg = uid === user.currentUser?.uid ? "sent-bg" : "received-bg";
