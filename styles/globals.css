@@ -2,26 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
-  font-family: "Kimjungchul Gothic";
-  src: url("../public/fonts/Kimjungchul/KimjungchulGothic-Light.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulGothic-Regular.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulGothic-Bold.ttf");
-}
-@font-face {
-  font-family: "Kimjungchul Myungjo";
-  src: url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Light.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Regular.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Bold.ttf");
-}
-
-html {
-  font-family: "Kimjungchul Myungjo", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
-}
-
 /* ------------------------------------------------------------------ */
 
 html {
