@@ -10,8 +10,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "#FFC107",
-
         light_gray_1: "#303030",
         light_gray_2: "#808080",
         light_gray_3: "#BDBDBD",
@@ -21,6 +19,7 @@ module.exports = {
 
         night_main_yellow: "#FFE922",
 
+        font_accent: "#ca7089",
         font_white: "#FFFFFF",
         font_black: "#000000",
 
