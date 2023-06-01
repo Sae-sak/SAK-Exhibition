@@ -2,7 +2,7 @@ import GoToEx from "./CTA/GoToEx";
 
 export default function About() {
   return (
-    <div className="container gap-6 p-5 col-center font-body">
+    <div className="container gap-6 p-5 col-center ">
       <h1 className="text-5xl font-bold">About SAK</h1>
       <div>
         <div className="bg-gray-400 col-center h-72 w-80">SAK 로고 이미지</div>

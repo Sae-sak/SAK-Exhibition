@@ -65,7 +65,7 @@ export default function ContactUsForm() {
         {/* name textfield */}
         <div className="w-1/2 p-2">
           <div className="relative">
-            <label htmlFor="name" className="text-sm leading-8 font-body">
+            <label htmlFor="name" className="text-sm leading-8 ">
               Name *
             </label>
             <input
@@ -87,7 +87,7 @@ export default function ContactUsForm() {
         {/* Email textfield */}
         <div className="w-1/2 p-2">
           <div className="relative">
-            <label htmlFor="email" className="text-sm leading-8 font-body">
+            <label htmlFor="email" className="text-sm leading-8 ">
               Email *
             </label>
             <input
@@ -119,7 +119,7 @@ export default function ContactUsForm() {
         {/* message textarea */}
         <div className="w-full p-2">
           <div className="relative">
-            <label htmlFor="message" className="text-sm leading-8 font-body">
+            <label htmlFor="message" className="text-sm leading-8 ">
               Message *
             </label>
             <Controller
@@ -147,7 +147,7 @@ export default function ContactUsForm() {
 
         {/* submit area */}
         <div className="w-full gap-4 row-center">
-          <div className="w-full p-2 pt-2 mt-2 text-xs border-gray-200 text-start font-body">
+          <div className="w-full p-2 pt-2 mt-2 text-xs border-gray-200 text-start ">
             <a className="text-gray-500">kimyoo04@gmail.com</a>
           </div>
           <div className="w-full p-2 pt-2 mt-2 col-end">

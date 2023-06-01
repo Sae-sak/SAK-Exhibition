@@ -20,7 +20,7 @@ export default function Banner() {
     <>
       <div className="pb-[4px] mt-1">
         {studentFilter !== "" ? (
-          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <div className="flex items-center justify-end gap-2 text-lg font-bold ">
             <span>{studentFilter}</span>
             <i
               onClick={() => dispatch(disableFilter())}
@@ -28,7 +28,7 @@ export default function Banner() {
             ></i>
           </div>
         ) : studioFilter !== "" ? (
-          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <div className="flex items-center justify-end gap-2 text-lg font-bold ">
             <span>{studioFilterKR}</span>
             <i
               onClick={() => dispatch(disableFilter())}
@@ -36,7 +36,7 @@ export default function Banner() {
             ></i>
           </div>
         ) : tagFilter !== "" ? (
-          <div className="flex items-center justify-end gap-2 text-lg font-bold font-body">
+          <div className="flex items-center justify-end gap-2 text-lg font-bold ">
             <span>{tagFilter}</span>
             <i
               onClick={() => dispatch(disableFilter())}

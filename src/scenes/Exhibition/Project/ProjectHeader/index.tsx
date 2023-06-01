@@ -16,7 +16,7 @@ export default function ProjectHeader({ title, name, excerpt, thumbnailImg }) {
           </h1>
 
           {/* Excerpt */}
-          <p className="pr-4 text-sm text-white font-body top-52 md:text-[16px] md:top-60 md:pr-32 left-8">
+          <p className="pr-4 text-sm text-white  top-52 md:text-[16px] md:top-60 md:pr-32 left-8">
             {excerpt}
           </p>
         </div>
@@ -30,14 +30,7 @@ export default function ProjectHeader({ title, name, excerpt, thumbnailImg }) {
         ></div>
       </div>
 
-      {/* Gradient */}
-      <div
-        className="absolute w-full h-96"
-        style={{
-          backgroundImage:
-            "linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,0,1))",
-        }}
-      ></div>
+      <div className="absolute w-full h-96"></div>
     </header>
   );
 }

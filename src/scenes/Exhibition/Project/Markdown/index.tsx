@@ -24,7 +24,7 @@ const MarkdownComponents = {
     }
     return (
       <ParagraphWrapper key={paragraph.choildren}>
-        <p className="font-body">{paragraph.children}</p>
+        <p className="">{paragraph.children}</p>
       </ParagraphWrapper>
     );
   },
