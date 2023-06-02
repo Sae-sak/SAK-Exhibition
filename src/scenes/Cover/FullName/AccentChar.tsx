@@ -8,7 +8,7 @@ export default function AccentChar({
   color: string;
 }) {
   return (
-    <motion.span layoutId={char} className={`text-2xl ${color}`}>
+    <motion.span layoutId={char} className={`text-3xl font-accent ${color}`}>
       {char}
     </motion.span>
   );

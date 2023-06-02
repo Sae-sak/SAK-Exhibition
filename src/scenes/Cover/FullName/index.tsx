@@ -7,22 +7,22 @@ export default function FullName() {
   return (
     <motion.div
       variants={textVariant(1.1)}
-      className="fixed text-left top-14 left-14 text-light_gray_2 dark:text-night_gray_2"
+      className="fixed text-left top-14 left-14"
     >
-      <span className="font-bold">
+      <span className="font-medium">
         <div>
-          <AccentChar char="S" color="text-kgu_main_red" />
+          <AccentChar char="S" color="text-font_accent dark:text-font_accent" />
           <NormalChar>CHOOL OF </NormalChar>
-          <AccentChar char="A" color="text-kgu_main_yellow" />
+          <AccentChar char="A" color="text-font_accent dark:text-font_accent" />
           <NormalChar>RCHITECTURE </NormalChar>
         </div>
         <div>
           <NormalChar>IN </NormalChar>
-          <AccentChar char="K" color="text-kgu_main_green" />
+          <AccentChar char="K" color="text-font_accent dark:text-font_accent" />
           <NormalChar>YONGGI UNIVERSITY </NormalChar>
         </div>
         <div>
-          <AccentChar char="E" color="text-kgu_main_blue" />
+          <AccentChar char="E" color="text-font_accent dark:text-font_accent" />
           <NormalChar>XHIBITION</NormalChar>
         </div>
       </span>
