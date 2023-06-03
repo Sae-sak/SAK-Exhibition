@@ -15,7 +15,7 @@ const Menu = ({ setIsClicked }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="relative z-40 w-screen h-screen col-center"
+        className="fixed z-40 w-screen h-screen col-center"
       >
         <div className="z-30 gap-10 col-center">
           {/* 네비게이션 버튼들 */}
