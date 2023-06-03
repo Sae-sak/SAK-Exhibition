@@ -15,11 +15,12 @@ export default function Logo() {
         }}
         className="absolute w-[66px] z-10 font-accent"
       >
-        <span className="text-2xl font-bold">S</span>
-        <span className="text-2xl font-bold">A</span>
-        <span className="text-2xl font-bold">K</span>
-        <span>-</span>
-        <span className="text-2xl font-bold">E</span>
+        <div className="relative">
+          <span className="text-2xl font-bold">SAK-E</span>
+          <span className="absolute -left-[1px] text-2xl font-bold text-outline">
+            SAK-E
+          </span>
+        </div>
       </motion.div>
     </Link>
   );

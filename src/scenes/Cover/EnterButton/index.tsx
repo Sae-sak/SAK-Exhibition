@@ -2,7 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { textVariant } from "@util/variants";
-import KGULogo from "./KGULogo";
+import Door from "./Door";
 
 export default function EnterButton() {
   return (
@@ -33,13 +33,13 @@ export default function EnterButton() {
           }}
           className="z-10 gap-4 row-center font-header"
         >
-          <span className="text-3xl leading-5 transition-all group-hover:text-font_accent dark:group-hover:text-font_accent font-accent border-y translate-x-10 bg-light_bg_1 dark:bg-night_bg_1">
+          <span className="text-3xl leading-5 transition-al font-accent border-y translate-x-10">
             Exhibition Enter
           </span>
         </motion.div>
 
-        {/* 경기대 로고 문 */}
-        <KGULogo />
+        {/* 입장하는 문 */}
+        <Door />
       </Link>
     </motion.div>
   );

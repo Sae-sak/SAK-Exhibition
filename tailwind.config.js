@@ -19,7 +19,9 @@ module.exports = {
 
         night_main_yellow: "#FFE922",
 
-        font_accent: "#ca7089",
+        accent_pink: "#ca7089",
+        accent_green: "#024138",
+
         font_white: "#FFFFFF",
         font_black: "#000000",
 
@@ -37,8 +39,9 @@ module.exports = {
       },
       fontFamily: {
         accent: ["DM Serif"],
+        body: ["Noto Sans KR"],
         title: ["Kimjungchul Myungjo"],
-        body: ["Kimjungchul Gothic"],
+        arch: ["Kimjungchul Gothic"],
       },
     },
   },

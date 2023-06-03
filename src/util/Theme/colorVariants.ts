@@ -1,6 +1,6 @@
 export const colorVariants = {
-  textActive: "text-font_accent/70 dark:text-font_accent/70",
-  textHover: "group-hover:text-font_accent dark:group-hover:text-font_accent",
-  borderActive: "w-48 bg-font_accent/70 dark:bg-font_accent/70",
-  borderHover: "group-hover:bg-font_accent dark:group-hover:bg-font_accent",
+  textActive: "text-accent_pink/70 dark:text-accent_pink/70",
+  textHover: "group-hover:text-accent_pink dark:group-hover:text-accent_pink",
+  borderActive: "w-48 bg-accent_pink/70 dark:bg-accent_pink/70",
+  borderHover: "group-hover:bg-accent_pink dark:group-hover:bg-accent_pink",
 };

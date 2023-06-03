@@ -43,7 +43,6 @@ html,
 body,
 input,
 textarea {
-  @apply bg-light_bg_1 dark:bg-night_bg_1;
 }
 
 input:focus {
@@ -185,4 +184,11 @@ html {
 
 .textareafield {
   @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
+}
+
+.text-outline {
+  color: #ca7089;
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: #ca7089;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 }
