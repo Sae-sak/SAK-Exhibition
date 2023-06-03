@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/font.css";
+import bg from "../public/images/grid-pattern-gray.png";
 
 import Head from "next/head";
 import type { AppProps } from "next/app";
@@ -28,7 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <ThemeProvider attribute="class">
         <Provider store={store}>
-          <main>
+          <main
+            style={{
+              backgroundImage: `url(${bg.src})`,
+              backgroundRepeat: "repeat",
+            }}
+          >
             <Cursor />
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.route} />
