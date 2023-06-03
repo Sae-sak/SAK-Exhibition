@@ -2,31 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
-  font-family: "Kimjungchul Gothic";
-  src: url("../public/fonts/Kimjungchul/KimjungchulGothic-Light.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulGothic-Regular.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulGothic-Bold.ttf");
-}
-@font-face {
-  font-family: "Kimjungchul Myungjo";
-  src: url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Light.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Regular.ttf"),
-    url("../public/fonts/Kimjungchul/KimjungchulMyungjo-Bold.ttf");
-}
-
-html {
-  font-family: "Kimjungchul Myungjo", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
-}
-
 /* ------------------------------------------------------------------ */
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* anchor url offset */
+  @apply font-title;
 }
 
 /* ------------------------------------------------------------------ */
@@ -37,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Kimjungchul Gothic", serif;
+  @apply font-title;
 }
 
 h1,
@@ -52,9 +33,10 @@ i,
 button,
 span,
 p,
+div,
 label,
 input {
-  @apply text-light_font_1 dark:text-night_font_1;
+  @apply text-font_black dark:text-font_white;
 }
 
 html,
@@ -70,7 +52,7 @@ input:focus {
 }
 
 footer {
-  @apply text-gray-900 bg-light_bg_1 dark:text-night_font_1 dark:bg-night_bg_1;
+  @apply text-gray-900 bg-light_bg_1 dark:text-font_white dark:bg-night_bg_1;
 }
 /* ------------------------------------------------------------------ */
 
@@ -111,30 +93,6 @@ footer {
   align-items: flex-end;
 }
 
-.kgu-gradient {
-  background: rgb(242, 88, 34);
-  background: linear-gradient(
-    135deg,
-    rgba(242, 88, 34, 1) 0%,
-    rgba(247, 148, 29, 1) 34%,
-    rgba(0, 171, 91, 1) 66%,
-    rgba(0, 90, 171, 1) 100%
-  );
-}
-
-.kgu-gradient__font {
-  background: -webkit-linear-gradient(
-    135deg,
-    rgba(0, 90, 171, 1) 0%,
-    rgba(0, 171, 91, 1) 34%,
-    rgba(247, 148, 29, 1) 66%,
-    rgba(242, 88, 34, 1) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* default border color */
 div,
 span,
@@ -146,7 +104,7 @@ header,
 input,
 button,
 textarea {
-  @apply border-light_font_1 dark:border-night_font_1;
+  @apply border-font_black dark:border-font_white;
 }
 
 .half-circle {
@@ -181,7 +139,7 @@ html {
 .cursor {
   width: 0.6rem;
   height: 0.6rem;
-  @apply bg-light_font_1 dark:bg-night_font_1;
+  @apply bg-black dark:bg-white;
 }
 
 .cursor-effect {
@@ -189,7 +147,7 @@ html {
   height: 2.4rem;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
-  @apply border border-light_font_1 dark:border-night_font_1;
+  @apply border border-font_black dark:border-font_white;
 }
 
 /* ------------------------------------------------------------------ */
@@ -222,9 +180,9 @@ html {
 }
 
 .textfield {
-  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs;
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs;
 }
 
 .textareafield {
-  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none font-body focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
 }

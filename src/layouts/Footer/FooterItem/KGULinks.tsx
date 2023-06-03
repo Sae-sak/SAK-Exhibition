@@ -1,6 +1,6 @@
 export default function KGULinks() {
   return (
-    <p className="gap-4 text-xs text-gray-500 dark:text-gray-300 font-body row-center sm:text-left">
+    <p className="gap-4 text-xs text-gray-500 dark:text-gray-300  row-center sm:text-left">
       <a
         href={"http://www.kyonggi.ac.kr/KyonggiUp.kgu"}
         className="text-gray-500 dark:text-gray-300"

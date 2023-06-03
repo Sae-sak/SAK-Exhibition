@@ -7,13 +7,13 @@ export default function Title() {
       variants={textVariant(1.2)}
       className="fixed w-screen h-screen col-center "
     >
-      <div className="flex items-center justify-center w-screen h-screen gap-10 p-10">
-        <div className="w-1/2 h-full">
-          <div className="w-full h-full gap-4 col-center">
-            <div className="text-4xl font-bold">NEW NORMAL VILLAGE</div>
-            <div className="text-2xl">&apos;뉴 노멀&apos; 시대의 건축</div>
-          </div>
-        </div>
+      <div className="col-center w-screen h-screen gap-10 p-10">
+        <h1 className="w-full h-full gap-4 col-center font-accent">
+          <span className="text-4xl text-center">
+            See the world through Architecture
+          </span>
+          <span className="text-2xl">건축을 통해 세상을 바라보다</span>
+        </h1>
       </div>
     </motion.div>
   );

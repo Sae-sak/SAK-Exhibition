@@ -12,7 +12,7 @@ export default function ChatInput() {
   const { register, handleSubmit, reset } = useForm<ISendForm>();
 
   const onValid = async (data: ISendForm) => {
-    if (data.chat !== "") return; // 빈칸 예외처리
+    if (data.chat === "") return; // 빈칸 예외처리
     const user = auth.currentUser; // 유저 확인
 
     // firestore에 저장

@@ -3,20 +3,20 @@ import { useRouter } from "next/router";
 
 const colorVariants = {
   red: {
-    active: "text-kgu_main_red",
-    hover: "hover:text-kgu_main_red",
+    active: "text-font_accent dark:text-font_accent",
+    hover: "hover:text-font_accent dark:hover:text-font_accent",
   },
   yellow: {
-    active: "text-kgu_main_yellow",
-    hover: "hover:text-kgu_main_yellow",
+    active: "text-font_accent dark:text-font_accent",
+    hover: "hover:text-font_accent dark:hover:text-font_accent",
   },
   blue: {
-    active: "text-kgu_main_blue",
-    hover: "hover:text-kgu_main_blue",
+    active: "text-font_accent dark:text-font_accent",
+    hover: "hover:text-font_accent dark:hover:text-font_accent",
   },
   green: {
-    active: "text-kgu_main_green",
-    hover: "hover:text-kgu_main_green",
+    active: "text-font_accent dark:text-font_accent",
+    hover: "hover:text-font_accent dark:hover:text-font_accent",
   },
 };
 

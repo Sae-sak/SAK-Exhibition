@@ -22,74 +22,75 @@ export default function NavLink({
         <div
           className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-48 ${
             "/home" === router.pathname && "/home" === link
-              ? colorVariants.red.borderActive
+              ? colorVariants.borderActive
               : "/about" === router.pathname && "/about" === link
-              ? colorVariants.yellow.borderActive
+              ? colorVariants.borderActive
               : router.pathname.includes("/exhibition") &&
                 "/exhibition" === link
-              ? colorVariants.blue.borderActive
+              ? colorVariants.borderActive
               : "/contactus" === router.pathname && "/contactus" === link
-              ? colorVariants.green.borderActive
+              ? colorVariants.borderActive
               : null
           } ${
             "/home" === link
-              ? colorVariants.red.borderHover
+              ? colorVariants.borderHover
               : "/about" === link
-              ? colorVariants.yellow.borderHover
+              ? colorVariants.borderHover
               : "/exhibition" === link
-              ? colorVariants.blue.borderHover
+              ? colorVariants.borderHover
               : "/contactus" === link
-              ? colorVariants.green.borderHover
+              ? colorVariants.borderHover
               : null
           }`}
         />
         <span
           className={`text-4xl transition-all duration-500  ${
             "/home" === router.pathname && "/home" === link
-              ? colorVariants.red.textActive
+              ? colorVariants.textActive
               : "/about" === router.pathname && "/about" === link
-              ? colorVariants.yellow.textActive
+              ? colorVariants.textActive
               : router.pathname.includes("/exhibition") &&
                 "/exhibition" === link
-              ? colorVariants.blue.textActive
+              ? colorVariants.textActive
               : "/contactus" === router.pathname && "/contactus" === link
-              ? colorVariants.green.textActive
+              ? colorVariants.textActive
               : null
           } ${
             "/home" === link
-              ? colorVariants.red.textHover
+              ? colorVariants.textHover
               : "/about" === link
-              ? colorVariants.yellow.textHover
+              ? colorVariants.textHover
               : "/exhibition" === link
-              ? colorVariants.blue.textHover
+              ? colorVariants.textHover
               : "/contactus" === link
-              ? colorVariants.green.textHover
+              ? colorVariants.textHover
               : null
           }`}
         >
           {name}
         </span>
+
         <div
           className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-48 ${
             "/home" === router.pathname && "/home" === link
-              ? colorVariants.red.borderActive
+              ? colorVariants.borderActive
               : "/about" === router.pathname && "/about" === link
-              ? colorVariants.yellow.borderActive
+              ? colorVariants.borderActive
               : router.pathname.includes("/exhibition") &&
                 "/exhibition" === link
-              ? colorVariants.blue.borderActive
+              ? colorVariants.borderActive
               : "/contactus" === router.pathname && "/contactus" === link
-              ? colorVariants.green.borderActive
+              ? colorVariants.borderActive
               : null
           } ${
             "/home" === link
-              ? colorVariants.red.borderHover
+              ? colorVariants.borderHover
               : "/about" === link
-              ? colorVariants.yellow.borderHover
+              ? colorVariants.borderHover
               : "/exhibition" === link
-              ? colorVariants.blue.borderHover
+              ? colorVariants.borderHover
               : "/contactus" === link
-              ? colorVariants.green.borderHover
+              ? colorVariants.borderHover
               : null
           }`}
         />

@@ -5,7 +5,7 @@ export default function Team() {
     <section className="text-gray-600 body-font">
       <div className="w-full gap-4 mb-20 text-center col-center">
         <h1 className="text-2xl font-bold font-title">OUR TEAM</h1>
-        <p className="mx-auto text-base leading-relaxed font-body lg:w-2/3">
+        <p className="mx-auto text-base leading-relaxed  lg:w-2/3">
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
           gentrify, subway tile poke farm-to-table. Franzen you probably haven`t
           heard of them.

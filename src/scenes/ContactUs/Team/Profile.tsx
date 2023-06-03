@@ -15,10 +15,10 @@ export default function Profile({ name, job, description, email, kakao }) {
         />
         <div className="flex-grow sm:pl-8 ">
           {/* 이름 */}
-          <h2 className="text-lg text-gray-900 font-body">{name}</h2>
+          <h2 className="text-lg text-gray-900 ">{name}</h2>
 
           {/* 직업 */}
-          <h3 className="mb-3 text-gray-500 font-body">{job}</h3>
+          <h3 className="mb-3 text-gray-500 ">{job}</h3>
 
           {/* 설명 */}
           <p className="mb-1">{description}</p>

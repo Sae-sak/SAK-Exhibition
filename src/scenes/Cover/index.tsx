@@ -11,7 +11,7 @@ export default function Cover() {
       variants={staggerContainer}
       initial="hidden"
       animate="show"
-      className="absolute z-50 w-screen h-screen gap-10 text-light_font_1 bg-light_bg_1 col-center dark:text-night_font_1 dark:bg-night_bg_1"
+      className="absolute z-50 w-screen h-screen gap-10 text-font_black bg-light_bg_1 col-center dark:text-font_white dark:bg-night_bg_1"
     >
       <div className="relative w-screen h-screen ">
         {/* 상단 좌측 텍스트 */}

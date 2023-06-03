@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ChatButton() {
   const dispatch = useAppDispatch();
   const isChat = useAppSelector((state) => state.chat.isChat);
-  const showChat = isChat ? "kgu-gradient" : "";
+  const showChat = isChat ? "bg-accent" : "";
 
   return (
     <motion.button
@@ -15,13 +15,13 @@ export default function ChatButton() {
         scale: 0.9,
         rotate: -10,
       }}
-      className={`fixed w-8 h-8 gap-0.5 border bg-white  rounded-br-none shadow-sm rounded-2xl row-center bottom-4 right-4 border-light_font_1 shadow-gray-400 dark:bg-black dark:border-night_font_1 ${showChat}`}
+      className={`fixed w-8 h-8 gap-0.5 border bg-white  rounded-br-none shadow-sm rounded-2xl row-center bottom-4 right-4 border-font_black shadow-gray-400 dark:bg-black dark:border-font_white ${showChat}`}
       onClick={() => dispatch(chatActions.toggleChat())}
     >
       {/* 점 3개 표현 */}
-      <div className="w-1 h-1 rounded-full bg-light_font_1 dark:bg-night_font_1"></div>
-      <div className="w-1 h-1 rounded-full bg-light_font_1 dark:bg-night_font_1"></div>
-      <div className="w-1 h-1 rounded-full bg-light_font_1 dark:bg-night_font_1"></div>
+      <div className="w-1 h-1 rounded-full bg-black dark:bg-white"></div>
+      <div className="w-1 h-1 rounded-full bg-black dark:bg-white"></div>
+      <div className="w-1 h-1 rounded-full bg-black dark:bg-white"></div>
     </motion.button>
   );
 }

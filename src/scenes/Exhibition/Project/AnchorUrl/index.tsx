@@ -17,7 +17,7 @@ export default function AnchorUrl({ content }) {
             <a
               href={`#${urls.replaceAll(" ", "-")}`}
               key={urls + indx}
-              className="font-body"
+              className=""
             >
               - {urls}
             </a>

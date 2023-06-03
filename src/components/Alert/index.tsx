@@ -68,12 +68,12 @@ const Alert = () => {
 
                   <div className="gap-1 col-start">
                     {/* 알림 유형 */}
-                    <span className="text-xl font-semibold font-body text-light_font_1 dark:text-light_font_1">
+                    <span className="text-xl font-semibold  text-font_black dark:text-font_black">
                       {alertType}
                     </span>
 
                     {/* 알림 메시지 */}
-                    <span className="text-sm font-body text-light_font_1 dark:text-light_font_1">
+                    <span className="text-sm  text-font_black dark:text-font_black">
                       {content}
                     </span>
                   </div>
@@ -82,7 +82,7 @@ const Alert = () => {
                 {/* close 버튼 */}
                 <div className="">
                   <i
-                    className="text-2xl ri-close-fill text-light_font_1 dark:text-light_font_1"
+                    className="text-2xl ri-close-fill text-font_black dark:text-font_black"
                     onClick={() => dispatch(alertActions.alertClose())}
                   ></i>
                 </div>

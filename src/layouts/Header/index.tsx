@@ -1,4 +1,4 @@
-import Logo from "./HeaderItem/Logo";
+import Logo from "@components/Logo";
 import MenuToggle from "./HeaderItem/MenuToggle";
 
 export default function Header() {

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Kimjungchul Gothic";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/Kimjungchul/KimjungchulGothic-light.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-light.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Kimjungchul Gothic";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Kimjungchul/KimjungchulGothic-Regular.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-Regular.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Kimjungchul Gothic";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Kimjungchul/KimjungchulGothic-Bold.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-Bold.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulGothic-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Kimjungchul Gothic";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/Kimjungchul/KimjungchulMyungjo-Light.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Light.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Kimjungchul Myungjo";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Kimjungchul/KimjungchulMyungjo-Regular.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Regular.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Kimjungchul Myungjo";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Kimjungchul/KimjungchulMyungjo-Bold.woff2) format("woff2"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Bold.woff) format("woff"),
+    url(/fonts/Kimjungchul/KimjungchulMyungjo-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/NotoSansKR/NotoSansKR-Light.woff2) format("woff2"),
+    url(/fonts/NotoSansKR/NotoSansKR-Light.woff) format("woff"),
+    url(/fonts/NotoSansKR/NotoSansKR-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/NotoSansKR/NotoSansKR-Regular.woff2) format("woff2"),
+    url(/fonts/NotoSansKR/NotoSansKR-Regular.woff) format("woff"),
+    url(/fonts/NotoSansKR/NotoSansKR-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/NotoSansKR/NotoSansKR-Medium.woff2) format("woff2"),
+    url(/fonts/NotoSansKR/NotoSansKR-Medium.woff) format("woff"),
+    url(/fonts/NotoSansKR/NotoSansKR-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/NotoSansKR/NotoSansKR-Bold.woff2) format("woff2"),
+    url(/fonts/NotoSansKR/NotoSansKR-Bold.woff) format("woff"),
+    url(/fonts/NotoSansKR/NotoSansKR-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "DM Serif";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/DM_Serif_Text/DMSerifText-Regular.ttf) format("truetype");
+}
+
+html {
+  font-family: "Noto Sans KR", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-weight: 300;
+  @apply text-font_black dark:text-font_white;
+}
