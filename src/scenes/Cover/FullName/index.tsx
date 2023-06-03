@@ -11,18 +11,18 @@ export default function FullName() {
     >
       <span className="font-medium">
         <div>
-          <AccentChar char="S" color="text-font_accent dark:text-font_accent" />
+          <AccentChar char="S" color="text-accent_pink dark:text-accent_pink" />
           <NormalChar>CHOOL OF </NormalChar>
-          <AccentChar char="A" color="text-font_accent dark:text-font_accent" />
+          <AccentChar char="A" color="text-accent_pink dark:text-accent_pink" />
           <NormalChar>RCHITECTURE </NormalChar>
         </div>
         <div>
           <NormalChar>IN </NormalChar>
-          <AccentChar char="K" color="text-font_accent dark:text-font_accent" />
+          <AccentChar char="K" color="text-accent_pink dark:text-accent_pink" />
           <NormalChar>YONGGI UNIVERSITY </NormalChar>
         </div>
         <div>
-          <AccentChar char="E" color="text-font_accent dark:text-font_accent" />
+          <AccentChar char="E" color="text-accent_pink dark:text-accent_pink" />
           <NormalChar>XHIBITION</NormalChar>
         </div>
       </span>

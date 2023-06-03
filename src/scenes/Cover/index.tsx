@@ -11,18 +11,16 @@ export default function Cover() {
       variants={staggerContainer}
       initial="hidden"
       animate="show"
-      className="absolute z-50 w-screen h-screen gap-10 text-font_black bg-light_bg_1 col-center dark:text-font_white dark:bg-night_bg_1"
+      className="w-screen h-screen gap-10 col-center"
     >
-      <div className="relative w-screen h-screen ">
-        {/* 상단 좌측 텍스트 */}
-        <FullName />
+      {/* 상단 좌측 텍스트 */}
+      <FullName />
 
-        {/* 가운데 타이틀 */}
-        <Title />
+      {/* 가운데 타이틀 */}
+      <Title />
 
-        {/* 하단 우측 링크*/}
-        <EnterButton />
-      </div>
+      {/* 하단 우측 링크*/}
+      <EnterButton />
     </motion.div>
   );
 }

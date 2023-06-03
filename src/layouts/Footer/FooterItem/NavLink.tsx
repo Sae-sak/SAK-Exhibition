@@ -3,20 +3,20 @@ import { useRouter } from "next/router";
 
 const colorVariants = {
   red: {
-    active: "text-font_accent dark:text-font_accent",
-    hover: "hover:text-font_accent dark:hover:text-font_accent",
+    active: "text-accent_pink dark:text-accent_pink",
+    hover: "hover:text-accent_pink dark:hover:text-accent_pink",
   },
   yellow: {
-    active: "text-font_accent dark:text-font_accent",
-    hover: "hover:text-font_accent dark:hover:text-font_accent",
+    active: "text-accent_pink dark:text-accent_pink",
+    hover: "hover:text-accent_pink dark:hover:text-accent_pink",
   },
   blue: {
-    active: "text-font_accent dark:text-font_accent",
-    hover: "hover:text-font_accent dark:hover:text-font_accent",
+    active: "text-accent_pink dark:text-accent_pink",
+    hover: "hover:text-accent_pink dark:hover:text-accent_pink",
   },
   green: {
-    active: "text-font_accent dark:text-font_accent",
-    hover: "hover:text-font_accent dark:hover:text-font_accent",
+    active: "text-accent_pink dark:text-accent_pink",
+    hover: "hover:text-accent_pink dark:hover:text-accent_pink",
   },
 };
 
@@ -26,12 +26,9 @@ export default function NavLink({ linkpath, name }) {
 
   return (
     <div className="w-full lg:w-1/4 md:w-1/2">
-      <Link
-        href={link}
-        className="mb-3 text-sm font-bold tracking-widest font-title"
-      >
+      <Link href={link} className="mb-3 font-medium">
         <span
-          className={`block font-title ${
+          className={`block ${
             "/home" === router.pathname && "/home" === link
               ? colorVariants.red.active
               : "/about" === router.pathname && "/about" === link
