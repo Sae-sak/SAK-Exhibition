@@ -192,3 +192,16 @@ html {
   -webkit-text-stroke-color: #ca7089;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 }
+
+svg {
+  font: bold 70px DM Serif;
+  width: 100%;
+  height: 120px;
+}
+
+text {
+  fill: none;
+  stroke: #ca7089;
+  stroke-linejoin: round;
+  @apply stroke-[1px] md:stroke-[0.1px];
+}

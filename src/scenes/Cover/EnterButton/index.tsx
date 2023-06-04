@@ -2,7 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { textVariant } from "@util/variants";
-import Door from "./Door";
+import Image from "next/image";
 
 export default function EnterButton() {
   return (
@@ -12,9 +12,9 @@ export default function EnterButton() {
       animate="show"
       whileHover="hover"
       exit="exit"
-      className="absolute bottom-14 right-14"
+      className="absolute bottom-10 right-10"
     >
-      <Link href={"/home"} className="gap-2 row-center group ">
+      <Link href={"/home"} className="gap-2 row-center group overflow-hidden">
         {/* 문에 들어가는 글자 */}
         <motion.div
           animate={{
@@ -26,20 +26,32 @@ export default function EnterButton() {
             ease: "linear", // 선형적인 애니메이션
           }}
           exit={{
-            x: 100,
+            x: 200,
             opacity: 0,
-            scale: 0.4,
             transition: { duration: 0.5 },
           }}
           className="z-10 gap-4 row-center font-header"
         >
-          <span className="text-3xl leading-5 transition-al font-accent border-y translate-x-10">
+          <span className="text-2xl leading-4 transition-al font-accent border-y translate-x-10">
             Exhibition Enter
           </span>
         </motion.div>
 
         {/* 입장하는 문 */}
-        <Door />
+        <motion.div
+          exit={{
+            opacity: 0,
+            transition: { delay: 0.8 },
+          }}
+          className="relative col-center"
+        >
+          <Image
+            src="/images/door.png"
+            alt="entrance"
+            width={70}
+            height={160}
+          />
+        </motion.div>
       </Link>
     </motion.div>
   );
