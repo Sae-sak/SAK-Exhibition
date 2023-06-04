@@ -7,9 +7,9 @@ export default function FullName() {
   return (
     <motion.div
       variants={textVariant(1.1)}
-      className="fixed text-left top-14 left-14"
+      className="fixed text-left top-10 left-10"
     >
-      <span className="font-medium">
+      <span>
         <div>
           <AccentChar char="S" color="text-accent_pink dark:text-accent_pink" />
           <NormalChar>CHOOL OF </NormalChar>

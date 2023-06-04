@@ -1,18 +1,19 @@
 export default function Logo() {
   return (
-    <div className="relative w-[66px] h-[32px]">
-      <div className="absolute left-0 top-2">
-        <div className="top-[8px] h-[1px] w-full bg-light_gray_1 dark:bg-night_gray_1" />
-        <div className="w-[66px] h-4"></div>
-        <div className="bottom-[8px] h-[1px] w-full bg-light_gray_1 dark:bg-night_gray_1" />
-      </div>
-      <div className="absolute w-[66px] z-10 font-accent">
-        <div className="relative">
-          <span className="text-2xl font-bold">SAK-E</span>
-          <span className="absolute -left-[1px] text-2xl font-bold text-outline">
+    <div className="gap-2 row-center group">
+      <div className="relative z-10 row-center">
+        <span className="text-2xl leading-4 transition-all font-accent border-y">
+          SAK-E
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 54 10"
+          className="absolute -top-[37px] -left-[0px] text-2xl font-bold overflow-visible"
+        >
+          <text stroke-width="1px" className="text-xl font-bold">
             SAK-E
-          </span>
-        </div>
+          </text>
+        </svg>
       </div>
     </div>
   );

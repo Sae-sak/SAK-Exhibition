@@ -26,7 +26,7 @@ export default function NavLink({ linkpath, name }) {
 
   return (
     <div className="w-full lg:w-1/4 md:w-1/2">
-      <Link href={link} className="mb-3 font-medium">
+      <Link href={link} className="mb-3 font-accent font-medium">
         <span
           className={`block ${
             "/home" === router.pathname && "/home" === link

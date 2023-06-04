@@ -52,7 +52,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
             await router.push(e.currentTarget.href);
           }}
         >
-          <div className="relative h-full border ">
+          <div className="relative h-full border bg-white dark:bg-black">
             {/* 썸네일 이미지 */}
             <Image
               src={thumbnailImg}
@@ -70,7 +70,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           </div>
 
           {/* 학생이름, 프로젝트 제목 */}
-          <div className="px-3 border border-t-0 col-center h-14">
+          <div className="px-3 border border-t-0 col-center h-14 bg-white dark:bg-black">
             <span className="text-sm font-bold ">{name}</span>
             <p className="font-bold text-center ">{title}</p>
           </div>

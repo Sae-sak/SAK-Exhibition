@@ -34,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
               backgroundImage: `url(${bg.src})`,
               backgroundRepeat: "repeat",
             }}
+            className=" bg-light_bg_1 dark:bg-night_bg_1"
           >
             <Cursor />
             <AnimatePresence mode="wait">

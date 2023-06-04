@@ -20,7 +20,7 @@ export default function NavLink({
     <motion.div variants={fadeIn("left", "easeInOut", delay, 0.4)}>
       <Link href={link} className="group">
         <div
-          className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-48 ${
+          className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-32 md:group-hover:w-36 ${
             "/home" === router.pathname && "/home" === link
               ? colorVariants.borderActive
               : "/about" === router.pathname && "/about" === link
@@ -44,7 +44,7 @@ export default function NavLink({
           }`}
         />
         <span
-          className={`text-4xl transition-all duration-500  ${
+          className={`text-2xl transition-all duration-500 font-accent md:text-3xl ${
             "/home" === router.pathname && "/home" === link
               ? colorVariants.textActive
               : "/about" === router.pathname && "/about" === link
@@ -71,7 +71,7 @@ export default function NavLink({
         </span>
 
         <div
-          className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-48 ${
+          className={`block w-8 h-[1px] transition-all duration-500 group-hover:w-32 md:group-hover:w-36 ${
             "/home" === router.pathname && "/home" === link
               ? colorVariants.borderActive
               : "/about" === router.pathname && "/about" === link
