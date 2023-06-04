@@ -30,7 +30,7 @@ export default function Title() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 36 10"
-                className="absolute -top-[34px] -left-[0.8px] text-xl font-bold text-outlineoverflow-visible"
+                className="absolute -top-[34px] -left-[0.8px] text-xl font-bold overflow-visible"
               >
                 <text stroke-width="1px" className="text-xl font-bold">
                   건축

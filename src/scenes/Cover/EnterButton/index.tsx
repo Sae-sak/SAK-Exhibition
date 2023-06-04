@@ -30,9 +30,9 @@ export default function EnterButton() {
             opacity: 0,
             transition: { duration: 0.5 },
           }}
-          className="z-10 gap-4 row-center font-header"
+          className="z-10 gap-4 row-center"
         >
-          <span className="text-2xl leading-4 transition-al font-accent border-y translate-x-10">
+          <span className="text-2xl leading-4 transition-all font-accent border-y translate-x-10">
             Exhibition Enter
           </span>
         </motion.div>
