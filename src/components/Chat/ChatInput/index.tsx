@@ -57,7 +57,7 @@ export default function ChatInput() {
 
         {/* 전송 버튼 */}
         <button
-          className="block border-t border-b border-r w-7 h-7 col-center"
+          className="block border-t border-b border-r w-7 h-7 col-center cursor-pointer"
           type="submit"
           disabled={formValue === ""} // 빈칸 버튼 비활성화
         >

@@ -10,9 +10,5 @@ export default function SignOut() {
   if (error) return <ErrorMsg message={error.message} />;
   if (loading) return <LoadingIcon />;
 
-  return (
-    <div className="App">
-      <button onClick={async () => await signOut()}>Sign out</button>
-    </div>
-  );
+  return <button onClick={async () => await signOut()}>Sign out</button>;
 }

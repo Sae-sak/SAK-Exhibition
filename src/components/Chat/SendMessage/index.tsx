@@ -8,7 +8,7 @@ export default function SendMessage(props: TextFieldProps) {
         name={props.label}
         type={props.type ?? "text"}
         {...(props.inputProps ?? {})}
-        className="w-full border h-7"
+        className="w-full border h-7 pl-0.5"
         autoComplete={props.autoComplete ?? ""}
         placeholder={props.placeholder ?? ""}
       />
