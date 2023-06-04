@@ -15,7 +15,7 @@ export default function ChatButton() {
         scale: 0.9,
         rotate: -10,
       }}
-      className={`fixed w-8 h-8 gap-0.5 border bg-white  rounded-br-none shadow-sm rounded-2xl row-center bottom-4 right-4 border-font_black shadow-gray-400 dark:bg-black dark:border-font_white ${showChat}`}
+      className={`fixed w-8 h-8 gap-0.5 border rounded-br-none shadow-sm rounded-2xl row-center bottom-4 right-4 border-font_black shadow-gray-400 dark:border-font_white ${showChat}`}
       onClick={() => dispatch(chatActions.toggleChat())}
     >
       {/* 점 3개 표현 */}
