@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 export default function ChatButton() {
   const dispatch = useAppDispatch();
   const isChat = useAppSelector((state) => state.chat.isChat);
-  const showChat = isChat ? "bg-accent_pink dark:bg-accent_pink" : "";
+  const showChat = isChat
+    ? "bg-accent_pink dark:bg-accent_pink"
+    : "bg-white dark:bg-black";
 
   return (
     <motion.button
