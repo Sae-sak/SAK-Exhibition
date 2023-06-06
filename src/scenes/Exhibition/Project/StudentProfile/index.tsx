@@ -19,7 +19,7 @@ export default function StudentProfile({
       {/* 학생 프로필 헤더 */}
       <div>
         <div className="relative z-10 row-center">
-          <span className="px-1 text-2xl leading-4 transition-all font-accent border-y">
+          <span className="px-1 text-2xl leading-4 transition-all font-accent border-y lg:text-3xl lg:leading-5 lg:mt-8">
             Student Profile
           </span>
         </div>
@@ -40,8 +40,8 @@ export default function StudentProfile({
         </div>
 
         {/* 학생 정보 영역*/}
-        <div className="col-center w-full">
-          <div className="col-center gap-2 md:items-start">
+        <div className="col-center w-full md:my-4 lg:my-8">
+          <div className="col-center gap-2 md:items-start md:justify-between md:h-48 lg:h-60">
             {/* 이름 */}
             <div className="col-center md:items-start mb-2">
               <span className="border-b font-accent text-sm lg:text-md xl:text-lg ">
