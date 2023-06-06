@@ -77,7 +77,7 @@ export default function CommentInput() {
                 id="content"
                 name="content"
                 rows={2}
-                className="textareafield bg-slate-100 resize-none placeholder:text-sm"
+                className="textareafield bg-light_bg_1 dark:bg-night_bg_1 resize-none placeholder:text-sm"
                 placeholder="자유롭게 댓글을 작성해 보세요."
                 maxLength={501}
               />
