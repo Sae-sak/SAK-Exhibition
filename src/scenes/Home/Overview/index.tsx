@@ -26,7 +26,24 @@ export default function Overview() {
 
   return (
     <div className="h-screen p-8 border col-center">
-      <h1 className="text-5xl">Overview</h1>
+      <h1 className="text-3xl">오프라인 전시장 안내</h1>
+
+      <div>
+        <div>
+          <span>전시 기간:</span>
+          <p> 07.07 - 07.09</p>
+        </div>
+
+        <div>
+          <p>개막식: 23.07.07 Fri. 11am</p>
+          <p>시상식: 23.07.07 Fri. 12pm</p>
+        </div>
+
+        <div>
+          <span>전시 장소:</span>
+          <p>서울 용산구 양녕로 445 노들갤러리 1관</p>
+        </div>
+      </div>
 
       <div ref={mapElement} className="w-full h-full border"></div>
     </div>
