@@ -11,7 +11,7 @@ import ProgressBar from "./ProgressBar";
 import ModalImage from "./ModalImage";
 import Carousel from "./Carousel";
 import Comment from "./Comment";
-import Student from "./Student";
+import StudentProfile from "./StudentProfile";
 
 export default function Project({ projectData }: { projectData: IProject }) {
   const {
@@ -26,6 +26,7 @@ export default function Project({ projectData }: { projectData: IProject }) {
     namepath,
     tags,
     name,
+    email,
     motto,
     content,
   } = projectData;
@@ -62,7 +63,7 @@ export default function Project({ projectData }: { projectData: IProject }) {
             <div className="pt-2 border-t">
               <ProjectContent content={content} />
               <Carousel data={drawingImgs} />
-              <Student />
+              <StudentProfile name={name} email={email} motto={motto} slug={slug} />
               <Comment />
               <Quote />
             </div>
