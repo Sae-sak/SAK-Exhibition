@@ -18,9 +18,7 @@ export default function Title() {
                 viewBox="0 0 167 10"
                 className="absolute w-full -top-6 -left-[0.6px] overflow-visible"
               >
-                <text stroke-width="1px" className="text-3xl font-bold">
-                  Architecture
-                </text>
+                <text className="text-3xl font-bold">Architecture</text>
               </svg>
             </span>
           </span>
@@ -32,9 +30,7 @@ export default function Title() {
                 viewBox="0 0 36 10"
                 className="absolute -top-[34px] -left-[0.8px] text-xl font-bold overflow-visible"
               >
-                <text stroke-width="1px" className="text-xl font-bold">
-                  건축
-                </text>
+                <text className="text-xl font-bold">건축</text>
               </svg>
             </span>
             을 통해 세상을 바라보다
