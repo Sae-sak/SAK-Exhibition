@@ -25,27 +25,31 @@ export default function Overview() {
   // }, []);
 
   return (
-    <div className="h-screen p-8 border col-center">
-      <h1 className="text-3xl">오프라인 전시장 안내</h1>
+    <div className="py-8 flex flex-col items-start justify-start md:items-start md:flex-row md:justify-between gap-8">
+      <div className="flex flex-col items-start md:h-80 justify-between gap-4">
+        <h1 className="text-2xl md:text-3xl">오프라인 전시장 안내</h1>
 
-      <div>
-        <div>
-          <span>전시 기간:</span>
-          <p> 07.07 - 07.09</p>
-        </div>
+        <div className="col-start gap-1">
+          <span className="text-sm md:text-md">
+            전시 기간: 7월 7일 - 7월 9일
+          </span>
 
-        <div>
-          <p>개막식: 23.07.07 Fri. 11am</p>
-          <p>시상식: 23.07.07 Fri. 12pm</p>
-        </div>
+          <div className="flex items-start justify-start flex-wrap sm:gap-4 md:gap-1">
+            <span className="text-sm md:text-md">
+              개막식: 23.07.07 금요일 11 AM
+            </span>
+            <span className="text-sm md:text-md">
+              시상식: 23.07.07 금요일 12 PM
+            </span>
+          </div>
 
-        <div>
-          <span>전시 장소:</span>
-          <p>서울 용산구 양녕로 445 노들갤러리 1관</p>
+          <span className="text-sm md:text-md">
+            전시 장소: 서울 용산구 양녕로 445 노들갤러리 1관
+          </span>
         </div>
       </div>
 
-      <div ref={mapElement} className="w-full h-full border"></div>
+      <div ref={mapElement} className="w-full md:w-2/3 h-80 border"></div>
     </div>
   );
 }
