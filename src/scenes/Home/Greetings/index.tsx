@@ -3,7 +3,7 @@ import poster from "public/images/poster.webp";
 
 export default function Greetings() {
   return (
-    <div className="p-8 border col-center lg:flex-row lg:justify-between xl:justify-center">
+    <div className="py-8 border-b col-center lg:flex-row lg:justify-between xl:justify-center">
       <div className="w-full lg:w-1/2">
         <Image
           src={poster}
@@ -14,9 +14,9 @@ export default function Greetings() {
           className="w-full"
         />
       </div>
-      <div className="col-center w-full lg:w-1/2">
+      <div className="col-center w-full">
         <h1 className="text-2xl md:text-3xl text-center">
-          56회 경기대학교 건축학과 온라인 졸업전시
+          56회 경기대학교 건축학과 졸업전시
         </h1>
       </div>
     </div>
