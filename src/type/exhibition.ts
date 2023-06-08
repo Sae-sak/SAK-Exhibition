@@ -26,8 +26,26 @@ export type StudioType =
   | "park-jung-dae"
   | "yoo-su-young"
   | "";
-
 export type StudioKRType = "김이석" | "김주철" | "박정대" | "유수영" | "";
+
+export type StudioRealType =
+  | "kim-hyun-hyi"
+  | "ryu-jeon-hyi"
+  | "an-chang-mo"
+  | "yun-hyi-jin"
+  | "lee-seung-hoon"
+  | "";
+export type StudioKRRealType =
+  | "김현휘"
+  | "류전희"
+  | "안창모"
+  | "윤희진"
+  | "이승훈"
+  | "";
+export type studioNamesRealType = {
+  name: StudioRealType;
+  nameKR: StudioKRRealType;
+};
 
 export interface IProject {
   slug: string;

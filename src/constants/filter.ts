@@ -1,4 +1,9 @@
-import { StudioKRType, StudioType, TagType } from "@type/exhibition";
+import {
+  StudioKRType,
+  studioNamesRealType,
+  StudioType,
+  TagType,
+} from "@type/exhibition";
 import { TStudent, TStudio, TTag } from "@type/Filter";
 
 type studioNamesType = {
@@ -11,6 +16,14 @@ export const studioNames: studioNamesType[] = [
   { name: "kim-ju-cheol", nameKR: "김주철" },
   { name: "park-jung-dae", nameKR: "박정대" },
   { name: "yoo-su-young", nameKR: "유수영" },
+];
+
+export const studioNamesReal: studioNamesRealType[] = [
+  { name: "kim-hyun-hyi", nameKR: "김현휘" },
+  { name: "ryu-jeon-hyi", nameKR: "류전희" },
+  { name: "an-chang-mo", nameKR: "안창모" },
+  { name: "yun-hyi-jin", nameKR: "윤희진" },
+  { name: "lee-seung-hoon", nameKR: "이승훈" },
 ];
 
 export const tagNames: TagType[] = [
