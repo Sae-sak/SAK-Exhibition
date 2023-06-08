@@ -13,6 +13,7 @@ import { store } from "@toolkit/store";
 import Cursor from "@components/Cursor";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const clientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
 
   return (
     <>
@@ -25,6 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#FBFBFB" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <script
+          type="text/javascript"
+          src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${clientId}`}
+          defer
+        ></script>
       </Head>
 
       <ThemeProvider attribute="class">

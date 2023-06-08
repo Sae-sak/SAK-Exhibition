@@ -10,9 +10,7 @@ export default function Logo() {
           viewBox="0 0 54 10"
           className="absolute -top-[37px] -left-[0px] text-2xl font-bold overflow-visible"
         >
-          <text stroke-width="1px" className="text-xl font-bold">
-            SAK-E
-          </text>
+          <text className="text-xl font-bold">SAK-E</text>
         </svg>
       </div>
     </div>
