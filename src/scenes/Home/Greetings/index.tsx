@@ -1,24 +1,37 @@
 import Image from "next/image";
 import poster from "public/images/poster.webp";
+import { motion } from "framer-motion";
+import { staggerContainer } from "@util/variants/container";
+import { textVariant } from "@util/variants";
 
 export default function Greetings() {
   return (
-    <div className="py-8 border-b col-center lg:flex-row lg:justify-between xl:justify-center">
-      <div className="w-full lg:w-1/2">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      className="py-8 max-h-screen border-b col-center gap-8"
+    >
+      <motion.h1
+        variants={textVariant(0.9)}
+        className="text-2xl md:text-3xl text-center"
+      >
+        제56회 경기대학교 건축학과 졸업 전시회
+      </motion.h1>
+
+      <motion.div
+        variants={textVariant(1.1)}
+        className="w-full h-full col-center"
+      >
         <Image
+          priority
           src={poster}
-          width={600}
+          width={500}
           height={500}
           alt="poster"
-          quality={100}
-          className="w-full"
+          quality={40}
         />
-      </div>
-      <div className="col-center w-full">
-        <h1 className="text-2xl md:text-3xl text-center">
-          56회 경기대학교 건축학과 졸업전시
-        </h1>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
