@@ -15,13 +15,21 @@ export default function Introduce() {
         className={`font-normal text-2xl md:text-3xl text-secondary-white font-accent`}
       >
         {Array.from("About Overseer").map((letter, index) => (
-          <motion.span variants={textVariant2} key={index}>
+          <motion.span
+            key={index}
+            variants={textVariant2}
+            viewport={{ once: true }}
+          >
             {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
       </motion.p>
 
-      <motion.p variants={textVariant(1.8)} className="max-w-4xl text-center">
+      <motion.p
+        variants={textVariant(1.8)}
+        viewport={{ once: true }}
+        className="max-w-4xl text-center"
+      >
         <span className="font-medium">‘Overseer’</span>는 단어가 담은 뜻 그대로
         감독이자 관찰자라는 뜻을 지니고 있다. 도면을 그릴 때 가장 먼저 기준이
         되는 ‘축’을 정하게 되면, 바탕에 그려지는 축과 기준선은 첫 레이어인

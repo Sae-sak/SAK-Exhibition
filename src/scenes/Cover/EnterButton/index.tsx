@@ -38,13 +38,7 @@ export default function EnterButton() {
         </motion.div>
 
         {/* 입장하는 문 */}
-        <motion.div
-          exit={{
-            opacity: 0,
-            transition: { delay: 0.8 },
-          }}
-          className="relative col-center"
-        >
+        <motion.div className="relative col-center">
           <Image
             src="/images/door.png"
             alt="entrance"

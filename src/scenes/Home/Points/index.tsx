@@ -19,13 +19,14 @@ export default function Points() {
     >
       <motion.h1
         variants={textVariant(0.9)}
+        viewport={{ once: true }}
         className="text-2xl md:text-3xl font-accent"
       >
         Player List
       </motion.h1>
 
       <div className="flex items-center justify-between">
-        <motion.nav variants={textVariant(1.1)} className="">
+        <motion.nav variants={textVariant(1.1)} viewport={{ once: true }}>
           <Reorder.Group
             as="ul"
             axis="x"
@@ -45,7 +46,7 @@ export default function Points() {
             </AnimatePresence>
           </Reorder.Group>
         </motion.nav>
-        <motion.main variants={textVariant(1.3)}>
+        <motion.main variants={textVariant(1.3)} viewport={{ once: true }}>
           <AnimatePresence mode="wait">
             <motion.ul
               key={selectedTab.studio}
