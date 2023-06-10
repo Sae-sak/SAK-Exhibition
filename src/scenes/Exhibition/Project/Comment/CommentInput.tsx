@@ -1,7 +1,10 @@
+import { auth, db } from "@config/firebaseApp";
 import { ICommentForm } from "@type/comment";
+import { addDoc, collection } from "firebase/firestore";
+import Image from "next/image";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
-export default function CommentInput() {
+export default function CommentInput({ slug }: { slug: string }) {
   const {
     register,
     handleSubmit,
@@ -34,20 +37,52 @@ export default function CommentInput() {
       setErrors(errMsg);
       return;
     }
+
+    // 유저 확인
+    const user = auth.currentUser;
+
+    // 현재 시간을 가져오고 UTC로 변환
+    const now = new Date();
+    const utcTimestampString = now.toISOString();
+
+    // firestore에 저장
+    if (user) {
+      const { uid, displayName, photoURL } = user;
+      await addDoc(collection(db, "comments"), {
+        uid,
+        displayName,
+        text: data.comment,
+        photoURL,
+        createdAt: utcTimestampString,
+
+        slug,
+      });
+
+      reset({ comment: "" }); // 전송 후 텍스트 지우기
+    }
   };
 
   return (
-    <div className="mb-2 mt-4 border-t pb-2 ">
-      <form onSubmit={handleSubmit(onValid)} className="col-center gap-1">
-        <div className="row-start w-full gap-2"></div>
+    <div className="py-2 mt-4 border-y  ">
+      <form onSubmit={handleSubmit(onValid)} className="col-center">
         {/* 댓글 입력 필드 헤더 */}
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center w-full">
             {/* 작성자 프로필 */}
-            <div className="m-2 w-10 h-10 bg-cyan-800 rounded-full"></div>
+            <div className="m-2 w-10 h-10 ">
+              <Image
+                className="rounded-full"
+                width={36}
+                height={36}
+                src={auth.currentUser.photoURL}
+                alt={auth.currentUser.uid}
+              />
+            </div>
 
             {/* 작성자 이름 */}
-            <span className=" border-b">아무개</span>
+            <span className="ml-2 border-b">
+              {auth.currentUser.displayName}
+            </span>
           </div>
           {/* 제출 버튼 */}
           <button type="submit" className="m-2 rounded-2xl border h-8 w-20">
@@ -55,7 +90,7 @@ export default function CommentInput() {
           </button>
         </div>
 
-        <div className="flex w-full flex-col gap-1">
+        <div className="flex w-full flex-col">
           {/* 댓글 입력 컨트롤러 */}
           <Controller
             {...register("comment", {
@@ -77,7 +112,7 @@ export default function CommentInput() {
                 id="content"
                 name="content"
                 rows={2}
-                className="textareafield bg-light_bg_1 dark:bg-night_bg_1 resize-none placeholder:text-sm"
+                className="w-full px-3 py-1 leading-8 outline-none placeholder:pt-2 bg-light_bg_1 dark:bg-night_bg_1 resize-none placeholder:text-sm"
                 placeholder="자유롭게 댓글을 작성해 보세요."
                 maxLength={501}
               />
