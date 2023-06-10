@@ -1,21 +1,12 @@
 import CommentInput from "./CommentInput";
-import { useAppSelector } from "@toolkit/hook";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LoadingIcon from "@components/Chat/LoadingIcon";
 import SignOut from "@components/Chat/Signout";
 import SignIn from "@components/Chat/Signin";
 import { auth } from "@config/firebaseApp";
+import CommentList from "./CommentList";
 
-export default function Comment({
-  name,
-  slug,
-}: {
-  name: string;
-  slug: string;
-}) {
-  const isChat = useAppSelector((state) => state.chat.isChat);
-  const showChat = isChat ? "" : "opacity-0 scale-0 -z-10";
-
+export default function Comment({ slug }: { slug: string }) {
   const [user, loading, error] = useAuthState(auth);
 
   if (loading) return <LoadingIcon />;
@@ -31,7 +22,7 @@ export default function Comment({
       )}
       {user ? (
         // 댓글 입력 필드
-        <CommentInput />
+        <CommentInput slug={slug} />
       ) : (
         <div className="py-4">
           <SignIn />
@@ -39,7 +30,7 @@ export default function Comment({
       )}
 
       {/* 댓글 목록 */}
-      <div className="w-full h-48 border-y bg-slate-300">Comment Lists</div>
+      <CommentList slug={slug} />
     </div>
   );
 }
