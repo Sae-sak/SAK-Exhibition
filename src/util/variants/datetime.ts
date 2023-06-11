@@ -1,7 +1,10 @@
-export function timeYmd(date: string) {
+export function timeYmd(dateSeconds: number) {
+  // 9시간이 더해진 한국 시간 밀리초
+  const dateSecondsKr = dateSeconds * 1000 + 9 * 60 * 60 * 1000;
+
   // 현재 시각 - 댓글이 쓰인 시각 (초 단위)
   const seconds = Math.floor(
-    (new Date().getTime() - new Date(date).getTime()) / 1000
+    (new Date().getTime() + 9 * 60 * 60 * 1000 - dateSecondsKr) / 1000
   );
   // 시간 경과 정도에 따라 상대적 시간 표기
   if (seconds <= 60) {
@@ -15,7 +18,7 @@ export function timeYmd(date: string) {
     return formatRelativeTime(seconds, "시간");
   } else {
     // 날짜
-    const ymdDate = getDotDate(new Date(date));
+    const ymdDate = getDotDate(new Date(dateSecondsKr));
     return ymdDate;
   }
 }
