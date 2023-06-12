@@ -12,27 +12,33 @@ export default function Comment({ slug }: { slug: string }) {
 
   const [user, loading, error] = useAuthState(auth);
 
-  if (loading) return <LoadingIcon />;
   if (error) return <p>error occur</p>;
 
   return (
     <div className="w-full bg-light_bg_1 dark:bg-night_bg_1  border rounded-md p-4">
-      <div className="flex justify-between items-center w-full border-b pb-4">
+      <div className="flex justify-between items-center w-full border-b pb-4 px-1">
         <p>응원의 한 마디를 남겨보세요.</p>
         {user && <SignOut />}
       </div>
 
-      {user ? (
-        // 댓글 입력 필드
-        !isUpdate && <CommentInput slug={slug} />
-      ) : (
-        <div className="py-4">
-          <SignIn />
+      {loading ? (
+        <div className="pt-6 pb-3">
+          <LoadingIcon />
         </div>
+      ) : (
+        <>
+          {/* 댓글 목록 */}
+          {user && <CommentList slug={slug} />}
+          {user ? (
+            // 댓글 입력 필드
+            !isUpdate && <CommentInput slug={slug} />
+          ) : (
+            <div className="pt-6 pb-3">
+              <SignIn />
+            </div>
+          )}
+        </>
       )}
-
-      {/* 댓글 목록 */}
-      <CommentList slug={slug} />
     </div>
   );
 }

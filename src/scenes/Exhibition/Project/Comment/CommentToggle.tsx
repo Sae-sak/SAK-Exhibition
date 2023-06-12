@@ -22,7 +22,7 @@ export default function CommentToggle({ comment }: { comment: IComment }) {
       const commentRef = doc(db, "comments", commentId);
       await deleteDoc(commentRef).then(() => {
         console.log("deleteDoc success");
-        dispatch(commentActions.clickDelete(comment.commentId));
+        dispatch(commentActions.resetComment());
       });
     } catch (error) {
       console.error("deleteDoc error ==> ", error);
@@ -39,7 +39,7 @@ export default function CommentToggle({ comment }: { comment: IComment }) {
         ></i>
       )}
       {isMore && comment.commentId === commentId && (
-        <div className="absolute right-4 top-4 w-20 h-18 rounded-md border bg-light_bg_1 dark:bg-night_bg_1">
+        <div className="absolute top-16 -right-1 w-20 h-18 rounded-md border bg-light_bg_1 dark:bg-night_bg_1">
           {/* 수정 버튼 */}
 
           <button

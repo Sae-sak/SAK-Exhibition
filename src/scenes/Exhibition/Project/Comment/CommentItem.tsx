@@ -1,18 +1,17 @@
-import { auth } from "@config/firebaseApp";
-import { commentActions } from "@features/comment/commentSlice";
-import { useAppDispatch, useAppSelector } from "@toolkit/hook";
+import { useAppSelector } from "@toolkit/hook";
 import { IComment } from "@type/comment";
 import { timeYmd } from "@util/variants/datetime";
 import Image from "next/image";
 import CommentToggle from "./CommentToggle";
-import { divide } from "lodash";
 import CommentInput from "./CommentInput";
 
 export default function CommentItem({ comment }: { comment: IComment }) {
-  const { isMore, isUpdate, isDelete, commentId } = useAppSelector(
-    (state) => state.comment
-  );
-  const dispatch = useAppDispatch();
+  const { isUpdate, commentId } = useAppSelector((state) => state.comment);
+
+  const cutDisplayName =
+    comment.displayName.length > 8
+      ? comment.displayName.slice(0, 8) + "..."
+      : comment.displayName;
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function CommentItem({ comment }: { comment: IComment }) {
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-2">
               {/* 작성자 프로필 */}
-              <div className="w-[32px] h-[32px]">
+              <div className="w-[32px] h-[32px] flex-shrink-0">
                 <Image
                   className="rounded-full"
                   width={32}
@@ -32,11 +31,11 @@ export default function CommentItem({ comment }: { comment: IComment }) {
                   alt={comment.uid}
                 />
               </div>
-              <div className="space-x-2">
+              <div className="flex flex-col items-start justify-start">
                 {/* 작성자 이름 */}
-                <span className="w-20 overflow-hidden">
-                  <span className="tuncate">{comment.displayName}</span>
-                </span>
+                <div className="w-40 overflow-hidden">
+                  <span className="truncate">{cutDisplayName}</span>
+                </div>
 
                 {/* 작성 시간 : timeYmd 함수 활용 */}
                 <span className="text-sm text-slate-400">
