@@ -3,14 +3,16 @@ import { commentActions } from "@features/comment/commentSlice";
 import { useAppDispatch, useAppSelector } from "@toolkit/hook";
 import { ICommentForm } from "@type/comment";
 import {
-  addDoc,
   collection,
   doc,
+  getDoc,
   serverTimestamp,
   setDoc,
+  updateDoc,
 } from "firebase/firestore";
 import Image from "next/image";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { string } from "zod";
 
 export default function CommentInput({
   slug,
@@ -19,9 +21,7 @@ export default function CommentInput({
   slug: string;
   commentText?: string;
 }) {
-  const { isMore, isUpdate, isDelete, commentId } = useAppSelector(
-    (state) => state.comment
-  );
+  const { isUpdate, commentId } = useAppSelector((state) => state.comment);
   const dispatch = useAppDispatch();
   const {
     register,
@@ -34,6 +34,12 @@ export default function CommentInput({
     // 초기값 지정
     defaultValues: { comment: commentText },
   });
+  // 현재 접속 중인 유저 확인
+  const user = auth.currentUser;
+  const cutDisplayName =
+    auth.currentUser.displayName.length > 8
+      ? auth.currentUser.displayName.slice(0, 8) + "..."
+      : auth.currentUser.displayName;
 
   const onValid: SubmitHandler<ICommentForm> = async (data) => {
     //  폼 데이터 유효성 검사
@@ -57,36 +63,53 @@ export default function CommentInput({
       return;
     }
 
-    // 현재 접속 중인 유저 확인
-    const user = auth.currentUser;
-
     // firestore에 저장 (학생별 slug 추가)
     if (user) {
       const { uid, displayName, photoURL } = user;
 
-      const commentRef = doc(collection(db, "comments"));
-      await setDoc(commentRef, {
-        uid,
-        commentId: commentRef.id,
-        displayName,
-        text: data.comment,
-        photoURL,
-        createdAt: serverTimestamp(),
+      // try ,catch문 활용
+      if (isUpdate) {
+        try {
+          // const commentRef = doc(db, "comments", commentId);
+          await updateDoc(doc(db, "comments", commentId), {
+            text: data.comment,
+          }).then(() => {
+            console.log("updateDoc success");
+            dispatch(commentActions.resetComment());
+          });
+        } catch (error) {
+          console.error("updateDoc error ==> ", error);
+        }
+      } else {
+        try {
+          const commentRef = doc(collection(db, "comments"));
+          await setDoc(commentRef, {
+            uid,
+            commentId: commentRef.id,
+            displayName,
+            text: data.comment,
+            photoURL,
+            createdAt: serverTimestamp(),
 
-        slug,
-      });
+            slug,
+          });
 
-      // 전송 후 텍스트 지우기
-      reset({ comment: "" });
+          // 전송 후 텍스트 지우기
+          reset({ comment: "" });
+        } catch (error) {
+          console.error("createDoc error ==> ", error);
+        }
+      }
     }
+    // isUpdate를 가지고 true일 때와 false를 조건문을 걸어서,
   };
 
   return (
-    <div className="py-2 pt-4">
+    <div className="py-2 pt-4 px-1">
       <form onSubmit={handleSubmit(onValid)} className="col-center">
         {/* 댓글 입력 필드 헤더 */}
-        <div className="flex items-center justify-between w-full">
-          <div className="flex items-center pb-4">
+        <div className="flex items-center justify-between w-full  pb-3">
+          <div className="flex items-center">
             {/* 작성자 프로필 이미지 */}
             <div className="w-[32px] h-[32px] ">
               <Image
@@ -99,9 +122,7 @@ export default function CommentInput({
             </div>
 
             {/* 작성자 이름 */}
-            <span className="ml-2 border-b">
-              {auth.currentUser.displayName}
-            </span>
+            <span className="ml-2 border-b">{cutDisplayName}</span>
           </div>
           <div className="row-center gap-2">
             {/* 제출 버튼 */}
