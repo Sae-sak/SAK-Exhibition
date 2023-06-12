@@ -4,6 +4,7 @@ import filterReducer from "@features/filter/filterSlice";
 import alertReducer from "@features/alert/alertSlice";
 import photoReducer from "@features/photo/photoSlice";
 import chatReducer from "@features/chat/chatSlice";
+import commentReducer from "@features/comment/commentSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     alert: alertReducer,
     photo: photoReducer,
     chat: chatReducer,
+    comment: commentReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

@@ -63,8 +63,14 @@ export default function Project({ projectData }: { projectData: IProject }) {
             <div className="pt-2 border-t">
               <ProjectContent content={content} />
               <Carousel data={drawingImgs} />
-              <StudentProfile name={name} email={email} motto={motto} slug={slug} />
-              <Comment />
+              <StudentProfile
+                name={name}
+                email={email}
+                motto={motto}
+                slug={slug}
+              />
+
+              <Comment name={name} slug={slug} />
               <Quote />
             </div>
           </section>
