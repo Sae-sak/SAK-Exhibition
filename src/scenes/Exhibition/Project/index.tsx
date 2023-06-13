@@ -70,7 +70,7 @@ export default function Project({ projectData }: { projectData: IProject }) {
                 slug={slug}
               />
 
-              <Comment name={name} slug={slug} />
+              <Comment slug={slug} />
               <Quote />
             </div>
           </section>
