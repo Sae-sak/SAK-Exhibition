@@ -7,7 +7,7 @@ export default function ChatButton() {
   const dispatch = useAppDispatch();
   const isChat = useAppSelector((state) => state.chat.isChat);
   const showChat = isChat
-    ? "bg-accent_pink dark:bg-accent_pink"
+    ? "bg-accent_pink dark:bg-accent_green"
     : "bg-white dark:bg-black";
 
   return (

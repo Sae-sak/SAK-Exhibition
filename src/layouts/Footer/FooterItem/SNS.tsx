@@ -1,7 +1,12 @@
 export default function SNS() {
   return (
     <span className="inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
-      <a className="ml-3 text-gray-500">
+      <a
+        href={"https://instagram.com/exhibit____sak?igshid=MjEwN2IyYWYwYw=="}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="ml-3 text-gray-500"
+      >
         <svg
           fill="none"
           stroke="currentColor"

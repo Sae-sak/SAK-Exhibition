@@ -15,7 +15,6 @@ module.exports = {
         light_gray_3: "#BDBDBD",
         light_gray_4: "#EEEEEE",
         light_bg_1: "#FBFBFB",
-        font_black: "#000000",
 
         night_main_yellow: "#FFE922",
 
@@ -30,7 +29,6 @@ module.exports = {
         night_gray_3: "#808080",
         night_gray_4: "#303030",
         night_bg_1: "#101010",
-        font_white: "#FFFFFF",
 
         alert_success: "#219653",
         alert_warning: "#F2C94C",
@@ -38,10 +36,10 @@ module.exports = {
         alert_info: "#2F80ED",
       },
       fontFamily: {
-        accent: ["DM Serif"],
+        accent: ["DM serif"],
         body: ["Noto Sans KR"],
-        title: ["Kimjungchul Myungjo"],
-        arch: ["Kimjungchul Gothic"],
+        title: ["Hanamdaum"],
+        arch: ["Playfair Display"],
       },
     },
   },

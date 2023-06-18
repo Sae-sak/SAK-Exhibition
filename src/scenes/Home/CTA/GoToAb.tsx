@@ -3,12 +3,10 @@ import { motion } from "framer-motion";
 
 export default function GoToAb() {
   return (
-    <motion.button className="text-2xl font-bold ">
-      <Link href="/about">
-        <div className="p-4">
-          <span className="">About SAK</span>
-        </div>
-      </Link>
-    </motion.button>
+    <Link href="/about">
+      <motion.button className="py-2 px-4 border border-accent_pink rounded-full">
+        <span className="text-2xl font-accent">About Exhibition</span>
+      </motion.button>
+    </Link>
   );
 }

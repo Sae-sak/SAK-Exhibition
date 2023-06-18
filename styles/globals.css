@@ -7,19 +7,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* anchor url offset */
-  @apply font-title;
 }
 
 /* ------------------------------------------------------------------ */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-title;
-}
 
 h1,
 h2,
@@ -103,7 +93,7 @@ header,
 input,
 button,
 textarea {
-  @apply border-font_black dark:border-font_white;
+  @apply border-accent_pink dark:border-accent_green;
 }
 
 .half-circle {
