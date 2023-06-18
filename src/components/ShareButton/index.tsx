@@ -73,7 +73,7 @@ export default function ShareButton({ company, emailPath }: ICompany) {
     case "CopyEmail":
       return (
         <button onClick={() => shareEmail()}>
-          <i className="text-[30px] ri-mail-line"></i>
+          <i className="text-[26px] ri-mail-line"></i>
         </button>
       );
 
