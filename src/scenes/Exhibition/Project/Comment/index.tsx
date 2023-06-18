@@ -12,7 +12,7 @@ export default function Comment({ slug }: { slug: string }) {
 
   const [user, loading, error] = useAuthState(auth);
 
-  if (error) return <p>error occur</p>;
+  if (error) return <p>에러가 발생했습니다.</p>;
 
   return (
     <div className="w-full bg-light_bg_1 dark:bg-night_bg_1  border rounded-md p-4">
