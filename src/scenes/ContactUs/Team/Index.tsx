@@ -11,24 +11,20 @@ export default function Team() {
           heard of them.
         </p>
       </div>
-      <div className="flex-wrap -m-4 col-center">
+      <div className="col-center">
         <Profile
           name={"정채영"}
           job={"Project Manager"}
-          description={
-            "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware."
-          }
-          email={"essentials106@ewhain.net"}
-          kakao={""}
+          description={"사람 재미를 아는 길잡이가 되자"}
+          email={"chaezero1997@gmail.com"}
+          github={"https://github.com/chae-zero"}
         />
         <Profile
           name={"김 유"}
-          job={"Developer"}
-          description={
-            "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware."
-          }
-          email={"kimyoo@kakao.com"}
-          kakao={""}
+          job={"Frontend Developer"}
+          description={"굳건하게 코딩하는 개발자"}
+          email={"kimyoo04eco@naver.com"}
+          github={"https://github.com/kimyoo04"}
         />
       </div>
     </section>
