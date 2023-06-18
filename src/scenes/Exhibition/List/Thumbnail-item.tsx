@@ -1,36 +1,13 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-
-import Loading from "@components/Loading";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { IProject } from "@type/exhibition";
 
 export default function ThumbnailItem({ project }: { project: IProject }) {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    slug,
-    title,
-    date,
-    year,
-    semester,
-    grade,
-    studio,
-    namepath,
-    tags,
-    name,
-    motto,
-    excerpt,
-    content,
-  } = project;
+  const { slug, title, name, excerpt } = project;
   const imagePath = `${slug.replaceAll("/", "_")}`;
   const thumbnailImg = `/posts-images/${imagePath}/thumbnail.jpg`;
-  const profileImg = `/posts-images/${imagePath}/profile.jpg`;
 
   return (
     <>
@@ -41,17 +18,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
         transition={{ duration: 0.6 }}
         className="w-full p-2 pt-4 mb-12 lg:w-1/3 md:w-1/2 group"
       >
-        <Link
-          rel="preload"
-          href={`/exhibition/${slug}/`}
-          onClick={async (e) => {
-            if (e.ctrlKey || e.metaKey) return;
-            e.preventDefault();
-            setIsLoading(true);
-            setTimeout(() => {}, 3000);
-            await router.push(e.currentTarget.href);
-          }}
-        >
+        <Link rel="preload" href={`/exhibition/${slug}/`}>
           <div className="relative h-full border bg-white dark:bg-black">
             {/* 썸네일 이미지 */}
             <Image
@@ -76,9 +43,6 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           </div>
         </Link>
       </motion.div>
-
-      {/* 썸네일 클릭시 3초 보여주기 */}
-      {isLoading && <Loading />}
     </>
   );
 }
