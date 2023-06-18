@@ -1,9 +1,13 @@
-import { IContactForm } from "@type/email";
-import { Controller, useForm } from "react-hook-form";
 import axios from "axios";
-import ErrorMsg from "./ContactUsItem/ErrorMsg";
+import { Controller, useForm } from "react-hook-form";
 import { useAppDispatch } from "@toolkit/hook";
+import ErrorMsg from "./ContactUsItem/ErrorMsg";
 import { alertActions } from "@features/alert/alertSlice";
+
+import { motion } from "framer-motion";
+import { textVariant } from "@util/variants";
+
+import { IContactForm } from "@type/email";
 
 export default function ContactUsForm() {
   const dispatch = useAppDispatch();
@@ -55,17 +59,24 @@ export default function ContactUsForm() {
     <div className="">
       {/* 제목 */}
       <div className="col-center">
-        <h1 className="mb-4 text-2xl font-bold font-title sm:text-xl">
+        <motion.h1
+          variants={textVariant(0.5)}
+          className="mb-4 text-xl font-bold sm:text-2xl"
+        >
           Contact Our Team
-        </h1>
+        </motion.h1>
       </div>
 
       {/* form */}
-      <form className="flex flex-wrap md:mx-4" onSubmit={handleSubmit(onValid)}>
+      <motion.form
+        variants={textVariant(0.7)}
+        className="flex flex-wrap md:mx-4"
+        onSubmit={handleSubmit(onValid)}
+      >
         {/* name textfield */}
         <div className="w-1/2 p-2">
           <div className="relative">
-            <label htmlFor="name" className="text-sm leading-8 ">
+            <label htmlFor="name" className="text-sm leading-8">
               Name *
             </label>
             <input
@@ -117,7 +128,7 @@ export default function ContactUsForm() {
         </div>
 
         {/* message textarea */}
-        <div className="w-full p-2">
+        <motion.div variants={textVariant(0.7)} className="w-full p-2">
           <div className="relative">
             <label htmlFor="message" className="text-sm leading-8 ">
               Message *
@@ -143,21 +154,21 @@ export default function ContactUsForm() {
             />
           </div>
           <ErrorMsg>{errors?.message?.message}</ErrorMsg>
-        </div>
+        </motion.div>
 
         {/* submit area */}
-        <div className="w-full gap-4 row-center">
-          <div className="w-full p-2 pt-2 mt-2 text-xs border-gray-200 text-start ">
-            <a className="text-gray-500">kimyoo04@gmail.com</a>
-          </div>
+        <motion.div
+          variants={textVariant(0.9)}
+          className="w-full gap-4 row-center"
+        >
           <div className="w-full p-2 pt-2 mt-2 col-end">
-            <button className="flex font-mono text-xl border-b">
+            <button className="flex font-title font-bold text-lg border-b">
               <span>submit</span>
               <i className="ri-arrow-right-line"></i>
             </button>
           </div>
-        </div>
-      </form>
+        </motion.div>
+      </motion.form>
     </div>
   );
 }

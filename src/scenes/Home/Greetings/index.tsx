@@ -2,7 +2,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@util/variants/container";
 import { textVariant } from "@util/variants";
-import HBorder from "@components/HBorder";
 
 export default function Greetings() {
   return (
@@ -20,7 +19,7 @@ export default function Greetings() {
             variants={textVariant(0.5)}
             className="md:text-xl font-title mb-2 flex-shrink-0"
           >
-            <p>KGONGGI UNIV.</p>
+            <p>KYONGGI UNIV.</p>
             <p>Dept. of ARCHITECTURE</p>
           </motion.div>
 
@@ -42,7 +41,7 @@ export default function Greetings() {
         <div className="z-10 col-center w-full">
           <motion.p
             variants={textVariant(0.7)}
-            className="col-center text-xl font-arch font-bold mb-2"
+            className="col-center text-xl font-arch mb-2"
           >
             See The World Through Architecture
           </motion.p>
@@ -91,24 +90,24 @@ export default function Greetings() {
                 width={240}
                 height={240}
                 priority
-                className="opacity-90 dark:opacity-70"
+                className="w-auto h-auto opacity-90 dark:opacity-70"
               />
             </motion.div>
             <motion.div className="pb-80" variants={textVariant(0.9)}>
               <Image
                 src={"/images/psd/right_hand.png"}
                 alt={"right_hand"}
-                width={240}
-                height={240}
+                width={220}
+                height={220}
                 priority
-                className="opacity-90 dark:opacity-70"
+                className="w-auto h-auto opacity-90 dark:opacity-70"
               />
             </motion.div>
           </div>
         </div>
 
         {/* 관계자 로고 */}
-        <div className="absolute bottom-6 grid grid-cols-3 w-96">
+        <div className="absolute bottom-2 grid grid-cols-3 w-96">
           <motion.div className="col-center" variants={textVariant(1.1)}>
             <Image
               src={"/images/psd/kgu_logo.png"}
@@ -116,7 +115,8 @@ export default function Greetings() {
               width={50}
               height={50}
               priority
-              className="dark:hidden"
+              className="w-auto h-auto dark:hidden"
+              quality={10}
             />
             <Image
               src={"/images/psd/kgu_logo_dark.png"}
@@ -124,7 +124,8 @@ export default function Greetings() {
               width={50}
               height={50}
               priority
-              className="hidden dark:block"
+              className="w-auto h-auto hidden dark:block"
+              quality={10}
             />
           </motion.div>
           <motion.div className="col-center" variants={textVariant(1.1)}>
@@ -134,7 +135,8 @@ export default function Greetings() {
               width={100}
               height={100}
               priority
-              className="dark:hidden"
+              className="w-auto h-auto dark:hidden"
+              quality={10}
             />
             <Image
               src={"/images/psd/sak_logo_dark.png"}
@@ -142,7 +144,8 @@ export default function Greetings() {
               width={100}
               height={100}
               priority
-              className="hidden dark:block"
+              className="w-auto h-auto hidden dark:block"
+              quality={10}
             />
           </motion.div>
           <motion.div className="col-center" variants={textVariant(1.1)}>
@@ -152,7 +155,8 @@ export default function Greetings() {
               width={80}
               height={80}
               priority
-              className="dark:hidden"
+              className="w-auto h-auto dark:hidden"
+              quality={10}
             />
             <Image
               src={"/images/psd/noddle_island_dark.png"}
@@ -160,7 +164,8 @@ export default function Greetings() {
               width={80}
               height={80}
               priority
-              className="hidden dark:block"
+              className="w-auto h-auto hidden dark:block"
+              quality={10}
             />
           </motion.div>
         </div>

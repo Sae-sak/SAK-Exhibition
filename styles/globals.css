@@ -169,11 +169,11 @@ html {
 }
 
 .textfield {
-  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs;
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none bg-transparent  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs;
 }
 
 .textareafield {
-  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none  focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
+  @apply w-full px-3 py-1 leading-8 transition-colors duration-200 ease-in-out border-b outline-none bg-transparent focus:border focus:rounded focus:border-gray-500 hover:ring-1 hover:ring-gray-500 hover:rounded placeholder:text-xs placeholder:pt-2;
 }
 
 .text-outline {

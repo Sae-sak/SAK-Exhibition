@@ -6,22 +6,24 @@ export default function Profile({ name, job, description, email, github }) {
     <div className="p-4 sm:w-[500px]">
       <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
         {/* 프로필 이미지 */}
-        <Image
-          alt="team"
-          className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-md sm:mb-0"
-          src={`/images/contactus/team/${name}.jpg`}
-          width={200}
-          height={200}
-        />
+        <div className="overflow-hidden rounded-md">
+          <Image
+            alt="team"
+            className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 hover:scale-105 rounded-md sm:mb-0 shadow-md transition-all"
+            src={`/images/contactus/team/${name}.jpg`}
+            width={200}
+            height={200}
+          />
+        </div>
         <div className="flex-grow sm:pl-8 ">
           {/* 이름 */}
           <h2 className="text-lg text-gray-900 ">{name}</h2>
 
           {/* 직업 */}
-          <h3 className="mb-3 text-gray-500 ">{job}</h3>
+          <h3 className="mb-1 text-sm text-gray-500 ">{job}</h3>
 
           {/* 설명 */}
-          <p className="mb-1">{description}</p>
+          <p className="mb-3">&quot;{description}&quot;</p>
 
           {/* SNS Links */}
           <span className="flex justify-center sm:justify-start items-center gap-2">
