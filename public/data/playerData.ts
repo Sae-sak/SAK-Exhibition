@@ -1,6 +1,6 @@
 export const playerData = [
   {
-    studio: "류전희 스튜디오",
+    studio: "RYU",
     players: [
       "공태웅",
       "성윤창",
@@ -17,7 +17,7 @@ export const playerData = [
     ],
   },
   {
-    studio: "윤희진 스튜디오",
+    studio: "YUN",
     players: [
       "강태임",
       "김우태",
@@ -34,7 +34,7 @@ export const playerData = [
     ],
   },
   {
-    studio: "이승훈 스튜디오",
+    studio: "LEE",
     players: [
       "김민규",
       "김준석",
@@ -50,7 +50,7 @@ export const playerData = [
     ],
   },
   {
-    studio: "안창모 스튜디오",
+    studio: "AHN",
     players: [
       "박기범",
       "진우성",
@@ -69,7 +69,7 @@ export const playerData = [
     ],
   },
   {
-    studio: "김현휘 스튜디오",
+    studio: "KIM",
     players: [
       "김승하",
       "김한나",

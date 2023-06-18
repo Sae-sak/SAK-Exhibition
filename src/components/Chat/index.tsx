@@ -25,7 +25,7 @@ export default function Chat() {
       <div className="flex flex-col justify-between h-full p-4 border rounded-md bg-light_bg_1 dark:bg-night_bg_1 ">
         {/* 헤더와 Sign out 버튼 */}
         <header className="flex items-center justify-between pb-4 w-72">
-          <h1 className="text-xl font-bold text-accent_pink font-accent dark:text-accent_pink">
+          <h1 className="text-xl font-bold text-accent_pink font-accent dark:text-accent_green">
             SAK-Exhibition Chat
           </h1>
           {user && <SignOut />}
