@@ -68,7 +68,7 @@ const Alert = () => {
 
                   <div className="gap-1 col-start">
                     {/* 알림 유형 */}
-                    <span className="text-xl font-semibold  text-font_black dark:text-font_black">
+                    <span className="text-xl font-title text-font_black dark:text-font_black">
                       {alertType}
                     </span>
 
