@@ -4,6 +4,7 @@ import GoToEx from "./GoToEx";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { textVariant } from "@util/variants";
+import Hall from "@components/Hall";
 
 export default function CTA() {
   return (
@@ -47,6 +48,7 @@ export default function CTA() {
             {/* 웹페이지 간단 설명 */}
             <motion.div className="h-60" variants={textVariant(0.9)}>
               <p>웹사이트 사용방법 간단하게 설명</p>
+              <Hall />
             </motion.div>
 
             {/* 페이지 이동 버튼 */}
