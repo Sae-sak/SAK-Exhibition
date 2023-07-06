@@ -26,11 +26,14 @@ export default function ContactUsForm() {
     if (!data || !data.name || !data.email || !data.message) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/api/sendemail", {
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      });
+      const response = await axios.post(
+        "https://sak-exhibition.vercel.app/api/sendemail",
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }
+      );
       console.log(response.data);
       function mailSuccess() {
         dispatch(
