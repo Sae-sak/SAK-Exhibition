@@ -2,6 +2,7 @@ import NavLink from "./NavLink";
 
 import { motion } from "framer-motion";
 import { staggerContainer } from "@util/variants/container";
+import FakeLink from "./FakeLink";
 
 export default function NavLinks() {
   return (
@@ -15,7 +16,7 @@ export default function NavLinks() {
       >
         <NavLink linkpath={"home"} name={"Home"} delay={0.1} />
         <NavLink linkpath={"about"} name={"About"} delay={0.2} />
-        <NavLink linkpath={"exhibition"} name={"Exhibition"} delay={0.3} />
+        <FakeLink linkpath={""} name={"(7/17) 오픈"} delay={0.3} />
         <NavLink linkpath={"contactus"} name={"Contact Us"} delay={0.4} />
       </motion.nav>
     </div>
