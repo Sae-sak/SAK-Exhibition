@@ -46,7 +46,7 @@ export default function CTA() {
           <motion.div className="flex flex-col justify-end items-center gap-3 flex-shrink-0">
             {/* 전시장 3D 모델 */}
             <motion.div
-              className="w-[800px] h-[600px]"
+              className="pb-8 w-[800px] h-[600px]"
               variants={textVariant(0.9)}
             >
               <Hall />

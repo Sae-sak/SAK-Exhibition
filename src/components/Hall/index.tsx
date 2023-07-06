@@ -25,21 +25,21 @@ export default function Hall() {
     );
   };
 
-  const directionalCtl = useControls("Directional Light", {
-    visible: true,
-    position: {
-      x: 3.3,
-      y: 1.0,
-      z: 4.4,
-    },
-    castShadow: true,
-  });
+  // const directionalCtl = useControls("Directional Light", {
+  //   visible: true,
+  //   position: {
+  //     x: 3.3,
+  //     y: 1.0,
+  //     z: 4.4,
+  //   },
+  //   castShadow: true,
+  // });
 
   const windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
   const windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full border rounded-md">
       <Canvas shadows="variance">
         {/* 카메라 설정 */}
         <OrthographicCamera
@@ -58,13 +58,9 @@ export default function Hall() {
         <ambientLight intensity={0.5} />
         <directionalLight
           intensity={3}
-          visible={directionalCtl.visible}
-          position={[
-            directionalCtl.position.x,
-            directionalCtl.position.y,
-            directionalCtl.position.z,
-          ]}
-          castShadow={directionalCtl.castShadow}
+          visible
+          position={[3.3, 1.0, 4.4]}
+          castShadow
         />
         {/* <pointLight intensity={0.5} position={[0, 0, 8]} castShadow /> */}
 
