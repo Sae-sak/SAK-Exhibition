@@ -24,7 +24,7 @@ export default function CTA() {
         </motion.h1>
 
         <div className="w-full col-center gap-4 lg:flex-row lg:justify-between">
-          {/* 전시 배치도 */}
+          {/* 전시 배치도
           <motion.div className="dark:hidden" variants={textVariant(0.7)}>
             <Image
               src={"/images/psd/plan.png"}
@@ -42,15 +42,15 @@ export default function CTA() {
               height={700}
               priority
             />
-          </motion.div>
-
+          </motion.div> */}
           <motion.div className="flex flex-col justify-end items-center gap-3 flex-shrink-0">
-            {/* 웹페이지 간단 설명 */}
-            <motion.div className="h-60" variants={textVariant(0.9)}>
-              <p>웹사이트 사용방법 간단하게 설명</p>
+            {/* 전시장 3D 모델 */}
+            <motion.div
+              className="w-[800px] h-[600px]"
+              variants={textVariant(0.9)}
+            >
               <Hall />
             </motion.div>
-
             {/* 페이지 이동 버튼 */}
             <div className="col-center gap-3">
               <motion.div variants={textVariant(0.9)}>
