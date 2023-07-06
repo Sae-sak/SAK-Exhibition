@@ -2,6 +2,7 @@ import HBorder from "@components/HBorder";
 import Committee from "./Committee";
 import Team from "./Team/Index";
 import ContactSection from "./ContactSection";
+import Contributors from "./Contributors";
 
 export default function ContactUs() {
   return (
@@ -10,6 +11,9 @@ export default function ContactUs() {
       <HBorder />
 
       <Team />
+      <HBorder />
+
+      <Contributors />
       <HBorder />
 
       <ContactSection />

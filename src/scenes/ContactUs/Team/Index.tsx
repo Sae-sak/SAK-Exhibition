@@ -13,7 +13,7 @@ export default function Team() {
         className="col-center gap-8 w-full px-5"
         viewport={{ once: true }}
       >
-        <div className="w-full gap-4 mb-8 text-center col-center">
+        <div className="w-full gap-4 text-center col-center">
           <motion.h1
             variants={textVariant(0.5)}
             className="text-2xl font-bold font-title"
@@ -29,9 +29,10 @@ export default function Team() {
             haven`t heard of them.
           </motion.p>
         </div>
+
         <motion.div
           variants={textVariant(0.9)}
-          className="col-center lg:flex-row"
+          className="col-center lg:flex-row py-4"
         >
           <Profile
             name={"정채영"}
