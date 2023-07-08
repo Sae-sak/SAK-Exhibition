@@ -1,111 +1,130 @@
-# SAK Exhibtion Website
+# 🏛 SAK Exhibtion Website
 
-## :page_with_curl: 목차 (List)
+### 경기대학교 건축학과 온라인 졸업 전시 웹사이트
 
-- [프로젝트명](#project-name)
-- [프로젝트 목표](#vision)
-- [기술 스택](#tech-stack)
-- [기능](#features)
-- [웹사이트 활용 방법](#guide)
-- [팀원 프로필](#team-profile)
-- [기여자들](#contributors)
+## 목차
 
-<a name="project-name"></a>
+1. [프로젝트 소개](#1-프로젝트-소개)
+2. [서비스 주요 기능](#2-서비스-주요-기능)
+3. [기술 스택](#3-기술-스택)
+4. [프로젝트 팀원 소개](#4-프로젝트-팀원-소개)
+5. [실행 방법](#5-실행-방법)
 
-# Project Name
+<br>
+
+## **1. 프로젝트 소개**
+
+### **1.1 프로젝트 개요**
 
 **SAK-EXHIBITION**
 
-- "SAK-EXHIBITION”은 경기대학교 건축학과 온라인 졸업 전시회 및 작품 아카이빙을 목적으로 하는 웹사이트입니다.
+"`SAK-Exhibition`은 경기대학교 건축학과 온라인 졸업 전시회 및 작품 아카이빙을 위해 제작된 웹사이트입니다.
 
-<a name="vision"></a>
+물리적, 시간적 제약 없이 학생들의 작품을 전시하고, 관람할 수 있도록 함으로써
 
-# Vision
+더 많은 사람들이 함께 즐길 수 있는 전시 환경을 구축하고자 합니다.
 
-- 경기대학교 건축학과 재학생과 졸업생들이 시간과 장소에 구애받지 않으며 졸업 작품을 전시하고 아카이빙할 수 있는 온라인 공간을 마련합니다.
+<br>
 
-- 온라인 전시 관람 가이드 툴킷, 검색 필터, 동적인 애니메이션 효과, 롤링페이퍼 기능을 통해 관객과의 원활한 소통을 유도합니다.
+### **1.2 서비스 목표**
 
-<a name="tech-stack"></a>
+- 경기대학교 건축학과 재학생과 졸업생들이 온라인 공간에 졸업 작품을 전시하고 아카이빙할 수 있도록 합니다.
 
-# Tech Stack
+- 온라인 팜플렛, 검색 필터, 동적인 애니메이션 효과, 방명록 기능을 통해 관객과의 원활한 소통을 유도합니다.
 
-:computer: **Front-End ( TailwindCSS / Typescript(TS) / Nextjs / Redux-Toolkit )**
+<br>
 
-- @hookform/resolvers
-- react-hook-form
-- react-markdown
-- gray-matter
-- lodash
-- zod
-- remixicon
-- framer-motion
-- next-themes
+## **2. 서비스 주요 기능**
 
-<a name="features"></a>
+### **2.1 Home (랜딩페이지)**
 
-# Features
+- 전시 포스터 및 컨셉, 스튜디오, 오프라인 전시장 위치 등 기본 정보를 제공합니다.
 
-### :o: **Done**
+- 오프라인 전시장을 본뜬 3D 그래픽을 통해 온라인 관람 여정에 현장감과 재미 요소를 더합니다.
 
-- About : SAK
-- Exhibition
-- Filter
-- Team Profile
-- Sending e-mail
-- Post’s Social sharing tools
-- Alert
-- Info
-- Welcome
-- Progress Bar
-- Thumbnail
+- About Exhibition: 5 개 스튜디오의 컨셉과 상세 정보를 제공합니다.
 
-### :speech_balloon: **We are going to do**
+- See Exhibition: Exhibition 페이지 (온라인 전시 공간) 으로 이동합니다.
 
-- Rolling paper/comment
-- Exhibition guide (tool tips)
-- Poster
-- Random Chat
-- Color customizing
-- randomly apply animations and motion effects to text
-- Auth
-- Scroll Event
-- Custom Cursor
-- Likes
-- Components
-  - Loading
-  - Search Bar
+![커버 페이지](image.png)
+![포스터](image-1.png)
+![컨셉 소개](image-2.png)
+![학생 소개](image-3.png)
+![3D 모델](image-4.png)
 
-### :grey_question: **Later**
+### **2.2 About (스튜디오 소개)**
 
-- Background Music
-- Dynamic Object Render
-- Graduation Exhibition Subject
-- CRUD
-- markdown editor
+- 5개 스튜디오의 컨셉을 확인할 수 있습니다.
 
-<a name="guide"></a>
+![스튜디오 소개](image-7.png)
 
-# Guide
+### **2.3 Exhibition (온라인 전시회)**
 
-웹사이트 이미지
+- 7/17 오픈 예정
 
-<a name="team-profile"></a>
+### **2.4 Contact us (팀원 소개)**
 
-# Team Profile
+- 졸업전시 위원회와, 사이트를 제작한 Sae-sak 팀원에 대한 소개를 제공합니다.
+
+- 개발자에게 이메일을 전송할 수 있습니다.
+
+![위원장 및 사이트 제작 팀원 소개](image-8.png)
+![이메일 전송 기능](image-9.png)
+
+### **2.5 부가 기능**
+
+- 데이 모드, 나이트 모드 설정이 가능합니다.
+- 구글 계정을 통해 채팅에 참여할 수 있습니다.
+
+![다크 모드](image-6.png)
+![채팅](image-5.png)
+
+<br>
+
+## **3. 기술 스택**
+
+![Typescript](https://img.shields.io/badge/-Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/-tailwindcss-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![Redux Toolkit](https://img.shields.io/badge/-redux-764ABC?style=flat-square&logo=redux&logoColor=white) ![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white) ![Github](https://img.shields.io/badge/-Github-181717?style=flat-square&logo=GitHub&logoColor=white) ![Discord](https://img.shields.io/badge/-Discord-7289DA?style=flat-square&logo=Discord&logoColor=white)
+
+<br>
+
+## **4. 프로젝트 팀원 소개**
 
 김 유 (Kim Yoo)
 
 - :e-mail: E-mail: [kimyoo04@gmail.com](mailto:kimyoo04@gmail.com)
-- :smile_cat: Github: kimyoo04
+- :smile_cat: Github: [kimyoo04](https://github.com/kimyoo04)
 
 정채영 (Jeong Chaeyoung)
 
 - :e-mail: E-mail: [essentials106@ewhain.net](mailto:essentials106@ewhain.net)
-- :smile_cat: Github: chae-zero
+- :smile_cat: Github: [chae-zero](https://github.com/chae-zero)
 
-<a name="contributors"></a>
+김민선 (Kim Minseon)
 
-# Contributors
+- Contributor
 
-- 김민선
+<br>
+
+## **5. 실행 방법**
+
+### 1. 환경변수 설정
+
+- 프로젝트를 실행하기 전에 `.env` 파일을 설정해야 합니다.
+- `.env` 파일을 프로젝트 루트 디렉토리에 생성하고 아래와 같이 키(key)를 작성하세요.
+
+```
+# Firebase
+NEXT_PUBLIC_FIREBASE_APIKEY
+NEXT_PUBLIC_FIREBASE_AUTHDOMAIN
+NEXT_PUBLIC_FIREBASE_PROJECTID
+NEXT_PUBLIC_FIREBASE_STORAGEBUCKET
+NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
+NEXT_PUBLIC_FIREBASE_APPID
+
+# Gmail SMTP
+NEXT_PUBLIC_EMAIL
+NEXT_PUBLIC_PASSWORD
+
+# Naver API
+NEXT_PUBLIC_NAVER_MAP_CLIENT_ID
+```
