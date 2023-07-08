@@ -69,15 +69,18 @@
 - 개발자에게 이메일을 전송할 수 있습니다.
 
 ![위원장 및 사이트 제작 팀원 소개](image-8.png)
-![이메일 전송 기능](image-9.png)
+![이메일 전송 기능](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/e2178295-50d0-488b-8a9e-7a445a6aaf4a)
+
 
 ### **2.5 부가 기능**
 
 - 데이 모드, 나이트 모드 설정이 가능합니다.
 - 구글 계정을 통해 채팅에 참여할 수 있습니다.
 
-![다크 모드](image-6.png)
-![채팅](image-5.png)
+![다크 모드](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/e5a24278-038a-493f-8d5a-aa7675b313ff)
+ ![채팅](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/125e7037-74dc-4fbf-8dde-c725482db212)
+
+
 
 <br>
 
@@ -107,7 +110,7 @@
 
 ## **5. 실행 방법**
 
-### 1. 환경변수 설정
+### 5-1. 환경변수 설정
 
 - 프로젝트를 실행하기 전에 `.env` 파일을 설정해야 합니다.
 - `.env` 파일을 프로젝트 루트 디렉토리에 생성하고 아래와 같이 키(key)를 작성하세요.
@@ -127,4 +130,13 @@ NEXT_PUBLIC_PASSWORD
 
 # Naver API
 NEXT_PUBLIC_NAVER_MAP_CLIENT_ID
+```
+
+### 5-2. 서비스 실행
+
+- 작업 중인 디렉토리에서 아래 코드를 실행하세요.
+
+```
+npm i
+npm run dev
 ```
