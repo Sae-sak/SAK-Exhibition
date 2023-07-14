@@ -61,7 +61,7 @@ const Alert = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="flex items-center justify-between h-24 gap-4 px-4 py-3 mx-auto bg-white rounded-md w-80"
+                className="flex items-center justify-between h-24 gap-4 px-4 py-3 mx-auto bg-white rounded-md w-[340px]"
               >
                 <div className="gap-4 row-center">
                   <div className="row-center">{alertIcon}</div>
