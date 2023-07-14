@@ -162,7 +162,7 @@ export default function CommentInput({
             render={({ field }) => (
               <textarea
                 {...field}
-                id="content"
+                id="comment"
                 name="content"
                 rows={2}
                 className="w-full px-3 py-1 leading-8 outline-none border rounded-md placeholder:pt-2 bg-light_bg_1 dark:bg-night_bg_1 resize-none placeholder:text-sm"
