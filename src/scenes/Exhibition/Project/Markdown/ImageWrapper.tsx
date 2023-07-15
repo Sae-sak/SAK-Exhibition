@@ -8,7 +8,7 @@ export default function ImageWrapper({ children, src }) {
 
   return (
     <motion.div
-      className="my-8 w-full"
+      className="my-8 w-full overflow-hidden rounded-md border"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

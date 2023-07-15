@@ -7,7 +7,7 @@ export default function HeaderWrapper({ children, value }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 }}
-      className="mb-2 text-[20px] font-bold md:text-2xl"
+      className="mb-2 mt-3 text-[20px] font-bold md:text-2xl"
       id={value.replaceAll(" ", "-")}
     >
       {children}

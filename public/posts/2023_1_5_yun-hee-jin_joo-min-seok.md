@@ -3,13 +3,12 @@ title: "Ecological Park Community"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "yun-hee-jin"
 namepath: "joo-min-seok"
 tags: "공원,문화,복합"
 excerpt: >
-This project is interested in the neighborhood where you live, finds problems and possibilities, and presents ideas and solutions as an architectural space.
-
+  his project is interested in the neighborhood where you live, finds problems and possibilities, and presents ideas and solutions as an architectural space.
 name: "주민석"
 email: "minsuk9685@gmail.com"
 motto: "내가 가진 것들을 사랑하기."

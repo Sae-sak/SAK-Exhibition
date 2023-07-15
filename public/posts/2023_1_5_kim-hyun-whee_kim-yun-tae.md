@@ -3,12 +3,12 @@ title: "베이스캠프 도봉"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "kim-hyun-whee"
 namepath: "kim-yun-tae"
 tags: "리모델링,문화,노유자,복합"
 excerpt: >
-This project started with concerns about how to use closed schools nationwide along with the aging population of low birth rates. Dobong High School, which was closed for the first time in Seoul, was set as the target site for the project.
+  This project started with concerns about how to use closed schools nationwide along with the aging population of low birth rates. Dobong High School, which was closed for the first time in Seoul, was set as the target site for the project.
 name: "김윤태"
 email: "yuntae4511@naver.com"
 motto: "내가 포기하는 것을 포기해라."

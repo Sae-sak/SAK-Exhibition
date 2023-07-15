@@ -3,13 +3,12 @@ title: "Breathe, Layer of Openspace"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "yun-hee-jin"
 namepath: "yoon-min-joo"
 tags: "공원,문화,파빌리온"
 excerpt: >
-다층적 도심 오픈스페이스 제안과 공원 프로그램의 새로운 가능성 탐구를 기반으로 한 프로젝트
-
+  다층적 도심 오픈스페이스 제안과 공원 프로그램의 새로운 가능성 탐구를 기반으로 한 프로젝트
 name: "윤민주"
 email: "pour__pre@naver.com"
 motto: "-"

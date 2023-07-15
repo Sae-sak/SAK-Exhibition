@@ -3,13 +3,12 @@ title: "WALKING for REST"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "yun-hee-jin"
 namepath: "park-yu-ri"
 tags: "리모델링,문화,복합"
 excerpt: >
-수원역 복합화를 통해 역사의 공공성을 되찾아주고자 한다.
-
+  수원역 복합화를 통해 역사의 공공성을 되찾아주고자 한다.
 name: "박유리"
 email: "ssambee2@kyonggi.ac.kr"
 motto: "-"
