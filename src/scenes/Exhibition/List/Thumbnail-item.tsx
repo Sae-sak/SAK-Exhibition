@@ -18,7 +18,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
         transition={{ duration: 0.6 }}
         className="group mb-12 w-full p-2 pt-4 md:w-1/2 lg:w-1/3"
       >
-        <Link rel="preload" href={`/exhibition/${slug}/`}>
+        <Link rel="preload" href={`/exhibition/${slug}`}>
           <div className="relative h-full border bg-white dark:bg-black">
             {/* 썸네일 이미지 */}
             <Image
@@ -27,6 +27,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
               width={630}
               height={400}
               className="h-full object-cover transition-all group-hover:opacity-30"
+              quality={50}
               loading="lazy"
             />
 
