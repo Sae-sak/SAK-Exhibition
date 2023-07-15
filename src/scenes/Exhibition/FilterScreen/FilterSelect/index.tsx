@@ -16,7 +16,7 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="fixed top-0 w-screen h-screen col-center bg-light_bg_1 dark:bg-night_bg_1">
+    <div className="col-center fixed top-0 h-screen w-screen bg-light_bg_1 dark:bg-night_bg_1">
       {CATEGORIES.map((CATEGORY, indx) => (
         <>
           {/* 위 경계 */}
@@ -25,9 +25,9 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
           <motion.div
             key={CATEGORY}
             className={classNames(
-              "flex items-center justify-between w-full px-8",
+              "flex w-full items-center justify-between px-8 font-accent",
               {
-                "h-full font-bold": categoryName === CATEGORY,
+                "h-full": categoryName === CATEGORY,
                 "h-20": categoryName !== CATEGORY,
               }
             )}
@@ -35,13 +35,21 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
             {/* Filter 종류별 명칭 */}
             <button
               className={classNames({
-                "w-full flex hover:font-bold": categoryName !== CATEGORY,
+                "flex w-full font-accent ": categoryName !== CATEGORY,
               })}
               onClick={() =>
                 dispatch(selectCategory({ categoryName: CATEGORY }))
               }
             >
-              <span className="text-2xl">{CATEGORY}</span>
+              <span
+                className={`text-2xl ${
+                  categoryName === CATEGORY
+                    ? "text-accent_pink dark:text-accent_green"
+                    : "hover:text-accent_pink dark:hover:text-accent_green"
+                }`}
+              >
+                {CATEGORY}
+              </span>
             </button>
 
             {/* Filter 종류별 리스트 */}
@@ -49,7 +57,7 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
               <>
                 {/* 가로 가이드라인 */}
                 <motion.div
-                  className="border-t-[1px] h-[1px] w-8 ml-4 origin-left sm:w-28 md:w-80 lg:w-full xl:w-full"
+                  className="ml-4 h-[1px] w-full origin-left border-t-[1px]"
                   initial={{ opacity: 0, scaleX: 0 }}
                   animate={{ opacity: 1, scaleX: 1 }}
                   transition={{ duration: 0.4 }}
@@ -68,7 +76,7 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
       {/* close button */}
       <i
         onClick={() => dispatch(closeFilter())}
-        className="fixed text-4xl cursor-pointer top-4 right-8 ri-close-line"
+        className="ri-close-line fixed right-8 top-4 cursor-pointer text-4xl"
       ></i>
     </div>
   );

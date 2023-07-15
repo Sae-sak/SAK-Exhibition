@@ -18,7 +18,7 @@ export default function MainLayout({ children }) {
     >
       <Header />
 
-      <div className="pt-[72px] flex flex-col min-h-[826px] items-center justify-start bg-light_bg_1 dark:bg-night_bg_1">
+      <div className="flex min-h-[826px] flex-col items-center justify-start bg-light_bg_1 pt-[57px] dark:bg-night_bg_1">
         {children}
       </div>
 
