@@ -7,17 +7,17 @@ export default function Carousel(props: { data: string[] }) {
   const dataLen = data.length;
 
   const dispatch = useAppDispatch();
-  let [count, setCount] = useState(1);
+  const [count, setCount] = useState(1);
 
   function goToSlide(slideIndex: number) {
     setCount(slideIndex);
   }
 
   return (
-    <div className="max-w-[1400px] h-[580px] w-full m-auto py-16 relative group">
+    <div className="group relative m-auto h-[580px] w-full max-w-[1400px] pb-10">
       <div
         style={{ backgroundImage: `url(${data[Math.abs(count) % dataLen]})` }}
-        className="w-full h-full duration-500 bg-center bg-cover border rounded-md"
+        className="h-full w-full rounded-md border bg-cover bg-center duration-500"
         onClick={() =>
           dispatch(
             photoActions.openPhoto({
@@ -29,31 +29,31 @@ export default function Carousel(props: { data: string[] }) {
 
       {/* Left Arrow */}
       <button
-        className="hidden group-hover:flex group-hover:justify-center group-hover:items-center absolute w-10 h-10 pr-[2px] top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full bg-black/70"
+        className="col-center absolute left-5 top-[50%] h-10 w-10 -translate-x-0 translate-y-[-50%] rounded-full bg-black/70 pr-[2px] text-2xl opacity-0 transition-all group-hover:opacity-100"
         onClick={() => setCount(count - 1)}
       >
-        <i className="text-3xl text-white ri-arrow-left-s-line"></i>
+        <i className="ri-arrow-left-s-line text-3xl text-white"></i>
       </button>
 
       {/* Right Arrow */}
       <button
-        className="hidden group-hover:flex group-hover:justify-center group-hover:items-center absolute w-10 h-10 pl-[2px] top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full bg-black/70"
+        className="col-center absolute right-5 top-[50%] h-10 w-10 -translate-x-0 translate-y-[-50%] rounded-full bg-black/70 pl-[2px] text-2xl opacity-0 transition-all group-hover:opacity-100"
         onClick={() => setCount(count + 1)}
       >
-        <i className="text-3xl text-white ri-arrow-right-s-line"></i>
+        <i className="ri-arrow-right-s-line text-3xl text-white"></i>
       </button>
 
       {/* Dots */}
-      <div className="gap-2 p-4 row-center">
+      <div className="row-center gap-2 p-4">
         {data.map((_, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer"
+            className="cursor-pointer text-2xl"
           >
-            <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
+            <div key={slideIndex}>
               <div
-                className={`w-2 h-2 ${
+                className={`h-2 w-2 ${
                   Math.abs(count) % dataLen === slideIndex
                     ? "bg-black dark:bg-white"
                     : "bg-gray-300 dark:bg-gray-600"
