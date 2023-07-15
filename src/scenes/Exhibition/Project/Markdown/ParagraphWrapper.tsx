@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
-import randomInteger from "@util/random-integer";
-import { randomXFadeIn } from "@util/variants";
 
 export default function ParagraphWrapper({ children }) {
   return (
     <motion.div
-      variants={randomXFadeIn}
-      initial="off"
-      whileInView="on"
-      transition={{ duration: 0.7 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      custom={randomInteger(-20, 20)}
+      transition={{ duration: 0.5, delay: 0.1 }}
       className="pb-4"
     >
       {children}

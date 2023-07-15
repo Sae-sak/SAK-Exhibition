@@ -28,6 +28,7 @@ const MarkdownComponents = {
       </ParagraphWrapper>
     );
   },
+
   h1(header) {
     return (
       <HeaderWrapper value={header.node.children[0].value}>
