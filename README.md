@@ -46,17 +46,17 @@
 
 - See Exhibition: Exhibition 페이지 (온라인 전시 공간) 으로 이동합니다.
 
-![커버 페이지](image.png)
-![포스터](image-1.png)
-![컨셉 소개](image-2.png)
-![학생 소개](image-3.png)
-![3D 모델](image-4.png)
+![커버 페이지](public\images\readme\01-cover.png)
+![포스터](public\images\readme\02-overseer.png)
+![컨셉 소개](public\images\readme\03-about.png)
+![학생 소개](public\images\readme\04-playerlist.png)
+![3D 모델](public\images\readme\05-3dmodel.png)
 
 ### **2.2 About (스튜디오 소개)**
 
 - 5개 스튜디오의 컨셉을 확인할 수 있습니다.
 
-![스튜디오 소개](image-7.png)
+![스튜디오 소개](public\images\readme\06-studios.png)
 
 ### **2.3 Exhibition (온라인 전시회)**
 
@@ -68,19 +68,16 @@
 
 - 개발자에게 이메일을 전송할 수 있습니다.
 
-![위원장 및 사이트 제작 팀원 소개](image-8.png)
-![이메일 전송 기능](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/e2178295-50d0-488b-8a9e-7a445a6aaf4a)
-
+![위원장 및 사이트 제작 팀원 소개](public\images\readme\07-teamsaesak.png)
+![시계와 이메일 전송 기능](public\images\readme\08-clock.png)
 
 ### **2.5 부가 기능**
 
 - 데이 모드, 나이트 모드 설정이 가능합니다.
 - 구글 계정을 통해 채팅에 참여할 수 있습니다.
 
-![다크 모드](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/e5a24278-038a-493f-8d5a-aa7675b313ff)
- ![채팅](https://github.com/Sae-sak/SAK-Exhibition/assets/115343657/125e7037-74dc-4fbf-8dde-c725482db212)
-
-
+![다크 모드](public\images\readme\09-dark.png)
+![채팅](public\images\readme\10-chat.png)
 
 <br>
 
