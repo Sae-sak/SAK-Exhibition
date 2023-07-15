@@ -13,7 +13,7 @@ export default function FilterList({ projects }: { projects: IProject[] }) {
 
   const tagNames = [];
   const tagsArr = projects.map((project) => project.tags);
-  for (let tagArr of tagsArr) {
+  for (const tagArr of tagsArr) {
     for (let i = 0; i < tagArr.length; i++) {
       if (!tagNames.includes(tagArr[i])) {
         tagNames.push(tagArr[i]);
@@ -22,8 +22,8 @@ export default function FilterList({ projects }: { projects: IProject[] }) {
   }
 
   return (
-    <div className="z-50 w-full">
-      <div className="flex-wrap gap-3 flex justify-end max-w-[700px]">
+    <div className="col-center z-50">
+      <div className="flex w-[200px] max-w-[600px] flex-wrap justify-center gap-3 sm:w-[400px] md:w-[500px]">
         <AnimatePresence mode="wait">
           {categoryName === STUDENT
             ? studentNames.map((studentName) => {

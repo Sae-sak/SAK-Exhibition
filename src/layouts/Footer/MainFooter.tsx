@@ -1,4 +1,3 @@
-import FakeLink from "./FooterItem/FakeLink";
 import Logo from "./FooterItem/Logo";
 import NavLink from "./FooterItem/NavLink";
 
@@ -9,7 +8,7 @@ export default function MainFooter() {
       <div className="flex flex-wrap flex-grow order-first gap-2 my-auto text-center md:pr-32 md:text-left md:gap-0">
         <NavLink linkpath={"home"} name={"Home"} />
         <NavLink linkpath={"about"} name={"About"} />
-        <FakeLink linkpath={""} name={"(7/17) 오픈"} />
+        <NavLink linkpath={"exhibition"} name={"Exhibition"} />
         <NavLink linkpath={"contactus"} name={"Contact Us"} />
       </div>
 

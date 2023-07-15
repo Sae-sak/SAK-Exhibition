@@ -105,13 +105,13 @@ export default function CommentInput({
   };
 
   return (
-    <div className="py-2 pt-4 px-1">
+    <div className="px-1 py-2 pt-4">
       <form onSubmit={handleSubmit(onValid)} className="col-center">
         {/* 댓글 입력 필드 헤더 */}
-        <div className="flex items-center justify-between w-full  pb-3">
+        <div className="flex w-full items-center justify-between  pb-3">
           <div className="flex items-center">
             {/* 작성자 프로필 이미지 */}
-            <div className="w-[32px] h-[32px] ">
+            <div className="h-[32px] w-[32px] ">
               <Image
                 className="rounded-full"
                 width={32}
@@ -128,13 +128,13 @@ export default function CommentInput({
             {/* 제출 버튼 */}
             <button
               type="submit"
-              className="py-1 px-2 col-center rounded-full border h-8"
+              className="col-center h-8 rounded-full border px-4 py-1 transition-colors duration-200 hover:bg-accent_pink dark:hover:bg-accent_green"
             >
               submit
             </button>
             {isUpdate && commentId !== "" && (
               <button
-                className="py-1 px-2 rounded-full border h-8"
+                className="h-8 rounded-full border px-2 py-1"
                 onClick={() => dispatch(commentActions.resetComment())}
               >
                 취소
@@ -165,7 +165,7 @@ export default function CommentInput({
                 id="comment"
                 name="content"
                 rows={2}
-                className="w-full px-3 py-1 leading-8 outline-none border rounded-md placeholder:pt-2 bg-light_bg_1 dark:bg-night_bg_1 resize-none placeholder:text-sm"
+                className="w-full resize-none rounded-md border bg-light_bg_1 px-3 py-1 leading-8 outline-none placeholder:pt-2 placeholder:text-sm dark:bg-night_bg_1"
                 placeholder="자유롭게 댓글을 작성해 보세요."
                 maxLength={501}
               />

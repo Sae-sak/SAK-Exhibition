@@ -16,7 +16,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="w-full p-2 pt-4 mb-12 lg:w-1/3 md:w-1/2 group"
+        className="group mb-12 w-full p-2 pt-4 md:w-1/2 lg:w-1/3"
       >
         <Link rel="preload" href={`/exhibition/${slug}/`}>
           <div className="relative h-full border bg-white dark:bg-black">
@@ -26,7 +26,7 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
               alt={title}
               width={630}
               height={400}
-              className="object-cover h-full transition-all group-hover:opacity-30"
+              className="h-full object-cover transition-all group-hover:opacity-30"
               loading="lazy"
             />
 
@@ -37,9 +37,9 @@ export default function ThumbnailItem({ project }: { project: IProject }) {
           </div>
 
           {/* 학생이름, 프로젝트 제목 */}
-          <div className="px-3 border border-t-0 col-center h-14 bg-white dark:bg-black">
-            <span className="text-sm font-bold ">{name}</span>
-            <p className="font-bold text-center ">{title}</p>
+          <div className="col-center h-14 border border-t-0 bg-white px-3 dark:bg-black">
+            <span className="text-sm">{name}</span>
+            <p className="text-center font-medium ">{title}</p>
           </div>
         </Link>
       </motion.div>
