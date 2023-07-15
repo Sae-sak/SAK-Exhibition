@@ -16,7 +16,7 @@ export default function Filter() {
           onClick={() => {
             dispatch(openFilter());
           }}
-          className="w-32 flex-shrink-0 rounded-full border py-1"
+          className="w-32 flex-shrink-0 rounded-full border py-1 transition-colors duration-200 hover:bg-accent_pink dark:hover:bg-accent_green"
         >
           <span className="font-accent text-lg">
             {studentFilter !== ""
