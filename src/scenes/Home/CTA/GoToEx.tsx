@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 export default function GoToEx() {
   return (
-    <>
-      <motion.button className="py-2 px-4 border border-font_black dark:border-font_white bg-accent_pink dark:bg-accent_green rounded-full">
-        <div className="gap-2 row-center">
-          <span className="text-2xl font-accent text-accent">
-            7월 17일 오픈
+    <Link href="/exhibition">
+      <motion.button className="rounded-full border border-font_black bg-accent_pink px-4 py-2 dark:border-font_white dark:bg-accent_green">
+        <div className="row-center gap-2">
+          <span className="text-accent font-accent text-2xl">
+            See Exhibition
           </span>
-          <i className="text-2xl ri-arrow-right-line text-accent"></i>
+          <i className="ri-arrow-right-line text-accent text-2xl"></i>
         </div>
       </motion.button>
-    </>
+    </Link>
   );
 }
