@@ -3,12 +3,12 @@ title: "Smart Farm Pump Station - 증산 빗물 펌프장 재해석"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "yun-hee-jin"
 namepath: "gye-hui-jeong"
 tags: "리모델링,증축,문화,복합,기타"
 excerpt: >
-Make Us Sustainable Ecovillage.    This is a project to seek transformation of the hometown of our parents' generation and local villages that are being neglected, and to set them as models for other local villages.
+  It was intended to study the direction of developing the Jeungsan Rainwater Pump Station, which has become an idle site due to the suspension of development, based on new possibilities from an urban perspective.
 name: "계희정"
 email: "kau0908@naver.com"
 motto: "안 되면 되게 하라."

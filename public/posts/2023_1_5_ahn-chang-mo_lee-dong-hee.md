@@ -8,9 +8,9 @@ semester: 1
 grade: 5
 studio: "ahn-chang-mo"
 namepath: "lee-dong-hee"
-tags: "리모델링"
+tags: "리모델링,문화"
 excerpt: >
-This project is about renovation of Yongin City Hall. It was intended to renew Yongin City, which was stained by reckless development, to make it sustainable. By Energy Harvesting.
+  This project is about renovation of Yongin City Hall. It was intended to renew Yongin City, which was stained by reckless development, to make it sustainable. By Energy Harvesting.
 name: "이동희"
 email: "minorvsmajor@gmail.com"
 motto: "그리다 보면 그 언젠간 그려질 거야"

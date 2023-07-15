@@ -3,13 +3,12 @@ title: "URBAN BATH"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "yun-hee-jin"
 namepath: "sung-min-ji"
-tags: "문화,증축,산업,기타
-"
+tags: "문화,증축,산업,기타"
 excerpt: >
-도심 속 새로운 목욕탕의 탄생
+  도심 속 새로운 목욕탕의 탄생
 name: "성민지"
 email: "smg3209@gmail.com"
 motto: "드디어 졸업이 코앞이다!"

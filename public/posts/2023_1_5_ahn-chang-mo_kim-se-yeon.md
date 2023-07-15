@@ -3,12 +3,12 @@ title: "잠재성의 클러스터"
 date: "2023-07-07"
 year: 2023
 semester: 1
-grade: 5 
+grade: 5
 studio: "ahn-chang-mo"
 namepath: "kim-se-yeon"
 tags: "마스터플랜,도시재생"
 excerpt: >
-본 프로젝트는 새로운 요구를 기존의 건축물에 근거해서 수용가능한 차원을 건축의 '잠재성'으로 정의한다. 
+  본 프로젝트는 새로운 요구를 기존의 건축물에 근거해서 수용가능한 차원을 건축의 '잠재성'으로 정의한다.
 name: "김세연"
 email: "tpdus0121@naver.com"
 motto: "안되면 되게하라-!"

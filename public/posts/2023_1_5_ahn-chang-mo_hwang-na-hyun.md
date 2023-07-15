@@ -8,7 +8,7 @@ studio: "ahn-chang-mo"
 namepath: "hwang-na-hyun"
 tags: "문화,신축,공원,복합"
 excerpt: >
-자연을 고려한 사람들의 개입을 통해 생태가 지속될 수 있도록, 또한 자연과 사람들이 어울려질 수 있도록 도시화된 서울 속에서 바람직한 새로운 생태공원의 모습을 제안한다.
+  자연을 고려한 사람들의 개입을 통해 생태가 지속될 수 있도록, 또한 자연과 사람들이 어울려질 수 있도록 도시화된 서울 속에서 바람직한 새로운 생태공원의 모습을 제안한다.
 name: "황나현"
 email: "whitenahyun@naver.com"
 motto: "The best is your favourite"
