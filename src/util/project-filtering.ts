@@ -82,7 +82,7 @@ export function getFilteredProjects(
     tag = "",
   }: IFilter
 ) {
-  let filterObject = {};
+  const filterObject = {};
 
   // 추후 필터 기능
   if (title !== "") filterObject["title"] = title;
