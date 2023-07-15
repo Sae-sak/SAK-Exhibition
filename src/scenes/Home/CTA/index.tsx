@@ -2,7 +2,7 @@ import { staggerContainer } from "@util/variants/container";
 import GoToAb from "./GoToAb";
 import GoToEx from "./GoToEx";
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import { textVariant } from "@util/variants";
 import Hall from "@components/Hall";
 
@@ -13,17 +13,17 @@ export default function CTA() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        className="col-center gap-8 w-full px-5"
+        className="col-center w-full gap-8 px-5"
         viewport={{ once: true }}
       >
         <motion.h1
           variants={textVariant(0.5)}
-          className="text-2xl sm:text-3xl md:text-4xl font-accent"
+          className="font-accent text-2xl sm:text-3xl md:text-4xl"
         >
           Exhibition Layout
         </motion.h1>
 
-        <div className="w-full col-center gap-4 lg:flex-row lg:justify-between">
+        <div className="col-center w-full gap-4 lg:flex-row lg:justify-between">
           {/* 전시 배치도
           <motion.div className="dark:hidden" variants={textVariant(0.7)}>
             <Image
@@ -43,10 +43,17 @@ export default function CTA() {
               priority
             />
           </motion.div> */}
-          <motion.div className="flex flex-col justify-end items-center gap-3 flex-shrink-0">
-            {/* 전시장 3D 모델 */}
+
+          {/* 전시장 3D 모델 */}
+          <motion.div className="flex flex-shrink-0 flex-col items-center justify-end gap-3">
             <motion.div
-              className="pb-8 w-[800px] h-[600px]"
+              className="h-[400px] w-full pb-8 md:hidden"
+              variants={textVariant(0.9)}
+            >
+              <Hall />
+            </motion.div>
+            <motion.div
+              className="hidden h-[600px] w-[800px] pb-8 md:block"
               variants={textVariant(0.9)}
             >
               <Hall />

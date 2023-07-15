@@ -4,7 +4,7 @@ import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Suspense, useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 
 export default function Hall() {
   // 전시장 gltf 파일 로드
@@ -24,7 +24,6 @@ export default function Hall() {
       </mesh>
     );
   };
-
   // const directionalCtl = useControls("Directional Light", {
   //   visible: true,
   //   position: {
@@ -39,7 +38,7 @@ export default function Hall() {
   const windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 
   return (
-    <div className="w-full h-full border rounded-md">
+    <div className="h-full w-full rounded-md border">
       <Canvas shadows="variance">
         {/* 카메라 설정 */}
         <OrthographicCamera
