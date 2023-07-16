@@ -8,6 +8,7 @@ import ChatButton from "@components/Chat/ChatButton";
 
 import Alert from "@components/Alert";
 import Chat from "@components/Chat";
+import ModalImage from "@scenes/Exhibition/Project/ModalImage";
 
 export default function MainLayout({ children }) {
   return (
@@ -29,6 +30,7 @@ export default function MainLayout({ children }) {
       {/* overlay 되는 창 */}
       <Alert />
       <Chat />
+      <ModalImage />
 
       <Footer />
     </motion.div>
