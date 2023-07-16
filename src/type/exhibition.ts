@@ -37,6 +37,7 @@ export type StudioKRType =
 
 export interface IProject {
   slug: string;
+
   title: string;
   date: string;
   year: number;
@@ -49,6 +50,8 @@ export interface IProject {
   email: string;
   motto: string;
   tags: TagType[];
+
   content: string;
+  thumbnail: string;
   drawingImgs: string[];
 }
