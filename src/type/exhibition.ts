@@ -52,6 +52,4 @@ export interface IProject {
   tags: TagType[];
 
   content: string;
-  thumbnail: string;
-  drawingImgs: string[];
 }

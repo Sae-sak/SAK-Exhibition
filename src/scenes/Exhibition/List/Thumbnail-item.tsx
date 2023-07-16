@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import { IProject } from "@type/exhibition";
 
 export default function ThumbnailItem({ project }: { project: IProject }) {
-  const { slug, title, name, excerpt, thumbnail } = project;
+  const { slug, title, name, excerpt } = project;
 
   const imageLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 50}`;
   };
+
+  const thumbnail = `/posts-images/${slug.replaceAll("/", "_")}/thumbnail.jpg`;
 
   return (
     <motion.div
