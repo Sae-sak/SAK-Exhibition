@@ -6,7 +6,7 @@ semester: 1
 grade: 5
 studio: "ryu-jeon-hee"
 namepath: "park-yeong-kwang"
-tags: "마스터 플랜,복합,주거,숙박,상업,교육,도시재생,신축"
+tags: "마스터플랜,복합,주거,숙박,상업,교육,도시재생,신축"
 excerpt: >
   Make Us Sustainable Ecovillage. This is a project to seek transformation of the hometown of our parents' generation and local villages that are being neglected, and to set them as models for other local villages.
 name: "박영광"
