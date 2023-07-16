@@ -1,7 +1,5 @@
 ---
-title: "RE_newable
-
-from Reckless Development to Sustianable"
+title: "RE_newable"
 date: "45114"
 year: 2023
 semester: 1

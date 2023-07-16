@@ -6,7 +6,7 @@ semester: 1
 grade: 5
 studio: "kim-hyun-whee"
 namepath: "jeon-seong-ju"
-tags: "리모델링,문화,복합,노유자,마스터 플랜,도시재생,공원"
+tags: "리모델링,문화,복합,노유자,마스터플랜,도시재생,공원"
 excerpt: >
   "서울은 이제 커피 한 잔을 사야 쉼을 제공받는다" 쉴 틈 없는 방산시장 상인들에게, 틈 새를 통해 잠시 쉬어갈 수 있는 쉼표를 만들어준다
 name: "전성주"

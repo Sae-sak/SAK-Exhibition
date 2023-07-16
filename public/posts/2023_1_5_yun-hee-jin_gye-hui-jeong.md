@@ -1,5 +1,5 @@
 ---
-title: "Smart Farm Pump Station - 증산 빗물 펌프장 재해석"
+title: "Smart Farm Pump Station"
 date: "2023-07-07"
 year: 2023
 semester: 1
