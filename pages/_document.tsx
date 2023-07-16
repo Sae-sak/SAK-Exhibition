@@ -1,4 +1,4 @@
-import { Html, Head, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -88,6 +88,7 @@ export default function Document() {
         <link rel="/manifest" href="/favicon/manifest.json" />
       </Head>
       <body>
+        <Main />
         <NextScript />
         <div className="fixed left-0 top-0 z-40 " id="portal"></div>
       </body>

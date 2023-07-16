@@ -7,7 +7,7 @@ export default function Carousel(props: { data: string[] }) {
   const dataLen = data.length;
 
   const dispatch = useAppDispatch();
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   function goToSlide(slideIndex: number) {
     setCount(slideIndex);

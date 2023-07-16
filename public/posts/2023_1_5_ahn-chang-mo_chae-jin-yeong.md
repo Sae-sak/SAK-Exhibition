@@ -64,5 +64,3 @@ motto: "정신일도 하사불성"
 ![image8](/posts-images/2023_1_5_ahn-chang-mo_chae-jin-yeong/image1.jpg)
 
 # 렌더이미지
-
-<!-- draw1.jpg, draw2.jpg, draw3.jpg -->
