@@ -12,11 +12,12 @@ import {
 import { db } from "@config/firebaseApp";
 
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ChatMessages() {
   // 스크롤 용 div 연결
   const scrollBottomDiv = useRef<HTMLDivElement>();
+  const [reversedMsg, setReversedMsg] = useState([] as IMessage[]);
 
   // firestore 의 messages collection 선택
   const messagesRef = collection(
@@ -39,7 +40,10 @@ export default function ChatMessages() {
 
   // 메시지들 받아오기
   const [messages, loading, error] = useCollectionData(messagesQuery, options);
-  const reversedMsg = messages?.reverse();
+
+  useEffect(() => {
+    !loading && !error && setReversedMsg(messages?.reverse());
+  }, [loading, messages, error]);
 
   // 채팅 화면 최하단으로 스크롤
   useEffect(
@@ -48,7 +52,7 @@ export default function ChatMessages() {
   );
 
   return (
-    <section className="border h-[400px] overflow-scroll">
+    <section className="h-[400px] overflow-scroll border">
       {/* 메시지 출력 영역 */}
       {reversedMsg &&
         reversedMsg.map((msg, indx) => (

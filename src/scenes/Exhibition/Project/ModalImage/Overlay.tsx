@@ -7,9 +7,8 @@ import { motion, useAnimation } from "framer-motion";
 import { OverlayVariant } from "@util/variants";
 
 export default function Overlay() {
-  const { selectedId } = useAppSelector((state) => state.photo);
+  const selectedId = useAppSelector((state) => state.photo.selectedId);
   const dispatch = useAppDispatch();
-
   const overlayAni = useAnimation();
 
   useEffect(() => {
@@ -27,7 +26,7 @@ export default function Overlay() {
   return (
     <motion.div
       variants={OverlayVariant}
-      className="fixed top-0 left-0 w-screen h-screen "
+      className="fixed left-0 top-0 h-screen w-screen"
       animate={overlayAni}
       onClick={() => dispatch(photoActions.closePhoto())}
     ></motion.div>

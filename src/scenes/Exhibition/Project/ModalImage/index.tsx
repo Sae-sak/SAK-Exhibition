@@ -15,20 +15,24 @@ export default function ModalImage() {
     <>
       <Overlay />
 
-      <motion.div
-        variants={OverlayVariant}
-        className="fixed top-0 bottom-0 z-10 col-center"
-        onClick={() => dispatch(photoActions.closePhoto())}
-      >
-        {selectedId ? (
-          <Image
-            src={selectedId}
-            alt={selectedId + "modal"}
-            width={600}
-            height={300}
-          />
-        ) : null}
-      </motion.div>
+      {selectedId ? (
+        <>
+          <motion.div
+            variants={OverlayVariant}
+            className="col-center fixed bottom-0 top-0 z-50 h-screen w-screen"
+            onClick={() => dispatch(photoActions.closePhoto())}
+          >
+            <Image
+              src={selectedId}
+              alt={selectedId + "modal"}
+              fill
+              sizes="100%"
+              quality={80}
+              className="h-auto w-auto object-contain"
+            />
+          </motion.div>
+        </>
+      ) : null}
     </>
   );
 }

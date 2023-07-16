@@ -5,14 +5,12 @@ import { ICommentForm } from "@type/comment";
 import {
   collection,
   doc,
-  getDoc,
   serverTimestamp,
   setDoc,
   updateDoc,
 } from "firebase/firestore";
 import Image from "next/image";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { string } from "zod";
 
 export default function CommentInput({
   slug,
@@ -24,7 +22,6 @@ export default function CommentInput({
   const { isUpdate, commentId } = useAppSelector((state) => state.comment);
   const dispatch = useAppDispatch();
   const {
-    register,
     handleSubmit,
     formState: { errors },
     control,
@@ -146,8 +143,10 @@ export default function CommentInput({
         <div className="flex w-full flex-col">
           {/* 댓글 입력 컨트롤러 */}
           <Controller
-            {...register("comment", {
-              required: "댓글을 작성해 주세요.",
+            name="comment"
+            control={control}
+            rules={{
+              required: true,
               minLength: {
                 value: 3,
                 message: "최소 세 글자 이상 입력해 주세요.",
@@ -156,18 +155,15 @@ export default function CommentInput({
                 value: 500,
                 message: "최대 500 글자까지 입력할 수 있어요.",
               },
-            })}
-            name="comment"
-            control={control}
+            }}
             render={({ field }) => (
               <textarea
-                {...field}
                 id="comment"
-                name="content"
+                name="comment"
                 rows={2}
                 className="w-full resize-none rounded-md border bg-light_bg_1 px-3 py-1 leading-8 outline-none placeholder:pt-2 placeholder:text-sm dark:bg-night_bg_1"
                 placeholder="자유롭게 댓글을 작성해 보세요."
-                maxLength={501}
+                {...field}
               />
             )}
           />

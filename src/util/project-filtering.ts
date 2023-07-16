@@ -34,17 +34,21 @@ export function getProjectData(filename: string) {
   } = data;
   const tags = data.tags.split(","); // tags 배열 변환
 
-
-  const imagePath = path.join(process.cwd(), `public/posts-images/${slug.replaceAll("/", "_")}`)
-  const drawingImgs = [ ];
+  const imagePath = path.join(
+    process.cwd(),
+    `public/posts-images/${slug.replaceAll("/", "_")}`
+  );
+  const drawingImgs = [];
+  let thumbnail = "";
 
   fs.readdirSync(imagePath).forEach((file) => {
-    if (file.startsWith('draw') && file.endsWith('.jpg')) {
+    if (file.startsWith("draw") && file.endsWith(".jpg")) {
       drawingImgs.push(`/posts-images/${slug.replaceAll("/", "_")}/${file}`);
     }
+    if (file.startsWith("thumbnail") && file.endsWith(".jpg")) {
+      thumbnail = `/posts-images/${slug.replaceAll("/", "_")}/${file}`;
+    }
   });
-
-  console.log(drawingImgs)
 
   const projectData: IProject = {
     slug,
@@ -63,6 +67,7 @@ export function getProjectData(filename: string) {
     tags,
 
     content,
+    thumbnail,
     drawingImgs,
   };
 

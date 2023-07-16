@@ -5,9 +5,7 @@ import { IComment } from "@type/comment";
 import { deleteDoc, doc } from "firebase/firestore";
 
 export default function CommentToggle({ comment }: { comment: IComment }) {
-  const { isMore, isUpdate, isDelete, commentId } = useAppSelector(
-    (state) => state.comment
-  );
+  const { isMore, commentId } = useAppSelector((state) => state.comment);
   const dispatch = useAppDispatch();
 
   // 현재 접속 중인 유저 정보
@@ -39,11 +37,11 @@ export default function CommentToggle({ comment }: { comment: IComment }) {
         ></i>
       )}
       {isMore && comment.commentId === commentId && (
-        <div className="absolute top-16 -right-1 w-20 h-18 rounded-md border bg-light_bg_1 dark:bg-night_bg_1">
+        <div className="h-18 absolute -right-1 top-16 w-20 rounded-md border bg-light_bg_1 dark:bg-night_bg_1">
           {/* 수정 버튼 */}
 
           <button
-            className="px-4 py-1 flex items-center justify-between"
+            className="flex items-center justify-between px-4 py-1"
             onClick={() => {
               dispatch(commentActions.clickUpdate(comment.commentId));
             }}
@@ -54,7 +52,7 @@ export default function CommentToggle({ comment }: { comment: IComment }) {
 
           {/* 삭제 버튼 */}
           <button
-            className=" border-t px-4 py-1 flex items-center justify-between"
+            className=" flex items-center justify-between border-t px-4 py-1"
             onClick={() => handleDelete()}
           >
             <i className="ri-close-line"></i>

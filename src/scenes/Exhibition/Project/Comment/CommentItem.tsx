@@ -4,6 +4,7 @@ import { timeYmd } from "@util/variants/datetime";
 import Image from "next/image";
 import CommentToggle from "./CommentToggle";
 import CommentInput from "./CommentInput";
+import { Fragment } from "react";
 
 export default function CommentItem({ comment }: { comment: IComment }) {
   const { isUpdate, commentId } = useAppSelector((state) => state.comment);
@@ -14,15 +15,15 @@ export default function CommentItem({ comment }: { comment: IComment }) {
       : comment.displayName;
 
   return (
-    <>
+    <Fragment>
       {isUpdate && commentId === comment.commentId ? (
         <CommentInput slug={comment.slug} commentText={comment.text} />
       ) : (
-        <div className="relative w-full py-4 px-1 border-b">
-          <div className="flex items-center justify-between w-full">
+        <div className="relative w-full border-b px-1 py-4">
+          <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-2">
               {/* 작성자 프로필 */}
-              <div className="w-[32px] h-[32px] flex-shrink-0">
+              <div className="h-[32px] w-[32px] flex-shrink-0">
                 <Image
                   className="rounded-full"
                   width={32}
@@ -49,9 +50,9 @@ export default function CommentItem({ comment }: { comment: IComment }) {
           </div>
 
           {/* 댓글 내용 */}
-          <p className="px-2 pt-2 pb-3">{comment.text}</p>
+          <p className="px-2 pb-3 pt-2">{comment.text}</p>
         </div>
       )}
-    </>
+    </Fragment>
   );
 }

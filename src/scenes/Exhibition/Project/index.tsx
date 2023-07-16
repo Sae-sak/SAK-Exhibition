@@ -1,4 +1,3 @@
-import fs from 'fs';
 import { IProject } from "@type/exhibition";
 import Quote from "@components/Quote";
 
@@ -9,7 +8,6 @@ import AnchorUrl from "./AnchorUrl";
 import StickyUrl from "./StickyUrl";
 
 import ProgressBar from "./ProgressBar";
-import ModalImage from "./ModalImage";
 import Carousel from "./Carousel";
 import Comment from "./Comment";
 import StudentProfile from "./StudentProfile";
@@ -17,26 +15,15 @@ import StudentProfile from "./StudentProfile";
 export default function Project({ projectData }: { projectData: IProject }) {
   const {
     slug,
-    
     title,
     excerpt,
-    date,
-    year,
-    semester,
-    grade,
-    studio,
-    namepath,
-    tags,
     name,
     email,
     motto,
-
     content,
+    thumbnail,
     drawingImgs,
   } = projectData;
-
-  const imagePath = `/posts-images/${slug.replaceAll("/", "_")}`;
-  const thumbnailImg = `${imagePath}/thumbnail.jpg`;
 
   return (
     <>
@@ -46,10 +33,10 @@ export default function Project({ projectData }: { projectData: IProject }) {
           title={title}
           name={name}
           excerpt={excerpt}
-          thumbnailImg={thumbnailImg}
+          thumbnail={thumbnail}
         />
-        <section className="flex mt-4 border-r flex-nowrap lg:border-x">
-          <section className="sticky hidden h-5 px-4 top-[90px] lg:w-1/4 lg:block">
+        <section className="mt-4 flex flex-nowrap border-r lg:border-x">
+          <section className="sticky top-[90px] hidden h-5 px-4 lg:block lg:w-1/4">
             {/* anchor URLs */}
             <AnchorUrl content={content} />
 
@@ -58,8 +45,8 @@ export default function Project({ projectData }: { projectData: IProject }) {
           </section>
 
           {/* content */}
-          <section className="w-full px-4 border-l lg:w-3/4">
-            <div className="pt-2 border-t">
+          <section className="w-full border-l px-4 lg:w-3/4">
+            <div className="border-t pt-2">
               <ProjectContent content={content} />
               <Carousel data={drawingImgs} />
               <StudentProfile
@@ -75,8 +62,6 @@ export default function Project({ projectData }: { projectData: IProject }) {
           </section>
         </section>
       </article>
-
-      <ModalImage />
     </>
   );
 }
