@@ -15,9 +15,7 @@ export default function ContactUsForm() {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
     control,
-    reset,
   } = useForm<IContactForm>({
     defaultValues: {},
   });
@@ -162,10 +160,10 @@ export default function ContactUsForm() {
         {/* submit area */}
         <motion.div
           variants={textVariant(0.9)}
-          className="w-full gap-4 row-center"
+          className="row-center w-full gap-4"
         >
-          <div className="w-full p-2 pt-2 mt-2 col-end">
-            <button className="flex font-title font-bold text-lg border-b">
+          <div className="col-end mt-2 w-full p-2 pt-2">
+            <button className="flex border-b font-title text-lg font-bold">
               <span>submit</span>
               <i className="ri-arrow-right-line"></i>
             </button>

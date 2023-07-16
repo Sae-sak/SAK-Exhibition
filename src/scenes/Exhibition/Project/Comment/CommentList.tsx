@@ -31,11 +31,12 @@ export default function CommentList({ slug }: { slug: string }) {
   );
 
   // 메시지들 받아오기
-  const [comments, loading, error] = useCollectionData(commentsQuery, options);
+  const [comments, loading] = useCollectionData(commentsQuery, options);
 
   return (
     <>
       {comments &&
+        !loading &&
         comments.map((comment, indx) => (
           <CommentItem key={`${comment.uid}${indx}`} comment={comment} />
         ))}

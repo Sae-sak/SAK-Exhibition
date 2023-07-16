@@ -4,7 +4,7 @@ import { auth } from "@config/firebaseApp";
 
 export default function ChatMessage(props: { message: IMessage }) {
   const user = auth;
-  const { uid, text, displayName, photoURL, createdAt } = props.message;
+  const { uid, text, displayName, photoURL } = props.message;
 
   // 받은 메세지와 보낸 메세지 구분
   const messageProfile =
@@ -37,6 +37,7 @@ export default function ChatMessage(props: { message: IMessage }) {
               photoURL ||
               "https://api.adorable.io/avatars/23/abott@adorable.png"
             }
+            quality={10}
             alt={uid || "avatar"}
           />
         </div>
@@ -50,7 +51,7 @@ export default function ChatMessage(props: { message: IMessage }) {
 
         {/* 텍스트 */}
         <div
-          className={`py-1 px-2 rounded-lg shadow max-w-[200px] dark:shadow-gray-600 ${messageBg}`}
+          className={`max-w-[200px] rounded-lg px-2 py-1 shadow dark:shadow-gray-600 ${messageBg}`}
         >
           <p className="text-sm">{text}</p>
           {/* <span>{time}</span> */}
