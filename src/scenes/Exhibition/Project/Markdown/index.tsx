@@ -12,12 +12,13 @@ const MarkdownComponents = {
       return (
         <ImageWrapper src={image.src}>
           <Image
+            priority
             className="w-full"
             src={`${image.src}`}
             alt={image.src}
             width={600}
             height={300}
-            loading="lazy"
+            quality={30}
           />
         </ImageWrapper>
       );
