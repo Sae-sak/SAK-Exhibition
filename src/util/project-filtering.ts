@@ -34,6 +34,18 @@ export function getProjectData(filename: string) {
   } = data;
   const tags = data.tags.split(","); // tags 배열 변환
 
+
+  const imagePath = path.join(process.cwd(), `public/posts-images/${slug.replaceAll("/", "_")}`)
+  const drawingImgs = [ ];
+
+  fs.readdirSync(imagePath).forEach((file) => {
+    if (file.startsWith('draw') && file.endsWith('.jpg')) {
+      drawingImgs.push(`/posts-images/${slug.replaceAll("/", "_")}/${file}`);
+    }
+  });
+
+  console.log(drawingImgs)
+
   const projectData: IProject = {
     slug,
 
@@ -51,6 +63,7 @@ export function getProjectData(filename: string) {
     tags,
 
     content,
+    drawingImgs,
   };
 
   return projectData;

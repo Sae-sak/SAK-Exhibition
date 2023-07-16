@@ -50,4 +50,5 @@ export interface IProject {
   motto: string;
   tags: TagType[];
   content: string;
+  drawingImgs: string[];
 }

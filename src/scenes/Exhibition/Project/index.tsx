@@ -1,3 +1,4 @@
+import fs from 'fs';
 import { IProject } from "@type/exhibition";
 import Quote from "@components/Quote";
 
@@ -16,6 +17,7 @@ import StudentProfile from "./StudentProfile";
 export default function Project({ projectData }: { projectData: IProject }) {
   const {
     slug,
+    
     title,
     excerpt,
     date,
@@ -28,16 +30,13 @@ export default function Project({ projectData }: { projectData: IProject }) {
     name,
     email,
     motto,
+
     content,
+    drawingImgs,
   } = projectData;
 
   const imagePath = `/posts-images/${slug.replaceAll("/", "_")}`;
   const thumbnailImg = `${imagePath}/thumbnail.jpg`;
-  const drawingImgs = [
-    `${imagePath}/draw1.jpg`,
-    `${imagePath}/draw2.jpg`,
-    `${imagePath}/draw3.jpg`,
-  ];
 
   return (
     <>
