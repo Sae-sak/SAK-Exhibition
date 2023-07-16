@@ -4,7 +4,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/dist/shared/lib/constants");
 const nextConfig = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      reactStrictMode: true,
+      reactStrictMode: false,
       webpack: (config) => {
         config.resolve.fallback = { fs: false };
         return config;

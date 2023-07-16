@@ -9,6 +9,7 @@ import { CATEGORIES } from "@constants/filter";
 
 import FilterList from "../FilterComponents/FilterList";
 import BorderDelay from "@components/Animation/BorderDelay";
+import { Fragment } from "react";
 
 export default function FilterSelect({ projects }: { projects: IProject[] }) {
   const categoryName = useAppSelector((state) => state.filter.categoryName);
@@ -18,12 +19,11 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
   return (
     <div className="col-center fixed top-0 h-screen w-screen bg-light_bg_1 dark:bg-night_bg_1">
       {CATEGORIES.map((CATEGORY, indx) => (
-        <>
+        <Fragment key={CATEGORY + indx}>
           {/* 위 경계 */}
           {indx === 0 || indx === 1 ? <BorderDelay delayTime={indx} /> : null}
 
           <motion.div
-            key={CATEGORY}
             className={classNames(
               "flex w-full items-center justify-between px-8 font-accent",
               {
@@ -70,7 +70,7 @@ export default function FilterSelect({ projects }: { projects: IProject[] }) {
 
           {/* 아래 경계 */}
           {indx === 1 || indx === 2 ? <BorderDelay delayTime={indx} /> : null}
-        </>
+        </Fragment>
       ))}
 
       {/* close button */}
