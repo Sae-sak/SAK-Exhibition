@@ -23,7 +23,7 @@ export default function Project({ projectData }: { projectData: IProject }) {
   // drawing images 주소를 배열에 저장
   const [drawingImgs, setDrawingImgs] = useState([]);
   useEffect(() => {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 10; i++) {
       const drawingImg = `/posts-images/${slug.replaceAll(
         "/",
         "_"
