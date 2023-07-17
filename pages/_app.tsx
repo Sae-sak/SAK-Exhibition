@@ -32,6 +32,12 @@ export default function App({ Component, pageProps }: AppProps) {
           name="naver-site-verification"
           content={process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION}
         />
+
+        {/* Google Site Verification*/}
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+        />
       </Head>
 
       <Script
