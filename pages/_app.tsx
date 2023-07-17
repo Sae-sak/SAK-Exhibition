@@ -26,6 +26,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#FBFBFB" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+
+        {/* Naver Site Verification*/}
+        <meta
+          name="naver-site-verification"
+          content="84f0f3ab096b92356efeaffe9b0a3f7bfb6e778e"
+        />
       </Head>
 
       <Script
