@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Naver Site Verification*/}
         <meta
           name="naver-site-verification"
-          content="84f0f3ab096b92356efeaffe9b0a3f7bfb6e778e"
+          content={process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION}
         />
       </Head>
 
