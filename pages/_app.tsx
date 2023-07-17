@@ -14,6 +14,7 @@ import Script from "next/script";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const clientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
+  const ga_key = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY;
 
   return (
     <>
@@ -39,6 +40,25 @@ export default function App({ Component, pageProps }: AppProps) {
           content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
       </Head>
+
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${ga_key}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${ga_key}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
 
       <Script
         type="text/javascript"
