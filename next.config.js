@@ -4,6 +4,14 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/dist/shared/lib/constants");
 const nextConfig = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
+      async rewrites() {
+        return [
+          {
+            source: "/sitemap.xml",
+            destination: "/api/sitemap",
+          },
+        ];
+      },
       reactStrictMode: false,
       webpack: (config) => {
         config.resolve.fallback = { fs: false };
@@ -30,6 +38,14 @@ const nextConfig = (phase) => {
   }
 
   return {
+    async rewrites() {
+      return [
+        {
+          source: "/sitemap.xml",
+          destination: "/api/sitemap",
+        },
+      ];
+    },
     reactStrictMode: true,
     webpack: (config) => {
       config.resolve.fallback = { fs: false };
