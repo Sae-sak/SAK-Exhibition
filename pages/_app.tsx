@@ -19,10 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>SAK Exhibition</title>
+        <title>SAK-Exhibition</title>
         <meta
           name="description"
-          content="SAK Exhibition - 2023 경기대학교 건축학과 온라인 졸업 전시 웹사이트"
+          content="SAK-Exhibition - 2023 경기대학교 건축학과 온라인 졸업 전시 웹사이트"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#FBFBFB" />

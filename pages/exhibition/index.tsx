@@ -17,7 +17,7 @@ export default function ExhibitionPage({ projects }: { projects: IProject[] }) {
         />
         <meta
           property="og:image"
-          content={`https://sak-exhibition.vercel.app/images/door.png`}
+          content={`https://sak-exhibition.vercel.app/images/poster.jpg`}
         />
         <meta
           property="og:url"
