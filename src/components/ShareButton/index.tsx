@@ -28,7 +28,9 @@ export default function ShareButton({ company, emailPath }: ICompany) {
   }
 
   function shareLink() {
-    navigator.clipboard.writeText(router.asPath); // 링크 복사
+    navigator.clipboard.writeText(
+      `https://sak-exhibition.vercel.app${router.asPath}`
+    ); // 링크 복사
     dispatch(
       alertActions.alert({
         alertType: "Information",
@@ -52,28 +54,28 @@ export default function ShareButton({ company, emailPath }: ICompany) {
     case "Twitter":
       return (
         <button onClick={() => shareTwitter()}>
-          <i className="text-3xl ri-twitter-fill"></i>
+          <i className="ri-twitter-fill text-3xl"></i>
         </button>
       );
 
     case "Facebook":
       return (
         <button onClick={() => shareFacebook()}>
-          <i className="text-3xl ri-facebook-fill"></i>
+          <i className="ri-facebook-fill text-3xl"></i>
         </button>
       );
 
     case "CopyLink":
       return (
         <button onClick={() => shareLink()}>
-          <i className="text-3xl ri-share-line"></i>
+          <i className="ri-share-line text-3xl"></i>
         </button>
       );
 
     case "CopyEmail":
       return (
         <button onClick={() => shareEmail()}>
-          <i className="text-[26px] ri-mail-line"></i>
+          <i className="ri-mail-line text-[26px]"></i>
         </button>
       );
 
