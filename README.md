@@ -24,6 +24,8 @@
 
 더 많은 사람들이 함께 즐길 수 있는 전시 환경을 구축하고자 합니다.
 
+![포스터](./public/images/poster.jpg)
+
 <br>
 
 ### **1.2 서비스 목표**
@@ -124,6 +126,13 @@ NEXT_PUBLIC_FIREBASE_APPID
 # Gmail SMTP
 NEXT_PUBLIC_EMAIL
 NEXT_PUBLIC_PASSWORD
+
+# Site Verification
+NEXT_PUBLIC_NAVER_SITE_VERIFICATION
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
+# Google Analytics
+NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY
 
 # Naver API
 NEXT_PUBLIC_NAVER_MAP_CLIENT_ID
