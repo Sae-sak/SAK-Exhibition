@@ -49,7 +49,7 @@
 - See Exhibition: Exhibition 페이지 (온라인 전시 공간) 으로 이동합니다.
 
 ![커버 페이지](./public/images/readme/01-cover.png)
-![포스터](./public/images/readme/02-oveseer.png)
+![포스터](./public/images/readme/02-overseer.png)
 ![컨셉 소개](./public/images/readme/03-about.png)
 ![학생 소개](./public/images/readme/04-playerlist.png)
 ![3D 모델](./public/images/readme/05-3dmodel.png)
